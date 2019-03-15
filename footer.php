@@ -1,4 +1,31 @@
 
+	<div class="footer-latest-news">
+		<?php if( get_post_type() != 'post'): ?>
+			<?php
+			$args = array(
+				'numberposts' => 3,
+				'post_status'=>"publish",
+				'post_type'=>"post",
+				'orderby'=>"post_date");
+
+			$postslist = get_posts( $args );
+
+			echo '<ul class="latest-posts">';
+
+			foreach ($postslist as $post) :  setup_postdata($post); ?>
+				<li>
+					<a href="<?the_permalink();?>">
+						<img src="<?php bloginfo('template_directory'); ?>/images/icon-file.png" alt="icon">
+						<?the_title();?>
+					</a>
+				</li>
+			<?php endforeach; ?>
+			<?php wp_reset_query(); ?>
+		</ul>
+	<?php endif; ?>
+</div>
+
+
 <footer>
 	<section class="upper-footer">
 		<div class="footer-contact-form">
@@ -33,43 +60,28 @@
 	</section>
 
 	
-	<div class="lower-footer">
-		<span>Blog</span>
-		<div class="footer-latest-news">
-			<?php if( get_post_type() != 'post'): ?>
-				<?php
-				$args = array(
-					'numberposts' => 3,
-					'post_status'=>"publish",
-					'post_type'=>"post",
-					'orderby'=>"post_date");
-
-				$postslist = get_posts( $args );
-
-				echo '<ul class="latest-posts">';
-
-				foreach ($postslist as $post) :  setup_postdata($post); ?>
-					<li>
-						<a href="<?the_permalink();?>">
-							<img src="<?php bloginfo('template_directory'); ?>/images/icon-file.png" alt="icon">
-							<?the_title();?>
-						</a>
-					</li>
-				<?php endforeach; ?>
-				<?php wp_reset_query(); ?>
-			</ul>
-		<?php endif; ?>
-	</div>
-	<div class="footer-logo">
-		<img src="<?php bloginfo('template_directory'); ?>/images/logo-footer.png" alt="logo">
-	</div>
-
+<section class="lower-footer">
+	<div class="footer-buttons">
+		<a href="<?php the_field('gallery_footer_link', 'option'); ?>">Results Gallery</a>
+		<a href="<?php the_field('reviews_footer_link', 'option'); ?>">Patient Reviews</a>
+	</div>		
 	<div class="model-disc">
 		<p>Stock model images are used throughout this website and are for illustrative purposes only. All before-and-after photos and patient testimonials on our site are from actual patients, and have been published with permission. Individual results may vary.</p>
 	</div>
 	<div class="copyright">Copyright &copy; <?=date("Y")?> <?bloginfo('title');?>. All rights reserved | <a href="<?php bloginfo('url'); ?>/privacy-policy">Privacy Policy</a> | <a href="<?php bloginfo('url'); ?>/sitemap/" title="Sitemap">Sitemap</a> </div>
 	<div class="rm-sig"><a href="<?php the_field('rm_footer_link', 'options'); ?>" target="_blank" rel="noopener" title="<?php the_field('rm_footer_text', 'options'); ?>"><?php the_field('rm_footer_text', 'options'); ?></a> by <a href="https://www.rosemontmedia.com/" title="Rosemont Media" target="_blank" rel="noopener"><?php inline_svg('rm-logo'); ?></a></div>
-</div>  
+	<div class="footer-logos">
+		<?php if(have_rows('footer_logos', 'option')): ?>
+			<ul>
+				<?php while(have_rows('footer_logos', 'option')): the_row(); ?>
+					<li>
+						<img src="<?php the_sub_field('logo'); ?>" alt="top doc logo">
+					</li>
+				<?php endwhile; ?>
+			</ul>
+		<?php endif; ?>
+	</div>
+</section>  
 
 
 

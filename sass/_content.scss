@@ -37,15 +37,17 @@
 }
 
 .page-title {
-	margin: 0 auto;
+	// margin: 0 auto;
 	// border: 1px solid red;
 	// width: 100%;
-	max-width: 1190px;
+	// max-width: 1190px;
 	text-align: left;
 	position: relative;
-	padding: 0 20px;
+	margin-bottom: 0;
+	padding-bottom: 0;
+	// padding: 0 20px;
 	@include media($tablet) {
-		padding: 0 40px;
+		// padding: 0 40px;
 	}
 
 	.heading-text {
@@ -65,9 +67,9 @@
 		color: $primaryColor;
 		display: block !important;
 		// border-bottom: 1px solid #ccc;
-		padding-bottom: 20px;
+		// padding-bottom: 20px;
 		@include media($tablet) {
-			padding-bottom: 40px;
+			// padding-bottom: 40px;
 			font-size: 50px;
 			line-height: 55px;
 		}
@@ -237,7 +239,7 @@ body.inside {
 		}
 
 		blockquote {
-			color: $secondaryColor;
+			// color: $secondaryColor;
 			margin: 40px 0;
 			margin-left: -20px;
 			font-family: $highlightFont;

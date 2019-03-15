@@ -12,9 +12,6 @@ body {
 	min-width: 320px;
 	text-align: center;
 	font: 14px/22px $defaultfont;
-	@include media($tablet) {
-		font: 14px/24px $defaultfont;
-	}
 	@include customfont();
 }
 
@@ -128,8 +125,8 @@ main,
 	@include media($desktop) {
 		// padding: 0  calc(40px + (50% - (#{$desktop} / 2)));
 	}
-	@include media(1190px) {
-		padding: 0 calc(40px + (50% - (1190px / 2)));
+	@include media(1280px) {
+		padding: 0 calc(40px + (50% - (1280px / 2)));
 	}
 	@include media($full) {
 		// padding: 0  calc(40px + (50% - (#{$full} / 2)));

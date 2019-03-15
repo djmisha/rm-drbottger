@@ -4,7 +4,7 @@ $menuHeight : 60px;
 .hover-menu {
 	width: 100%;
 	// border: 1px solid black;
-	@include font(18px, 1em);
+	// @include font(18px, 1em);
 	display: block;
 	.main-menu {
 		font-size: 0;
@@ -31,7 +31,10 @@ $menuHeight : 60px;
 					// border-bottom: 2px solid $tertiaryColor;
 
 					// border-top: 1px solid $tertiaryColor;
-					background: lighten($primaryColor, 15%);
+					// background: lighten($primaryColor, 15%);
+					// background: $darkColor;
+					// background-color: $primaryAlt;
+
 
 				} 
 				> .sub-menu{
@@ -52,34 +55,29 @@ $menuHeight : 60px;
 				transition: .25s ease-in-out background;
 				color: $lightColor; //set this color
 				height: $menuHeight;
+				text-transform: uppercase;
+				// border: 1px solid red;
 				&:hover {
 					color: $lightColor;
-					// background-color: $primaryAlt;
-					background: lighten($primaryColor, 15%);
+					background: $darkColor;
+
 				}
 
-				@media screen and (max-width:1196px) and (min-width:1080px) {
-					
-					padding: 20px 11px;
-					
-				}
+				
 			}
 		}
 		
 	}
 
 	a {
-		font-size: 15px; //reset font-size for inline-block hack
-
-		@media screen and (max-width:1196px) and (min-width:1080px) {
-			font-size: 14px; 
-		}
+		font-size: 14px; //reset font-size for inline-block hack
+		line-height: 22px;
 	}
 
 
 	.sub-menu {
 			background: $primaryAlt; //set to your own background color
-			border: 1px solid rgba($lightColor, .5); //for visual purposes.  can remove.
+			border: 1px solid rgba($lightColor, .2); //for visual purposes.  can remove.
 			position: absolute;
 			top: 64px;
 			left: 50%;
@@ -93,7 +91,7 @@ $menuHeight : 60px;
 			// transition: .25s ease-in-out top, .25s ease-in-out opacity;
 			> li {
 
-				border-bottom: 1px solid rgba($lightColor, .5); //for visual purposes.  can remove.
+				border-bottom: 1px solid rgba($lightColor, .2); //for visual purposes.  can remove.
 				&:last-of-type {
 					border-bottom:none;
 				}
@@ -153,7 +151,7 @@ $menuHeight : 60px;
 				&:hover {
 					> a {
 						color: $lightColor;
-						background: $primaryAlt;
+						// background: $primaryAlt;
 						border-bottom: none;
 					}
 				}
