@@ -1,0 +1,73 @@
+/* ------------------------
+   Variables
+------------------------ */
+
+$darkBlue: #000;
+
+$blue: #000;
+
+$lightBlue: #000;
+
+$gray: #000;
+
+$lightGrey: #000;
+
+$primaryColor: $blue; // link color, buttons, nav, footer, etc
+$primaryAlt: $darkBlue; //link hover
+
+$primaryHighlight: $lightBlue;
+
+$secondaryColor: $gray;
+$secondaryAlt: $gray;
+
+$tertiaryColor: $lightGrey;
+$tertiaryAlt: #000;
+
+$lightColor: #ffffff;
+$darkColor: $gray;
+
+// Font Family
+
+$primaryFont: "Open Sans", sans-serif;
+$secondaryFont: "Raleway", sans-serif;
+$highlightFont: "Playfair Display", serif;
+
+// $fourthFont: "Source Sans Pro", sans-serif;
+
+$sidebar: 308px;
+
+// Font Weight
+
+$thin: 100;
+$light: 300;
+$normal: 400;
+$regular: 400;
+$medium: 500;
+$semiBold: 600;
+$bold: 700;
+$extraBold: 800;
+$heavy: 900;
+
+// Media Query break points
+
+$tablet: 768px;
+$desktop: 1080px;
+$full: 1480px;
+
+$ipad-min: 768px;
+$ipad-max: 1024px;
+
+$ipadpro-min: 1024px;
+$ipadpro-max: 1366px;
+
+$ipad: ipads;
+$ipads: ipads;
+
+// Increasing color
+
+$step: 1;
+
+// Defaults
+
+$defaultfont: $primaryFont;
+$defaultcolor: $darkColor;

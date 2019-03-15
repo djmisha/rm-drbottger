@@ -1,0 +1,1304 @@
+.content {
+	// font-family: $secondaryFont;
+	padding-bottom: 50px;
+	@include media($desktop) {
+		margin-bottom: 0;
+		// max-width: 1020px;
+		// margin: 0 auto;
+		// width: calc(100% - 350px);
+		padding-right: 60px;
+	}
+	b,
+	strong {
+		// font-weight: 700;
+	}
+	a {
+		text-decoration: underline;
+		// font-family: $primaryFont;
+		color: $primaryColor;
+		&:hover {
+			text-decoration: underline;
+			color: $primaryColor;
+		}
+	}
+	h2 {
+		color: $secondaryColor;
+	}
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		color: $primaryColor;
+		font-family: $secondaryFont;
+		font-weight: 100;
+		margin-top: 50px;
+	}
+}
+
+.page-title {
+	margin: 0 auto;
+	// border: 1px solid red;
+	// width: 100%;
+	max-width: 1190px;
+	text-align: left;
+	position: relative;
+	padding: 0 20px;
+	@include media($tablet) {
+		padding: 0 40px;
+	}
+
+	.heading-text {
+		margin-top: 20px;
+		margin-bottom: 0;
+		// border: 1px solid red;
+	}
+	.heading-text,
+	h1 {
+		width: 100%;
+		// position: relative;
+		text-align: left;
+		// font-family: $secondaryFont;
+		font-size: 28px;
+		line-height: 26px;
+		font-weight: 400;
+		color: $primaryColor;
+		display: block !important;
+		// border-bottom: 1px solid #ccc;
+		padding-bottom: 20px;
+		@include media($tablet) {
+			padding-bottom: 40px;
+			font-size: 50px;
+			line-height: 55px;
+		}
+		@include media($desktop) {
+			padding-right: 375px;
+			// max-width: 750px;
+			// padding-right: 350px;
+		}
+	}
+}
+
+.site-crumbs {
+	text-align: left;
+	font-family: $primaryFont;
+	font-size: 9px;
+	line-height: 14px;
+	@include media($tablet) {
+		font-size: 12px;
+		line-height: 16px;
+	}
+	.salacious-crumb {
+		color: $primaryAlt;
+		position: relative;
+		font-style: italic;
+		a {
+			font-family: $primaryFont;
+			
+			text-decoration: none;
+			color: $darkColor;
+			font-size: 9px;
+			line-height: 14px;
+			@include media($tablet) {
+				font-size: 12px;
+				line-height: 16px;
+			}
+		}
+		.crumb-sep {
+			margin: 0 8px;
+			color: $darkColor;
+		}
+		.current-crumb-item {
+			text-decoration: none;
+			color: $darkColor;
+		}
+	}
+}
+
+body.inside {
+	background: url("images/bg-inside-logo.png") top left;
+	background-repeat: no-repeat;
+	background-position-x: calc(40px);
+	background-position-y: 450px;
+	background-size: 200px auto;
+	@include media($tablet) {
+		background: url("images/bg-inside-logo.png") top left;
+		background-repeat: no-repeat;
+		// background-position-x: calc(50% - 60px);
+		background-size: 300px auto;
+		background-position-x: 60px;
+		background-position-y: 450px;
+	}
+	@include media($desktop) {
+		background: url("images/bg-inside-logo.png") top left;
+		background-repeat: no-repeat;
+		background-position-x: calc(50% - 360px);
+		background-position-y: 450px;
+	}
+	&.tmpl_type_page_landing {
+		background-image: none;
+	}
+}
+
+.interior {
+	text-align: left;
+	padding-bottom: 60px;
+	@include media($tablet) {
+		padding-bottom: 100px;
+	}
+	@include media($desktop) {
+		display: flex;
+		justify-content: space-between;
+	}
+	.content {
+		overflow-wrap: break-word;
+		word-wrap: break-word;
+		a:hover {
+			text-decoration: none;
+		}
+		p {
+			&:first-of-type {
+				margin-top: 0;
+			}
+		}
+		ul {
+			margin: 1em 10px;
+			list-style: none;
+			@include media($tablet) {
+				margin: 2em 50px;
+			}
+			li {
+				position: relative;
+
+				margin-bottom: 7px;
+				padding-left: 20px;
+				&:before {
+					content: "";
+					color: $primaryColor;
+					background-color: $primaryColor;
+					font-weight: $bold;
+					position: absolute;
+					left: 0px;
+					top: 9px;
+					width: 7px;
+					height: 7px;
+					border-radius: 50%;
+				}
+			}
+			ul,
+			ul ul {
+				margin: 1em 20px;
+			}
+		}
+		ul.links-list {
+			@include media($tablet) {
+				margin: 3em 0px;
+			}
+			li {
+				&:before {
+					content: "\f0c1" !important;
+					top: 0px;
+					background: transparent;
+					font-family: "Font Awesome 5 Pro";
+					position: absolute;
+					left: 7px;
+					transform: rotate(45deg);
+				}
+				border-bottom: 1px solid #ccc;
+				a {
+					text-decoration: none;
+					color: $darkColor;
+				}
+			}
+		}
+
+		ol {
+			counter-reset: item;
+			margin: 1em 10px;
+			@include media($tablet) {
+				margin: 2em 50px;
+			}
+			> li {
+				display: block;
+				position: relative;
+
+				margin-bottom: 7px;
+				padding-left: 23px;
+
+				&:before {
+					left: 0px;
+					position: absolute;
+					content: counter(item) ". ";
+					counter-increment: item;
+					color: $primaryColor;
+					font-weight: bold;
+				}
+			}
+		}
+
+		blockquote {
+			color: $secondaryColor;
+			margin: 40px 0;
+			margin-left: -20px;
+			font-family: $highlightFont;
+			font-size: 20px;
+			line-height: 30px;
+			border-left: 7px solid $primaryColor;
+			padding-left: 20px;
+			font-weight: 100;
+			font-size: italic;
+			@include media($tablet) {
+				margin: 80px 0;
+				margin-left: 40px;
+				padding-right: 140px;
+				font-size: 20px;
+				line-height: 29px;
+				// float: right;
+				// width: 420px;
+				// margin: 0 0px 80px 80px;
+			}
+			position: relative;
+			&:before {
+				content: "";
+				background: url("images/icon-inside-bquote.png");
+				background-size: 102px 79px;
+				width: 102px;
+				height: 79px;
+				position: absolute;
+				right: 40px;
+				top: 20px;
+			}
+			span {
+				font-size: 25px;
+				color: $primaryColor;
+			}
+		}
+
+		.bna-set {
+			margin: 40px 0px;
+			@include media($tablet) {
+				display: flex;
+				justify-content: space-around;
+				> div {
+					max-width: 47%;
+				}
+			}
+		}
+		.bna-case-container {
+			text-align: center;
+			background: #f3f5f3;
+			padding: 20px;
+			max-width: 320px;
+			margin-top: 20px;
+			margin-bottom: 20px;
+			@include media($tablet) {
+				max-width: none;
+				width: auto;
+				padding-bottom: 10px;
+				float: left;
+				margin-top: 40px;
+				margin-bottom: 40px;
+				margin-right: 40px;
+				margin-bottom: 20px;
+				padding: 35px;
+			}
+			.button {
+				margin: 0 auto;
+				text-align: center;
+				margin-top: 20px;
+			}
+		}
+		.bnacase-imgset, .twentytwenty-wrapper  {
+			width: 280px;
+		}
+	}
+}
+
+.interior .content .cases .bnacase-imgset {
+	clear: both;
+	margin: 0 auto;
+	border: none;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	text-align: left;
+	text-transform: uppercase;
+	width: 100%;
+	margin-bottom: 40px;
+
+	@include media($tablet) {
+		margin-bottom: 80px;
+		width: 49%;
+	}
+
+	.before,
+	.after {
+		width: 48%;
+		img {
+			margin-bottom: 0px;
+		}
+
+		@include media($tablet) {
+			width: 48%;
+		}
+		span {
+			text-transform: none;
+			font-family: $secondaryFont;
+			display: block;
+			padding-top: 5px;
+			font-size: 19px;
+		}
+	}
+	.before {
+		margin-right: 5px;
+	}
+}
+
+/*==========================================
+=            Fill Width Section            =
+==========================================*/
+
+.full-width {
+	width: 100vw;
+	padding: 40px 0px;
+	position: relative;
+	left: -20px;
+
+	@include media($tablet) {
+		left: -40px;
+		margin-top: 75px;
+		margin-bottom: 75px;
+	}
+
+	@include media(1150px) {
+		left: calc(((40px + (50vw - (1150px / 2)))) * -1);
+		background-size: cover;
+	}
+	@include media($full) {
+		left: calc(((205px + (50vw - (#{$full} / 2)))) * -1);
+	}
+}
+
+.page-feature {
+	@include media($tablet) {
+		display: flex;
+	}
+	> div {
+		min-height: 350px;
+		@include media($tablet) {
+			width: 50%;
+		}
+	}
+	.feature-content {
+		padding: 20px;
+		@include media($tablet) {
+			background: #f4f3f3;
+			padding: 100px 40px;
+		}
+		@include media($desktop) {
+		}
+		p,
+		h2,
+		h3 {
+			margin: 0 auto;
+			@include media($tablet) {
+				max-width: 500px;
+			}
+		}
+		p {
+			margin-top: 20px !important;
+		}
+	}
+	.feature-image {
+		background-position: center center !important;
+		background-repeat: no-repeat !important;
+		background-size: cover !important;
+		@include media($desktop) {
+		}
+	}
+}
+
+/*=========================================================================
+=            WordPress Core Gallery with Fancybox, Medium Size            =
+=========================================================================*/
+
+.gallery {
+	.content {
+		max-width: none;
+	}
+}
+
+.gallery-size-medium {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	.gallery-item {
+		float: none !important;
+		margin-right: 5px;
+		margin-left: 5px;
+		width: 45% !important;
+		@include media($tablet) {
+			margin-right: 10px;
+			margin-left: 10px;
+			width: 31% !important;
+		}
+		img {
+			border: none !important;
+			width: 100%;
+			height: auto;
+		}
+	}
+}
+
+.wp-block-image img {
+	width: 150px;
+	height: auto;
+	@include media($tablet) {
+		width: auto;
+	}
+}
+
+/*====================================
+=            faqs-section            =
+====================================*/
+
+.content .faqs-section {
+	padding: 40px 0;
+	padding-left: 50px;
+	border-top: 1px solid #ccc;
+	.faq-quest,
+	.faq-answ {
+		position: relative;
+		span {
+			top: 4px;
+			left: -45px;
+			position: absolute;
+			font-family: $highlightFont;
+			width: 40px;
+			color: $primaryColor;
+			font-size: 34px;
+			font-weight: bold;
+			margin-right: 10px;
+		}
+	}
+	h2 {
+		display: inline-block;
+		margin-top: 0;
+		@include media($desktop) {
+			font-size: 30px;
+			line-height: 35px;
+		}
+	}
+}
+
+/*==============================================
+=            Langing Page Sections             =
+==============================================*/
+
+.tmpl_type_page_landing header {
+	position: relative;
+	padding-top: 80vw;
+	margin-bottom: 0px;
+	height: auto;
+	background-size: 140vw auto;
+	background-position: top right;
+
+	@include media($tablet) {
+		background-position: center center;
+		background-size: cover;
+		padding-top: 150px;
+	}
+	@include media($desktop) {
+		padding-top: 150px;
+		padding-bottom: 280px;
+		max-height: 1550px;
+	}
+
+	h1 {
+		border-bottom: none;
+		margin-bottom: 0;
+		margin-top: 20px;
+		padding-bottom: 20px;
+	}
+	.flexible-jump-links p {
+		text-align: left;
+		@include media($tablet) {
+			padding-right: 40%;
+		}
+		@include media($desktop) {
+			padding-right: 50%;
+		}
+	}
+	p a {
+		text-decoration: underline;
+		color: $darkColor;
+	}
+}
+
+.tmpl_type_page_landing .flexible-content-page {
+	padding-bottom: 0;
+	.content {
+		background-image: none !important;
+		width: 100%;
+		padding-right: 0px;
+	}
+}
+
+/*=============================================
+=            Rhinapplasty    		          =
+=============================================*/
+
+.page-23 {
+	.page-common-reasons {
+		ul {
+			margin: 0;
+			margin-top: 40px;
+			@include media($tablet) {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-between;
+			}
+			li {
+				border-bottom: 1px solid #ccc;
+				padding-bottom: 8px;
+				@include media($tablet) {
+					width: 30%;
+				}
+				&:before {
+					left: 5px;
+				}
+			}
+		}
+	}
+	.bulbous-tip {
+		padding-top: 0;
+	}
+	#Candidates {
+		padding-top: 40px;
+		padding-bottom: 40px;
+		// background: #ebf1f5;
+		text-align: left;
+		@include media($tablet) {
+			padding-top: 120px;
+			padding-bottom: 120px;
+		}
+		@include media($desktop) {
+			flex-wrap: wrap;
+		}
+
+		background: #ebf1f5 url("images/bg-inside-logo.png") top left;
+		background-repeat: no-repeat;
+		background-position-x: calc(40px);
+		background-position-y: 450px;
+		background-size: 200px auto;
+		@include media($tablet) {
+			background: #ebf1f5 url("images/bg-inside-logo.png") top left;
+			background-repeat: no-repeat;
+			// background-position-x: calc(50% - 60px);
+			background-size: 300px auto;
+			background-position-x: 60px;
+			background-position-y: 50px;
+		}
+		@include media($desktop) {
+			background: #ebf1f5 url("images/bg-inside-logo.png") top left;
+			background-repeat: no-repeat;
+			background-position-x: calc(50% - 360px);
+			background-position-y: 50px;
+		}
+
+		#IsRhinoplastyRightForMe {
+			width: 100% !important;
+		}
+	}
+	#Doctor {
+		position: relative;
+		background-size: cover;
+		@include media($desktop) {
+			min-height: 720px;
+		}
+		h2 {
+			margin: 0;
+			margin-bottom: 20px;
+			position: relative;
+			border-bottom: none;
+			@include media($tablet) {
+				padding-left: 35%;
+			}
+			@include media($desktop) {
+				padding-left: 40%;
+			}
+		}
+		p {
+			color: $lightColor;
+			@include media($tablet) {
+				padding-left: 35%;
+			}
+			@include media($desktop) {
+				padding-left: 40%;
+			}
+		}
+		img {
+			width: 150px;
+			float: left;
+			margin-right: 20px;
+			@include media($tablet) {
+				position: absolute;
+				top: 130px;
+				left: calc(50% - 440px);
+				width: 300px;
+				box-shadow: 10px 10px 50px rgba(#000, 0.3);
+			}
+			@include media(860px) {
+				left: calc(50% - 480px);
+			}
+
+			@include media($desktop) {
+				position: absolute;
+				top: 130px;
+				left: calc(50% - 580px);
+				width: 355px;
+			}
+		}
+	}
+
+	#Doctor,
+	#ThreeDee,
+	#Recovery {
+		em {
+			margin-top: 40px;
+			display: block;
+			padding: 10px 20px 10px 30px;
+			background: $lightColor;
+			color: $darkColor;
+			border-left: 5px solid $primaryColor;
+			font-weight: bold;
+		}
+	}
+	#ThreeDee {
+		min-height: 450px;
+		background-size: 900px auto;
+		background-position: top center;
+		padding-top: 300px;
+		@include media($tablet) {
+			background-position: top center;
+			background-size: auto auto;
+			background-position-y: -60px;
+			padding-top: 650px;
+			min-height: 750px;
+			padding-bottom: 40px;
+		}
+		em {
+			background: #f2f6f8;
+		}
+	}
+	.Look-After-Rhinoplasty {
+		padding-top: 0px;
+		h2 {
+			width: 100%;
+		}
+		p {
+			@include media($desktop) {
+				width: 30%;
+			}
+		}
+		@include media($desktop) {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+		}
+	}
+	#Cost {
+		background-color: #dee2df;
+		background-size: 800px auto;
+		background-position: top right;
+		padding-top: 420px;
+		@include media($tablet) {
+			background-position: top center;
+			padding-top: 60px;
+			padding-bottom: 60px;
+			background-size: cover;
+		}
+		@include media($desktop) {
+			padding-top: 120px;
+			padding-bottom: 120px;
+		}
+		p {
+			@include media($tablet) {
+				padding-right: 30%;
+			}
+			@include media($desktop) {
+				padding-right: 50%;
+			}
+		}
+	}
+	#Procedure {
+		background: #ebf1f5;
+		position: relative;
+		@include media($tablet) {
+			padding-top: 60px;
+		}
+		@include media($desktop) {
+			padding-top: 120px;
+			padding-bottom: 100px;
+		}
+
+		background-repeat: no-repeat;
+		background-position-x: 47px;
+		background-position-y: 350px;
+		background-size: 182px 423px;
+		@include media($desktop) {
+			background-position-y: 40px;
+			background-size: 245px 570px;
+			background-position-x: calc(50% - 430px;);
+		}
+
+		p {
+			@include media($desktop) {
+				padding-right: 55%;
+			}
+		}
+		img {
+			width: 100%;
+			margin-bottom: 20px;
+			@include media($tablet) {
+				float: right;
+				margin-left: 20px;
+				width: 400px;
+				// position: absolute;
+				// top: 130px;
+				// right: calc(50% - 480px);
+				// width: 300px;
+				// box-shadow: 10px 10px 50px rgba(#000, 0.3);
+			}
+			@include media($desktop) {
+				margin-bottom: 0px;
+				float: none;
+				margin: 0;
+				position: absolute;
+				top: 190px;
+				right: calc(50% - 540px);
+				width: 601px;
+			}
+		}
+	}
+	#Recovery {
+		h2 {
+			// padding-bottom: 0px;
+			// margin-bottom: 0px;
+		}
+		em {
+			margin-top: 30px;
+			background: #f2f6f8;
+			margin-bottom: 20px;
+		}
+	}
+	.flexible-multicolumn > div {
+		width: 100%;
+		margin-bottom: 0;
+		@include media($desktop) {
+		margin-bottom: 40px;
+			width: 31%;
+		}
+	}
+	#recovery-list-tips {
+		padding-left: 40px;
+		padding-right: 40px;
+		max-width: 1110px;
+		margin: 0 auto;
+		background: #f5f7f9;
+		text-align: left;
+		flex-wrap: wrap;
+		padding-top: 40px;
+		padding-bottom: 40px;
+
+		@include media($tablet) {
+			padding-top: 30px;
+			padding-bottom: 0px;
+			margin-bottom: 0px;
+		}
+
+		#recovery-tips {
+			width: 100% !important;
+		}
+	}
+	.recovery-discl {
+		margin-top: 0;
+		padding-top: 20px;
+	}
+}
+
+/*=============================================
+=            Rhinapplasty Revision            =
+=============================================*/
+
+.page-26 {
+	header {
+		@include media(768px) {
+			background-position-x: -900px !important; 
+		}
+		@include media(790px) {
+			background-position-x: -800px !important; 
+		}
+		@include media(870px) {
+			background-position: 50% 0px !important ;
+		}
+	}
+	#Choose {
+		@include media($desktop) {
+			min-height: 720px;
+		}
+		h2 {
+			margin: 0;
+			margin-bottom: 20px;
+			border-bottom: none;
+			@include media($tablet) {
+				padding-left: 35%;
+			}
+			@include media($desktop) {
+				padding-left: 40%;
+			}
+		}
+		p {
+			color: $lightColor;
+			@include media($tablet) {
+				padding-left: 35%;
+			}
+			@include media($desktop) {
+				padding-left: 40%;
+			}
+		}
+		position: relative;
+		img {
+			width: 150px;
+			float: left;
+			margin-right: 20px;
+			@include media($tablet) {
+				position: absolute;
+				top: 130px;
+				left: calc(50% - 420px);
+				width: 280px;
+				box-shadow: 10px 10px 50px rgba(#000, 0.3);
+			}
+			@include media(860px) {
+				left: calc(50% - 480px);
+			}
+			@include media($desktop) {
+				position: absolute;
+				top: 130px;
+				left: calc(50% - 580px);
+				width: 355px;
+			}
+		}
+	}
+	#Recovery {
+		background-size: 800px auto;
+		background-position: top right;
+		padding-top: 320px;
+		@include media($tablet) {
+			padding-top: 120px;
+			background-position: center center;
+			background-size: cover;
+		}
+		h2 {
+			margin: 0;
+			margin-bottom: 20px;
+			border-bottom: none;
+			@include media($tablet) {
+				padding-right: 40%;
+			}
+			@include media($desktop) {
+				padding-right: 50%;
+			}
+		}
+		p {
+			@include media($tablet) {
+				padding-right: 40%;
+			}
+			@include media($desktop) {
+				padding-right: 50%;
+			}
+		}
+	}
+	.rhinoplasty-performed {
+		padding-bottom: 40px;
+		padding-top: 40px;
+		background-color: #ebf1f5;
+		background-repeat: no-repeat;
+		background-position-x: 47px;
+		background-position-y: 40px;
+		background-size: 182px 423px;
+		@include media($tablet) {
+			// background-position-x: calc(50% - 400px;);
+			padding-bottom: 120px;
+			padding-top: 120px;
+			display: flex;
+			justify-content: space-between;
+			flex-wrap: wrap;
+		}
+		@include media($desktop) {
+			background-position-x: calc(50% - 400px;);
+		}
+		h2 {
+			width: 100%;
+		}
+		p {
+			@include media($tablet) {
+				width: 47%;
+			}
+		}
+	}
+	.flexible-multicolumn > div {
+		width: 100%;
+		@include media($desktop) {
+			width: 30%;
+		}
+	}
+}
+
+.page-559 {
+	.content {
+		padding-right: 0;
+		width: 100%;
+	}
+	aside {
+		display: none;
+	}
+	ul.form-gather,
+	ul.form-gather-address {
+		margin: 0;
+		li:before {
+			display: none;
+		}
+	}
+	h2:nth-of-type(1) {
+		margin-top: 0;
+		border-top: none;
+	}
+	h2 {
+		clear: both;
+		padding-top: 20px;
+		border-top: 1px solid #ccc;
+		strong {
+			font-weight: normal;
+			float: left;
+			margin-right: 10px;
+			display: inline-block;
+			background: $primaryColor;
+			color: $lightColor;
+			width: 30px;
+			height: 30px;
+			border-radius: 50px;
+			padding-left: 8px;
+			font-family: $secondaryFont;
+			@include media($tablet) {
+				padding-left: 15px;
+				width: 50px;
+				height: 50px;
+			}
+			// display: flex;
+			// align-items: center;
+			// justify-content: center;
+		}
+	}
+	ul.form-gather {
+		@include media($tablet) {
+			display: flex;
+			justify-content: space-between;
+		}
+		li {
+			background: #edf0ee;
+			width: 100%;
+			padding: 20px 60px;
+			margin: 0 auto;
+			text-align: center;
+			margin-bottom: 20px;
+			@include media($tablet) {
+				margin-bottom: 0px;
+				width: 24%;
+			}
+			img {
+				display: block;
+				margin: 0 auto;
+			}
+		}
+		li:nth-of-type(1),
+		li:nth-of-type(2) {
+			font-weight: bold;
+			a {
+				text-decoration: none;
+				color: $darkColor;
+			}
+		}
+		li:nth-of-type(1) {
+			margin-top: 0;
+			padding-top: 0;
+			img {
+				margin-bottom: -10px;
+			}
+		}
+		li:nth-of-type(2) {
+			img {
+				margin-top: 25px;
+				margin-bottom: 10px;
+			}
+		}
+		li:nth-of-type(3) {
+			width: 100%;
+			text-align: left;
+			font-size: 12px;
+			line-height: 16px;
+			@include media($tablet) {
+				width: 50%;
+			}
+			img {
+				float: left;
+				margin-right: 20px;
+				padding-right: 20px;
+				margin-top: 20px;
+				margin-bottom: 20px;
+				border-right: 1px solid #ccc;
+			}
+		}
+	}
+	ul.form-gather-address {
+		margin-top: 60px;
+		@include media($tablet) {
+			display: flex;
+			justify-content: space-between;
+		}
+		@include media($desktop) {
+			max-width: 90%;
+		}
+		li {
+			width: 100%;
+			display: block;
+			// border-left: 1px solid red;
+			clear: both;
+			@include media($tablet) {
+				width: 45%;
+			}
+			img {
+				float: left;
+				margin-right: 20px;
+				margin-top: -10px;
+			}
+			// border: 1px solid black;
+		}
+		li:nth-of-type(2) {
+			width: 80px;
+			margin-right: 40px;
+		}
+		li:nth-of-type(2) {
+			// height: 60px;
+			margin-bottom: 20px;
+			strong {
+				font-weight: normal;
+				width: 60px;
+				display: inline-block;
+				height: 60px;
+				background: #edf0ee;
+				border-radius: 50px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				font-family: $highlightFont;
+				font-size: 25px;
+				font-style: italic;
+			}
+		}
+
+		li:nth-of-type(1) {
+			img {
+				margin-bottom: 20px;
+			}
+		}
+		li:nth-of-type(3) {
+			img {
+				margin-bottom: 110px;
+			}
+		}
+	}
+	#seaform-1077 {
+		input,
+		textarea,
+		select {
+			border: 1px solid #d4d4d4;
+		}
+		@include media($tablet) {
+			.field-14,
+			.field-15,
+			.field-16,
+			.field-17,
+			.field-18,
+			.field-25,
+			.field-14,
+			.field-81,
+			.field-19,
+			.field-37,
+			.field-38 {
+				width: 48%;
+				float: left;
+				margin-right: 20px;
+			}
+			.field-94,
+			.field-95,
+			.field-96,
+			.field-97,
+			.field-98,
+			.field-99,
+			.field-100,
+			.field-101,
+			.field-102,
+			.field-103,
+			.field-104,
+			.field-105,
+			.field-106,
+			.field-107,
+			.field-108,
+			.field-109,
+			.field-110,
+			.field-111,
+			.field-112,
+			.field-113,
+			.field-114,
+			.field-115,
+			.field-116 {
+				margin-bottom: 0;
+				padding: 10px 15px;
+				// background: #ebf1f5;
+				width: 33%;
+				float: left;
+			}
+			.field-117 {
+				clear: both;
+				padding-top: 30px;
+			}
+			.field-94,
+			.field-95,
+			.field-96,
+			// .field-97,
+			// .field-98,
+			// .field-99,
+			.field-100,
+			.field-101,
+			.field-102,
+			// .field-103,
+			// .field-104,
+			// .field-105,
+			.field-106,
+			.field-107,
+			.field-108,
+			// .field-109,
+			// .field-110,
+			// .field-111,
+			.field-112,
+			.field-113,
+			.field-114,
+			// .field-115,
+			 {
+				background: #ebf1f5;
+			}
+			.field-124,
+			.field-126,
+			.field-125,
+			.field-128,
+			.field-129,
+			.field-131,
+			.field-132,
+			.field-123 {
+				padding: 10px 15px;
+				float: left;
+				width: 50%;
+			}
+			.field-125 {
+				clear: left;
+			}
+			.field-125,
+			.field-123 {
+				background: #ebf1f5;
+			}
+			.field-127 {
+				clear: left;
+			}
+		}
+		.type-text {
+			margin: 0 auto;
+			width: 100%;
+			> p {
+				font-size: 14px;
+				line-height: 24px;
+			}
+		}
+	}
+}
+
+.page-484 {
+	.content {
+		padding-right: 0;
+		width: 100%;
+	}
+	aside {
+		display: none;
+	}
+	.video-grid {
+		// display: flex;
+		// flex-wrap: wrap;
+		// justify-content: space-between;
+		// width: 100%;
+		// border: 1px solid red;
+	}
+	.video-block {
+		// border: 1px solid red;
+		margin-left: 10px;
+		margin-right: 10px;
+		margin-bottom: 40px;
+		width: 100%;
+		min-height: 350px;
+		@include media($tablet) {
+			width: 31%;
+
+			// border: 1px solid red;
+		}
+		video {
+			margin: 0 !important;
+			width: 100%;
+			height: 190px;
+			background: #000;
+			// max-height: 180px;
+		}
+	}
+	h1 {
+		border-bottom: none;
+	}
+	h3 {
+		font-family: $primaryFont;
+		margin-top: 0;
+		margin-bottom: 10px;
+		font-size: 16px;
+		font-weight: bold;
+		line-height: 24px;
+	}
+	ul.button-group {
+		padding-top: 20px;
+		padding-bottom: 15px;
+		background: #f3f5f3;
+		border-top: 1px solid #caccca;
+		border-bottom: 1px solid #caccca;
+		margin: 0 !important;
+		margin-bottom: 40px !important;
+		display: flex;
+		flex-wrap: wrap;
+		li {
+			&:before {
+				display: none;
+			}
+			a {
+				text-decoration: none;
+				&.is-checked {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+}

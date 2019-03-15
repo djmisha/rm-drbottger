@@ -1,0 +1,595 @@
+/*========================================
+=            Category Archive            =
+========================================*/
+
+.tmpl_type_rmg_archive {
+	h2 {
+		text-decoration: none;
+		border-bottom: 0;
+		margin-bottom: 10px;
+		margin-top: 0;
+	}
+	.content {
+		width: 100%;
+		justify-content: space-between;
+		padding-right: 0;
+		@include media($tablet) {
+			display: flex;
+			flex-wrap: wrap;
+		}
+		> div {
+			width: 100%;
+
+			@include media($tablet) {
+				width: 31%;
+			}
+		}
+		ul {
+			margin-left: 0;
+			list-style: none;
+			margin: 0;
+			margin-left: 20px !important;
+			margin-right: 20px !important;
+
+			li {
+				// font-size: 17px;
+				text-align: left;
+				border-bottom: 1px solid rgba($darkColor, 0.1);
+				padding-bottom: 10px;
+
+				a {
+					text-decoration: none;
+					color: $primaryColor;
+					&:hover {
+						color: $secondaryColor;
+					}
+				}
+				&:before {
+					display: none;
+				}
+			}
+		}
+	}
+	.interior {
+		display: block;
+	}
+
+	.cat-container {
+		// border-bottom: 1px solid $secondaryColor;
+		margin-bottom: 20px;
+		padding-bottom: 20px;
+		position: relative;
+		margin-top: 40px;
+		@include media($tablet) {
+			// margin-top: 60px;
+		}
+
+		a {
+			text-decoration: none;
+		}
+
+		.gallery-section {
+			background-position: center;
+			background-size: cover;
+			background-repeat: no-repeat;
+			margin: 0 auto;
+			margin-bottom: 20px;
+			max-width: 500px;
+			height: 400px;
+			display: flex;
+			flex-wrap: wrap;
+			text-align: center;
+			// align-items: flex-end;
+			flex-direction: column;
+			justify-content: flex-end;
+			align-items: baseline;
+			align-content: center;
+			// justify-content: center;
+
+			h2 {
+				width: 100%;
+				font-family: $primaryFont;
+				color: $primaryColor;
+				// text-align: center;
+				font-size: 18px;
+				line-height: 28px;
+				font-weight: bold;
+				// background-color: $secondaryColor;
+				padding: 0px 20px;
+				margin: 0;
+			}
+			span {
+				width: 100%;
+				color: $lightColor;
+				font-family: $secondaryFont;
+				color: $lightColor;
+				font-size: 28px;
+				// text-align: center;
+				display: block;
+				padding: 1px 20px;
+				margin-bottom: 30px;
+			}
+			ul {
+				margin-left: 0;
+				list-style: none;
+
+				li {
+					&:before {
+						display: none;
+					}
+				}
+			}
+		}
+		.gallery-content {
+			// padding-top: 60px;
+			// padding-bottom: 40px;
+		}
+		.gallery-vid {
+			text-align: center;
+			padding: 40px 0;
+		}
+	}
+}
+
+// Category Child
+
+.gal-title {
+	width: 100%;
+	color: $secondaryColor;
+	position: relative;
+	// border-bottom: 1px solid $secondaryColor;
+
+	h2 {
+		font-family: $secondaryFont;
+		text-align: center;
+		color: $darkColor;
+		// color: $secondaryColor;
+		// max-width: 600px;
+		// margin: 0 auto;
+		margin-top: 40px;
+		&:first-of-type {
+			margin-top: 0;
+		}
+	}
+	// &:before {
+	// 	content: '';
+	// 	border-top: 1px solid $secondaryColor;
+	// 	position: absolute;
+	// 	top: 60%;
+	// 	left: 0;
+	// 	width: calc(50% - 220px);
+
+	// }
+	// &:after {
+	// 	content: '';
+	// 	border-top: 1px solid $secondaryColor;
+
+	// 	position: absolute;
+	// 	top: 60%;
+	// 	right: 0;
+	// 	width: calc(50% - 220px);
+	// }
+	a {
+		color: $secondaryColor;
+	}
+}
+
+.tmpl_type_rmg_category_child,
+.tmpl_type_rmg_category_parent {
+	.gallery-cat-wrap {
+		// @include media($tablet) {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		// }
+		padding-left: 0;
+		padding-right: 0;
+		margin-top: 40px;
+		@include media($tablet) {
+			margin-top: 0px;
+		}
+	}
+	.bna-group {
+		width: 100%;
+		// margin-bottom: 20px;
+		margin-bottom: 40px;
+		position: relative;
+		@include media($tablet) {
+			margin-bottom: 70px;
+			width: 31%;
+		}
+
+		h2 {
+			// text-transform: uppercase;
+			font-size: 20px;
+			text-align: left;
+			color: $primaryAlt;
+			margin: 10px 0;
+			letter-spacing: 1px;
+			font-family: $secondaryFont;
+
+			@include media($tablet) {
+				font-size: 30px;
+			}
+		}
+
+		.hover-overlay {
+			text-align: center;
+			width: 100%;
+			font-size: 18px;
+			a {
+				text-decoration: none;
+				color: $primaryColor;
+			}
+		}
+
+		a.button {
+			display: block;
+			width: 100% !important;
+			padding: 12px 20px;
+			// margin-top: 10px;
+			@include media($tablet) {
+				margin-top: 10px;
+			}
+			// position: absolute;
+			// width: 100%;
+			// height: 100%;
+			// top: 0;
+			// left: 0;
+		}
+
+		// &:hover {
+		// 	@include media($desktop) {
+		// 		.hover-overlay {
+		// 			display: flex;
+
+		// 			justify-content: center;
+		// 			align-items: center;
+		// 			position: absolute;
+		// 			width: 100%;
+		// 			height: 100%;
+		// 			top: 0;
+		// 			left: -4px;
+		// 		}
+		// 	}
+		// }
+		// .hover-overlay {
+		// 	display: none;
+		// 	.button {
+		// 		background-color: transparent !important;
+		// 		border: none;
+
+		// 		&:hover {
+		// 			color: $darkColor!important;
+		// 		}
+
+		// 		i {
+		// 			padding: 10px;
+		// 			border-radius: 50%;
+		// 			background-color: $lightColor;
+		// 			position: absolute;
+		// 			top: 39%;
+		// 			left: 45%;
+		// 			font-size: 30px;
+		// 			line-height: 30px;
+		// 			color: $tertiaryColor;
+		// 		}
+		// 	}
+		// }
+	}
+	.img-set {
+		// @include media($tablet) {
+		display: flex;
+		flex-wrap: wrap;
+		position: relative;
+		justify-content: space-between;
+		> a {
+			display: block;
+			width: 49.5%;
+		}
+		a {
+			&:nth-last-of-type(2),
+			&:nth-last-of-type(1) {
+				.bna-label {
+					display: block;
+					display: none;
+					color: $primaryColor;
+					text-transform: uppercase;
+					font-weight: bold;
+					// letter-spacing: 1px;
+				}
+			}
+			.bna-label {
+				display: none;
+			}
+		}
+		// }
+		img {
+			border: 1px solid $lightColor;
+			width: 100%;
+			margin-bottom: 10px;
+		}
+		.before-link,
+		.after-link {
+			position: relative;
+			&:after {
+				content: "";
+				// background: url('images/bg-bna-watermark.png');
+				background-size: 100%;
+				background-repeat: no-repeat;
+				position: absolute;
+				bottom: 3px;
+				left: 10px;
+				width: 90%;
+				height: 20px;
+
+				@include media($tablet) {
+					left: 20px;
+					height: 40px;
+					bottom: 20px;
+				}
+			}
+		}
+	}
+
+	.details-hdng {
+		// text-align: left;
+		// font-weight: $normal;
+		// color: $lightColor !important;
+		// margin-top: 40px;
+		// font-family: $highlightFont;
+		// text-transform: uppercase;
+	}
+	.patient-details {
+		text-align: left;
+	}
+}
+
+// Single Case
+
+.tmpl_type_rmg_single_case {
+	.single-case-title {
+	}
+	.single-case-content {
+		margin-top: 50px;
+		// text-align: center !important;
+		@include media($tablet) {
+			margin-top: 0;
+			// margin: 0 auto !important;
+		}
+	}
+	h2 {
+		text-align: center;
+		margin: 0;
+		margin-bottom: 20px;
+	}
+	.case-wrap {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		// border: 1px solid red;
+		margin: 0 auto;
+		text-align: center;
+		padding: 0px 0;
+		position: relative;
+		@include media($tablet) {
+			// width: 80%;
+		}
+		p {
+			padding-top: 20px;
+			text-align: left;
+		}
+	}
+	.img-wrap {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		width: 100%;
+		@include media($tablet) {
+			width: 70%;
+		}
+		> div {
+			position: relative;
+			width: 46.5%;
+			margin-bottom: 40px;
+			img {
+				width: 100%;
+				border: 1px solid $lightColor;
+			}
+			&:nth-last-of-type(2),
+			&:nth-last-of-type(1) {
+				.bna-label {
+					font-family: $primaryFont;
+					position: absolute;
+					display: block;
+					// bottom:0px;
+					width: 100%;
+					text-align: center;
+					color: $primaryColor;
+					// text-transform: uppercase;
+					// font-weight: bold;
+					// letter-spacing: 1px;
+				}
+			}
+		}
+		.bna-label {
+			display: none;
+		}
+
+		.before-img,
+		.after-img {
+			position: relative;
+
+			&:after {
+				content: "";
+				background: url("images/bg-bna-watermark.png");
+				background-size: 100%;
+				background-repeat: no-repeat;
+				position: absolute;
+				bottom: 3px;
+				left: 10px;
+				width: 90%;
+				height: 20px;
+
+				@include media($tablet) {
+					left: 20px;
+					height: 40px;
+					bottom: 10px;
+				}
+			}
+		}
+	}
+	.details-hdng {
+		text-align: left;
+		font-weight: $normal;
+		margin-top: 40px;
+		font-family: $highlightFont;
+		text-transform: uppercase;
+		color: $primaryAlt;
+		font-weight: $bold;
+		font-size: 20px;
+	}
+	.patient-details {
+		border-top: 1px solid #ccc;
+		border-bottom: 1px solid #ccc;
+		width: 100%;
+		text-align: left;
+		line-height: 20px;
+		padding: 35px 35px 20px 35px;
+		margin-top: 40px;
+		@include media($tablet) {
+		}
+		span {
+			font-family: $secondaryFont;
+			font-size: 30px;
+			color: $primaryColor;
+		}
+		p {
+			margin-top: 5px;
+			margin-bottom: 5px;
+		}
+	}
+}
+
+.notice-body-everything {
+	h2,
+	p {
+		color: $darkColor;
+	}
+}
+
+.back-btn {
+	// border: 1px solid red;
+	display: block;
+	// margin-top: 20px;
+	// margin-left: 0;
+	text-align: left;
+	position: relative;
+	height: 100px;
+	@include media($tablet) {
+		// margin-top: 60px;
+	}
+	.gallery-button {
+		padding-top: 10px;
+		padding-bottom: 15px;
+		padding-left: 25px;
+		padding-right: 25px;
+		// color: $tertiaryColor;
+		i {
+			color: $tertiaryColor;
+			font-size: 20px;
+			position: relative;
+			top: 2px;
+			margin-right: 5px;
+		}
+		&:hover {
+			text-decoration: none;
+		}
+	}
+	h2 {
+		display: block;
+		text-align: center;
+		margin: 0;
+		margin-top: 40px;
+		// margin-bottom: 60px;
+		font-family: $secondaryFont;
+		@include media($tablet) {
+			margin-bottom: 0px;
+			margin-top: -45px;
+			display: block;
+		}
+	}
+}
+
+.gallery-title {
+	background: $darkColor;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+
+	h1 {
+		max-width: 250px;
+		@include media($tablet) {
+			max-width: none;
+			max-width: 850px;
+		}
+	}
+}
+
+.gallery-nav {
+	margin: 0 auto;
+	margin-top: -10px;
+	margin-bottom: 40px;
+	display: block;
+	width: 100%;
+	height: 50px;
+	@include media($tablet) {
+		margin-bottom: 80px;
+		margin-top: -25px;
+	}
+}
+.gal-prev-next {
+	position: relative;
+	height: 50px;
+	border-bottom: 1px solid #ccc;
+	width: 100%;
+}
+
+.single-case-title {
+	color: $primaryColor;
+	font-size: 30px;
+	font-family: $secondaryFont;
+	text-align: center;
+	margin-top: 10px;
+	@include media($tablet) {
+		margin-top: -50px;
+	}
+}
+
+.button-rmg {
+	i {
+		position: relative;
+		top: 6px;
+		color: $lightColor;
+		font-size: 30px;
+		line-height: 0;
+	}
+	.fa-angle-left {
+		right: 10px;
+	}
+	.fa-angle-right {
+		left: 10px;
+	}
+}
+
+.button-gallery-next {
+	position: absolute;
+	right: 0;
+}
+
+.button-gallery-prev {
+	position: absolute;
+	left: 0;
+}

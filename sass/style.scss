@@ -1,0 +1,24 @@
+/*
+Theme Name: drbottger
+Theme URI: http://www.rosemontdev.com/
+Description: A custom theme built by the team at Rosemont Media.
+Author: Rosemont Media
+Version: 2.0
+Tags:
+*/
+
+@import "utils/reset";
+// @import 'helpers/rm_bootstrap';
+// @import 'helpers/rm_bootstrap_extended';
+@import "helpers/animate";
+// @import 'helpers/rm_variables'; not needed
+// @import 'helpers/rm_mixins'; not needed
+@import "variables";
+@import "mixins";
+@import "utils/utility";
+@import "common";
+@import "helpers/rm_fonts";
+@import "helpers/rm_contact";
+@import "base";
+@import "utils/nonsym";
+@import "utils/print";
