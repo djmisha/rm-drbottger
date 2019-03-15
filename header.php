@@ -9,20 +9,11 @@
 	<title><?php wp_title(""); ?></title>
 
 	<?php if(!is_404()): ?>
-		<?php miniCSS::url( 'https://fonts.googleapis.com/css?family=Open+Sans:400,600|Playfair+Display|Raleway:100' ); ?>
+		<?php miniCSS::url( 'https://fonts.googleapis.com/css?family=Open+Sans:400' ); ?>
+		<link rel="stylesheet" href="https://use.typekit.net/uzs6owq.css">
 	<?php endif; ?>
 
 	<?php wp_head()?>
-
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-8656700-3"></script>
-	<script>
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
-
-	  gtag('config', 'UA-8656700-3');
-	</script>
 
 
 </head>
@@ -33,31 +24,15 @@
 
 <header class="site-header <?php echo is_front_page() ? 'front-header' : 'int-header will-parallax parallax-internal-header'; ?>" <?php get__header__image(); ?> >
 
-	<section class="nav-bar">
-		<div class="nav-bar-logo">
-			<a href="<?php bloginfo('url'); ?>">
-				<?php echo is_front_page() ? '<h1>' : ''; ?>
-					<img src="<?php bloginfo('template_directory'); ?>/images/logo.png" alt="Dallas Rhinoplasty Center">
-				<?php echo is_front_page() ? '</h1>' : ''; ?>
-			</a>
-		</div>
-		<div class="nav-bar-social">
-			<a href="<?php the_field('facebook','options'); ?>" target="_blank" rel="noopener" title="facebook"><i class="fab fa-facebook"></i></a>
-			<a href="<?php the_field('instagram','options'); ?>" target="_blank" rel="noopener" title="instagram"><i class="fab fa-instagram"></i></a>
-			<!-- <a href="<?php the_field('twitter','options'); ?>" target="_blank" rel="noopener" title="twitter"><i class="fab fa-twitter"></i></a> -->
-		</div>
-		<div class="nav-bar-gallery">
-			<a href="<?php bloginfo('url'); ?>/gallery/">
-			<i class="far fa-id-card"></i>
-				Gallery
-			</a>
-		</div>
-		<div class="nav-bar-contact">
-			<a href="<?php bloginfo('url'); ?>/contact-us/">
-			<i class="fal fa-envelope"></i>
-				Contact Us
-			</a>
-		</div>
+	<div class="nav-bar">
+		<nav>
+			<?php wp_nav_menu( array(
+				'menu' 		=> 'Main',
+				'container_class' => 'menu-wrap',
+				'menu_id'	=> 'menu-main',
+				'menu_class' => 'main-menu',
+			)); ?>
+		</nav> 
 		<div class="nav-bar-phone">
 			<?php if(have_rows('locations', 'option')): ?>
 				<?php while(have_rows('locations', 'option')): the_row(); ?>
@@ -65,42 +40,20 @@
 				<?php endwhile; ?>
 			<?php endif; ?>
 		</div> 
-		<div class="menu-trigger">
+		<!-- <div class="menu-trigger">
 			<div class="hamburger"></div>
 			<div class="hamburger"></div>
 			<div class="hamburger"></div>
-		</div>
-	</section>
+		</div> -->
+	</div>
 
-	<nav>
-		<?php wp_nav_menu( array(
-			'menu' 		=> 'Main',
-			'container_class' => 'menu-wrap',
-			'menu_id'	=> 'menu-main',
-			'menu_class' => 'main-menu',
-		)); ?>
-		
-		<div class="nav-form">
-			<span>Contact Us</span>
-			<?php echo do_shortcode('[seaforms name="quick-contact"]'); ?>
-		</div>
-		<div class="nav-bar-logo nav-overlay-logo">
-			<a href="<?php bloginfo('url'); ?>">
-				<img src="<?php bloginfo('template_directory'); ?>/images/logo.png" alt="logo">
-			</a>
-		</div>
-	</nav> 
-	
 	<?php 
-		// Inside Page Header Tag
+		// Inside Page Logo
 		// Does not show on Homepage or Custom Landing Pages 
 		if(!is_front_page() and !is_page_template('page-landing.php')): 
 	 ?>
 		<section>
-			<div class="inside-header-tag">
-				<div class="tag1"><?php the_field('welcome_headline', 4); ?></div>
-				<div class="tag2"><?php the_field('welcome_subheadline', 4); ?></div>
-			</div>
+			<div class="inside-header-logo"></div>
 		</section>
 	<?php endif; ?>
 

@@ -1,19 +1,4 @@
 
-
-<section class="schedule-bar">
-	<div>
-		<span>Schedule A Consultation</span>
-	</div>
-	<?php if(have_rows('locations', 'option')): ?>
-		<?php while(have_rows('locations', 'option')): the_row(); ?>
-			<div>
-				<a href="<?php the_sub_field('phone_link', 'option'); ?>" class="track-outbound" data-label="Phone - Footer"><i class="fas fa-mobile-alt"></i><?php the_sub_field('phone', 'option'); ?></a>
-	<a href="<?php bloginfo('url'); ?>/contact-us" rel="nofollow" class="button">Email Us</a></div>
-		<?php endwhile; ?>
-	<?php endif; ?>
-</section>
-
-
 <footer>
 	<section class="upper-footer">
 		<div class="footer-contact-form">

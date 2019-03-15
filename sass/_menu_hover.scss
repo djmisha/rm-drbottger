@@ -1,230 +1,205 @@
-// $menuHeight: 100%;
+$menuHeight : 60px;
 
-// /* Hides the Menu on load */
 
-// @include media($desktop) {
-// 	.menu-wrap {
-// 		display: none;
-// 	}
-// }
+.hover-menu {
+	width: 100%;
+	// border: 1px solid black;
+	@include font(18px, 1em);
+	display: block;
+	.main-menu {
+		font-size: 0;
+		text-align: center;
+		display: flex;
+		justify-content: baseline;
+		align-items: center;
+		height: $menuHeight;
+		> li {
+			display: inline-block;
+			vertical-align: top;
+			position: relative;
+			height: 100%;
+			// margin-left: 10px;
+			// &:last-of-type {
+			// 	a {
+			// 		padding-right: 0;
+			// 	}
+			// }
+			//show sub-menus on hover
+			&:hover{
+				> a {
+					color: $secondaryColor;
+					// border-bottom: 2px solid $tertiaryColor;
 
-// .menu-is-open .hover-menu .main-menu {
-// 	opacity: 1;
-// 	z-index: 9999;
-// 	position: fixed;
-// 	// transition: visibility 0s linear 300ms, opacity 0.5s, transform 0s;
-// 	width: 100vw;
-// 	height: 100vh;
-// 	padding: 140px 130px;
-// 	transition: opacity 0.2s ease-in-out;
-// }
+					// border-top: 1px solid $tertiaryColor;
+					background: lighten($primaryColor, 15%);
 
-// .menu-is-closed .hover-menu .main-menu {
-// 	transition: opacity 0.2s ease-in-out;
-// 	opacity: 0;
-// 	// display: none;
-// 	visibility: hidden;
-// }
+				} 
+				> .sub-menu{
+					opacity: 1;
+					visibility: visible;
+					z-index: 50;
+					top: $menuHeight; //same as height of .main-menu
+				}
+			}
+			&.mega-menu{
+				position: static;
+			}
+			a{	
+				// background-color: $lightColor;
+				display: block;
+				text-decoration: none;
+				padding: 20px 16px;
+				transition: .25s ease-in-out background;
+				color: $lightColor; //set this color
+				height: $menuHeight;
+				&:hover {
+					color: $lightColor;
+					// background-color: $primaryAlt;
+					background: lighten($primaryColor, 15%);
+				}
 
-// .hover-menu {
-// 	font-family: $highlightFont;
-// 	display: block;
-// 	position: absolute;
-// 	width: 0;
-// 	top: 0;
+				@media screen and (max-width:1196px) and (min-width:1080px) {
+					
+					padding: 20px 11px;
+					
+				}
+			}
+		}
+		
+	}
 
-// 	.main-menu {
-// 		display: flex;
-// 		flex-direction: column;
-// 		z-index: 9999;
-// 		height: 0;
-// 		background: rgba($lightColor, 1);
-// 		padding: 0px;
+	a {
+		font-size: 15px; //reset font-size for inline-block hack
 
-// 		> li {
-// 			display: block;
-// 			// vertical-align: top;
-// 			position: static;
-// 			// height: 20px;
-// 			// border: 1px solid white;
-// 			text-align: left;
-// 			width: 300px;
-// 			border-right: 1px solid rgba($darkColor, 0.2);
+		@media screen and (max-width:1196px) and (min-width:1080px) {
+			font-size: 14px; 
+		}
+	}
 
-// 			&:hover {
-// 				// border-right: 1px solid rgba($lightColor, .8);
-// 				> a {
-// 					color: $secondaryColor;
-// 				}
 
-// 				> .sub-menu {
-// 					opacity: 1;
-// 					visibility: visible;
-// 					z-index: 50;
-// 				}
-// 			}
-// 			&.mega-menu {
-// 				position: static;
-// 			}
+	.sub-menu {
+			background: $primaryAlt; //set to your own background color
+			border: 1px solid rgba($lightColor, .5); //for visual purposes.  can remove.
+			position: absolute;
+			top: 64px;
+			left: 50%;
+			right: 50%;
+			transform: translate(-50%, 0);
+			opacity: 0;
+			visibility: hidden;
+			width: 302px;
+			z-index: -5;
+			transition: .25s ease-in-out all;
+			// transition: .25s ease-in-out top, .25s ease-in-out opacity;
+			> li {
 
-// 			a {
-// 				// text-transform: uppercase;
-// 				// font-weight: 700;
-// 				font-family: $primaryFont;
-// 				display: block;
-// 				text-decoration: none;
-// 				padding: 15px 0px;
-// 				transition: 0.15s ease-in-out color;
-// 				color: $primaryColor;
+				border-bottom: 1px solid rgba($lightColor, .5); //for visual purposes.  can remove.
+				&:last-of-type {
+					border-bottom:none;
+				}
 
-// 				&:hover {
-// 					color: $secondaryColor;
-// 					// background: lighten($primaryColor, 10%);
-// 				}
-// 			}
-// 		}
-// 	}
+				&.menu-item-has-children {
+					// padding-right: 25px; //set this to the size of the arrows container
+					position: relative;
 
-// 	a {
-// 		font-size: 22px;
-// 		line-height: 18px;
-// 		font-weight: 400px;
-// 	}
+					&:after{
+						content: '';
+						width: 12px;
+						height: 20px;
+						background-size: 12px 20px;
+						transition: .2s linear transform;
+						position: absolute;
+						top: 50%;
+						transform: translateY(-50%);
+						// left: 0;
+						right: 10px;
+						margin: 0 auto;
+						background-image: url(images/svg/arrow.svg);
+						background-position: center;
+						background-repeat: no-repeat;
+					}
+					.sub-menu{
+						// left: 300px;
+						right: inherit;
+						left: inherit;
+						transform: none;
+						left: 300px;
+						top: 0;
 
-// 	.menu-item-2298 .sub-menu,
-// 	.menu-item-2302 .sub-menu,
-// 	.menu-item-2309 .sub-menu,
-// 	.menu-item-2294 .sub-menu {
-// 		min-height: 600px;
-// 		top: 0px;
-// 		.sub-menu {
-// 			left: 290px !important;
-// 			margin-left: 0 !important;
-// 			// border: 1px solid red;
-// 			// top: -40px !important;
-// 			width: 400px !important;
-// 			li {
-// 				width: 400px !important;
-// 				padding-left: 150px !important;
-// 			}
-// 		}
-// 	}
-// 	.menu-item-2597 .sub-menu {
-// 		top: -45px !important;
-// 		// border: 1px solid red;
-// 	}
-// 	.menu-item-2607 .sub-menu {
-// 		top: -85px !important;
-// 	}
-// 	.sub-menu {
-// 		// border: 1px solid red;
-// 		position: absolute;
-// 		top: 0px;
-// 		left: 360px;
-// 		opacity: 0;
-// 		visibility: hidden;
-// 		width: 350px;
-// 		// width: 100%;
-// 		// z-index: -5;
-// 		transition: 0.4s ease-in-out opacity;
+					}
+					&:hover{ //show third level sub-menu
+						&:after{
+							transform: translateY(-50%) rotate(90deg);
+						}
+						> .sub-menu{
+							opacity: 1;
+							visibility: visible;
+							right: inherit;
+							left: inherit;
+							transform: none;
+							left: 300px;
+							top: 0;
+						}
+					}
+				}
 
-// 		> li {
-// 			width: 380px;
-// 			padding-left: 120px;
-// 			padding-right: 40px;
-// 			border-right: 1px solid rgba($lightColor, 0.2);
-// 			ul li {
-// 				border-right: none;
-// 				// margin-left: 60px;
-// 				// padding-right: 0px;
+				a {
+					color: $lightColor;
+					background: lighten($primaryColor, 15%); //set to your own background color
+					// background-color
+					// letter-spacing: 1px;
 
-// 				&:first-of-type {
-// 					margin-top: 0px;
-// 				}
-// 			}
-// 			&:first-of-type {
-// 				margin-top: 140px;
-// 			}
+				}
+				&:hover {
+					> a {
+						color: $lightColor;
+						background: $primaryAlt;
+						border-bottom: none;
+					}
+				}
+			}
+			a{
+				text-align: left;
+				// padding: 15px 20px!important;
+				color: $lightColor;
+			}
+		}
 
-// 			&:last-of-type {
-// 				border-bottom: none;
-// 			}
-
-// 			&.menu-item-has-children {
-// 				position: relative;
-
-// 				&:after {
-// 					content: "";
-// 					width: 10px;
-// 					height: 10px;
-// 					border: 1px solid rgba($darkColor, 0.2);
-// 					border-left: none;
-// 					border-bottom: none;
-// 					// background: #000;
-// 					background: rgba($darkColor, 1);
-
-// 					position: absolute;
-// 					right: -7px;
-// 					top: 15px;
-// 					transform: rotate(45deg);
-// 					opacity: 0;
-// 					transition: all 0.1s ease-in;
-// 				}
-
-// 				&:hover {
-// 					&:after {
-// 						opacity: 1;
-// 					}
-
-// 					> .sub-menu {
-// 						opacity: 1;
-// 						visibility: visible;
-// 						right: inherit;
-// 						left: inherit;
-// 						transform: none;
-// 						left: 300px;
-// 						top: 0px;
-// 						min-height: 300px;
-// 						li {
-// 							// padding-left: 200px;
-// 						}
-// 					}
-// 				}
-// 			}
-// 			a {
-// 				text-transform: none;
-// 				color: $primaryColor;
-// 				font-weight: 400;
-// 			}
-// 			&:hover {
-// 				> a {
-// 					color: $darkColor;
-// 					border-bottom: none;
-// 				}
-// 			}
-// 		}
-// 		a {
-// 			font-size: 16px;
-// 			font-family: $primaryFont !important;
-// 			text-align: left;
-// 			padding: 7px 0px !important;
-// 			color: $primaryColor;
-// 		}
-// 	}
-
-// 	.close-menu {
-// 		display: block;
-// 		position: absolute;
-// 		top: 70px;
-// 		right: 43px;
-// 		color: $primaryColor;
-// 		text-align: center;
-// 		font-size: 30px;
-// 		cursor: pointer;
-// 		font-weight: 100;
-
-// 		&:hover {
-// 			color: $darkColor;
-// 		}
-// 	}
-// }
+		.mega-menu{
+			> .sub-menu{
+				width: 100%;
+				.sub-menu{ //reset styling for sub-sub-menus
+					position: relative;
+					opacity: 1;
+					visibility: visible;
+					width: 100%;
+					top: inherit;
+					left: 0!important;
+					right: inherit;
+					transform: none;
+					z-index: 50;
+				}
+				li{
+					padding-right: 0;
+					&:after{
+						display: none;
+					}
+				}
+				a{
+					// color: #fff; //remove
+				}
+				> li{
+					width: 50%; //set this width to however many columns you need
+					display: inline-block;
+					vertical-align: top;
+					padding: 25px;
+					> a, > .sub-menu{ //set the background color of the sub-menus
+						background: none;
+					}
+				}
+			}
+		}
+		.close-menu{
+			display: none!important;
+		}
+	}

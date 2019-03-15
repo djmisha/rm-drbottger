@@ -1,261 +1,190 @@
-// Touch Menu
+//Touch Menu
 
-.menu-wrap {
+.menu-wrap{
 	display: none;
 }
 
-.menu-is-open .touch-menu {
-	top: 0;
-	opacity: 1;
-	z-index: 9999;
-	position: fixed;
-	// transition: visibility 0s linear 300ms, opacity 0.25s, transform 0s;
-	transition: opacity 0.2s;
-	width: 100vw;
-	height: 100vh;
-	background-color: rgba( $lightColor, .99);
-	overflow: scroll;
-}
+.touch-menu{
+	display: block;
+	&.menu-wrap{
+		width: 320px;
+		position: fixed;
+		top: 62px;
+		left: -320px;
+		height: 100%;
+		z-index: 500;
+		padding: 0;
+	}
 
-.menu-is-closed .touch-menu {
-	opacity: 0;
-	z-index: -1;
-}
+	.main-menu{
+		border-right: 1px solid rgba($secondaryColor, .2);
+		background: rgba($primaryColor, .98);
+		height: 100%;
+		width: 320px;
+		overflow-y: scroll;
+		transform: translate3d(-320px, 0, 0);
+		transition: all 600ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
 
-.touch-menu {
-	display: block !important;
-	position: absolute;
+		li.menu-item-316 a  {
+			font-size: 33px;
+			padding-top: 6px;
+			padding-bottom: 6px;
 
-	.main-menu {
-		// border: 1px solid;
-		// max-width: 500px;
-		height: auto;
-		background: rgba($lightColor, 1);
-		// height: 0;
-		// overflow-y: scroll;
-		opacity: 1;
-		z-index: 9999;
-		padding-right: 20px;
-		padding-left: 20px;
-		margin-top: 60px;
-
-		@include media($desktop) {
-			margin-top: 0px;
-			padding-right: 0;
-			padding-left: 0;
-			position: absolute;
-			top: 190px;
-			left: calc(50vw - 500px);
-			// left: auto;
-			width: 500px;
+			// line-height: 
 		}
 
-		// max-width: 600px;
 
-		// Set baseline "li" styling
-
-		li {
+		li.menu-item-316 a i {
+			font-size: 30px;
+			// line-height: 
+		}
+		//Set baseline "li" styling
+		li{
 			margin: 0;
 			padding: 0;
 			position: relative;
 			list-style-type: none;
-			&:before {
-				display: none;
-			}
+				&:before{
+					display: none;
+				}
 		}
-
-		// Set baseline "a" styling
-
-		a {
-			// text-transform: uppercase;
+		//End "li" reset
+		//Set baseline "a" styling
+		a, span{
+			text-align: left;
 			font-family: $primaryFont;
-			text-decoration: none;
+			text-transform: none;
+			// letter-spacing: 1px;
+			// font-weight: bold;
+			// text-decoration: none;
 			display: block;
-			color: rgba($primaryColor, 1); // Set color for menu items
-			line-height: 1em;
-			font-size: 16px; // Set font size for menu items
-			line-height: 16px;
-			font-weight: 500;
-			letter-spacing: 0.5px;
 			
-
-				text-align: left;
-			@include media($desktop) {
-				font-size: 25px;
-				line-height: 24px;
-			}
-			@include media($desktop) {
-				&:hover {
-					text-decoration: underline;
-					// background: $tertiaryColor;
-				}
-			}
+			color: $lightColor; //Set color for menu items
+			line-height: 1em;
+			font-size: 15px; //Set font size for menu items
 		}
+		//End "a" reset
 
-		// Touch Menu Items
-
-		.menu-item {
-			> a {
-				padding: 17px 20px;
-				border-bottom: 1px solid rgba($secondaryColor, 0.15);
+		//Touch Menu Items
+		.menu-item{
+			> a{
+				padding: 16px 20px;
+				border-bottom: 1px solid rgba($secondaryColor, .2);
 			}
 		}
 
-		.first.menu-item {
-			border-top: 1px solid rgba($secondaryColor, 0.15);
+		.first.menu-item{
+			border-top: 1px solid rgba($secondaryColor, .2);
 		}
 
-		// General Sub-Menu Styling
-
-		.sub-menu {
+		//General Sub-Menu Styling
+		.sub-menu{
 			display: none;
-			a {
-				font-size: .9em;
-				line-height: 16px;
-				@include media($desktop) {
-					line-height: 24px;
-					
-				}
+			a{
+				font-size: .85em;
 			}
 		}
 
-		// Specific Sub-Menu Level Styling
-
-		ul[data-ul-depth="0"] {
-			> li > a {
+		//Specific Sub-Menu Level Styling
+		ul[data-ul-depth="0"]{
+			> li > a{
 				padding-left: 30px;
 			}
 		}
-		ul[data-ul-depth="1"] {
-			> li > a {
+		ul[data-ul-depth="1"]{
+			> li > a{
 				padding-left: 40px;
 			}
 		}
-		ul[data-ul-depth="2"] {
-			> li > a {
+		ul[data-ul-depth="2"]{
+			> li > a{
 				padding-left: 50px;
 			}
 		}
-		ul[data-ul-depth="3"] {
-			> li > a {
+		ul[data-ul-depth="3"]{
+			> li > a{
 				padding-left: 60px;
 			}
 		}
-		ul[data-ul-depth="4"] {
-			> li > a {
+		ul[data-ul-depth="4"]{
+			> li > a{
 				padding-left: 70px;
 			}
 		}
 	}
 
 	.nav-dropdown-button {
-		position: absolute;
-		z-index: 25;
-		width: 58px;
-		height: 50px;
-		// border: 1px solid red;
-		background: rgba($tertiaryColor, 0.45);
-		right: 0;
-		top: 0px;
-		cursor: pointer;
-		// border-left: 1px solid rgba($secondaryColor, .15);
-		
-		@include media($desktop) {
-		height: 58px;
-			
-		}
-		&:after {
-			content: "\f067";
-			font-family: "Font Awesome 5 Pro";
-			color: rgba($secondaryColor, 0.4);
-			font-weight: 100;
-			// transition: 0.2s linear transform;
+    position: absolute;
+    z-index: 25;
+    width: 50px;
+    height: 46px;
+    // background: rgba($lightColor, 0.1);
+    right: 0;
+    top: 0px;
+    cursor: pointer;
+    border-left:  1px solid rgba($secondaryColor, .2);
+		&:after{
+			content: '';
+			width: 12px;
+			height: 20px;
+			background-size: 12px 20px;
+			transition: .2s linear transform;
 			position: absolute;
-			top: 26px;
+			top: 50%;
 			transform: translateY(-50%);
 			left: 0;
 			right: 0;
 			margin: 0 auto;
-			@include media($desktop) {
-				top: 30px;
-				font-size: 18px;
-			}
+			background-image: url(images/svg/arrow.svg);
+			background-position: center;
+			background-repeat: no-repeat;
 		}
 	}
 
-	.close-menu {
-		position: absolute;
-		top: 5px;
-		right: 15px;
-		padding: 8px 15px 7px 27px; // match to "a" padding
-		color: rgba($primaryAlt, 1);
-
-		text-align: center;
-		font-size: 30px; // match to other font-size
-		cursor: pointer;
-		@include media($desktop) {
-			position: fixed;
-			top: 30px;
-			right: calc(50% - 560px);
+	.close-menu{
+		i {
+			font-size: 28px;
 		}
-	}
-
-	.sub-menu-open {
-		> .nav-dropdown-button {
-			&:after {
-				content: "\f068";
-			}
-		}
-	}
-}
-
-.nav-form {
-	position: absolute;
-	// display: none;
-	z-index: -1;
-	opacity: 0;
-	width: 500px;
-	height: 400px;
-	top: -1000px;
-	right: calc(50vw - 540px);
-	position: fixed;
-	.menu-is-open & {
-		@include media($desktop) {
-			z-index: 9999;
-			opacity: 1;
-			top: 190px;
-			display: block;
-		}
-	}
-	form {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: space-between;
-		.type-singlelinetext {
-			width: 48%;
-		}
-		.type-textarea,
-		.type-submitbutton {
-			width: 100%;
-		}
-		.robotic {
-			position: absolute;
-		}
-		textarea {
-			margin-bottom: 0;
-		}
-	}
-	.disclaimer {
-		color: #ccc;
-		text-align: left;
-		margin-bottom: 10px;
-	}
-	text-align: left;
-	span {
-		font-family: $secondaryFont;
-		color: $primaryColor;
-		font-size: 30px;
 		display: block;
-		margin-bottom: 20px;
+		width: 100%;
+		padding: 12px 20px;
+		 //match to "a" padding
+		color: $lightColor;
+		text-align: center;
+		font-size: 15px; //match to other font-size
+		cursor: pointer;
+		// border-bottom: 1px solid rgba($secondaryColor, .2);
+
+		// &:before{
+		// 	content: '';
+		// 	width: 12px;
+		// 	height: 20px;
+		// 	background-size: 12px 20px;
+		// 	transition: .2s linear transform;
+		// 	position: absolute;
+		// 	top: 351px;
+		// 	transform:  rotate(180deg) ;
+		// 	left: 100px;
+		// 	// right: 0;
+		// 	margin: 0 auto;
+		// 	background-image: url(images/svg/arrow.svg);
+		// 	background-position: center;
+		// 	background-repeat: no-repeat;
+		// }
+	}
+
+	.sub-menu-open{
+		> .nav-dropdown-button{
+			&:after{
+				content: '';
+				transform: translateY(-50%) rotate(90deg) !important;
+			}
+		}
+	}
+} //Closing .touch-menu
+
+.menu-is-open{
+	.touch-menu .main-menu{
+		transform: translate3d(320px, 0, 0);
 	}
 }

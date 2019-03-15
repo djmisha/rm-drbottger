@@ -8,54 +8,6 @@
 	display: none;
 }
 
-.schedule-bar {
-	position: fixed;
-	height: 60px;
-	width: 100%;
-	bottom: 0px;
-	background:rgba($secondaryColor, .9) ;
-	align-items: center;
-	color: $lightColor;
-	z-index: 8999;
-	justify-content: space-between;
-	display: none;
-	@include media($tablet) {
-		display: flex;
-	}
-	span {
-		font-family: $secondaryFont;
-		font-size: 25px;
-	}
-	a {
-		text-decoration: none;
-		&:first-of-type {
-			font-family: $primaryFont;
-			font-weight: 400;
-			font-size: 20px;
-			line-height: 22px;
-		}
-	}
-	i {
-		color: $primaryColor;
-		font-size: 24px;
-		margin-right: 10px;
-		top: 2px;
-		position: relative;
-	}
-	.button {
-		margin-left: 20px;
-		&:hover {
-			background-color: $primaryColor;
-		}
-	}
-
-	transition: transform 0.5s ease-in-out;
-	transform: translateY(80px);
-	&.fixed-bar {
-		transform: translateY(0px);
-	}
-}
-
 .upper-footer {
 	background: $secondaryColor url("images/bg-footer.jpg") center center
 		no-repeat;
