@@ -75,15 +75,12 @@
 			<h1><?php // do nothing if homepage  ?></h1>
 		<?php elseif(this_is('gallery-case')): ?>
 			<?php $category_title =  get_the_title($post->in_cat_ID); ?>
-			<a href="<?php the_field('virtual_consult_link', 'option'); ?>"  class="virtual-consulation virtual-consulation-page-title sidebar-button"> <div> <i class="fas fa-user-tie"></i> <i class="far fa-comment-alt"></i> Virtual Consultation </div> </a>
 			<h1><?php echo $category_title ?> Gallery</h1>
 		<?php elseif(this_is('gallery-child')): ?>
 			<?php $category_title =  get_the_title($post->in_cat_ID); ?>
 			<h1><?php echo $category_title ?> Gallery</h1>
-			<a href="<?php the_field('virtual_consult_link', 'option'); ?>"  class="virtual-consulation virtual-consulation-page-title sidebar-button"> <div> <i class="fas fa-user-tie"></i> <i class="far fa-comment-alt"></i> Virtual Consultation </div> </a>
 		<?php elseif(this_is('gallery')): ?>
 			<h1>Photo Gallery</h1>
-			<a href="<?php the_field('virtual_consult_link', 'option'); ?>"  class="virtual-consulation virtual-consulation-page-title sidebar-button"> <div> <i class="fas fa-user-tie"></i> <i class="far fa-comment-alt"></i> Virtual Consultation </div> </a>
 		<?php elseif (get_post_type() =='news-room'): ?>
 			<div class="heading-text"> Newsroom </div>
 		<?php elseif (is_search()): ?>

@@ -27,26 +27,22 @@
 
 		<?php
 			if(has_post_thumbnail()):
-
 				$catBg = get_the_post_thumbnail_url( $post->ID);
-			
 			endif;
-
-
 
 			$postURL = get_permalink($post->ID);
 
 		 ?>
 
 		<div class="cat-container">
-			<a href="<?php echo $postURL; ?>">
-				<div class="gallery-section" style="background-image: url(<?php echo $catBg; ?>)">
+			<!-- <a href="<?php echo $postURL; ?>"> -->
+				<!-- <div class="gallery-section" style="background-image: url(<?php echo $catBg; ?>)"> -->
 				<h2><?php the_title();?></h2>
-				<span>View Gallery</span>
-				</div>
-			</a>
+				<!-- <span>View Gallery</span> -->
+				<!-- </div> -->
+			<!-- </a> -->
 
-		<!-- 	<ul>
+			<ul>
 				<?php
 					$cats = $rmg_cat::children( $post , array('orderby' => 'menu_order' , 'order' => 'ASC' ));//uses get_children , finds the cases & their images and attaches it to the $post object
 
@@ -56,7 +52,7 @@
 						echo '</li>';
 					}
 				?>
-			</ul>  -->
+			</ul> 
 
 		</div>
 		

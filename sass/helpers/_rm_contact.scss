@@ -179,44 +179,37 @@ $errorcolor: darken($primaryColor, 20%);
 			padding: 16px 20px;
 			// border-radius: 5px;
 			// font-weight: 300;
-			.nav-form & {
-				background: transparent;
-				border: 1px solid #ccc;
-			}
+			
 		}
 		::-webkit-input-placeholder {
 			/* WebKit, Blink, Edge */
-			color: rgba($lightColor, 1);
+			color: rgba($darkColor, 1);
+			text-transform: uppercase;
 			font-weight: normal;
-			.nav-form & {
-				color: #ccc;
-			}
+			
 		}
 		:-moz-placeholder {
 			/* Mozilla Firefox 4 to 18 */
-			color: rgba($lightColor, 1);
+			color: rgba($darkColor, 1);
+			text-transform: uppercase;
 			font-weight: normal;
 			opacity: 1;
-			.nav-form & {
-				color: #ccc;
-			}
+			
 		}
 		::-moz-placeholder {
 			/* Mozilla Firefox 19+ */
-			color: rgba($lightColor, 1);
+			color: rgba($darkColor, 1);
+			text-transform: uppercase;
 			font-weight: normal;
 			opacity: 1;
-			.nav-form & {
-				color: #ccc;
-			}
+			
 		}
 		:-ms-input-placeholder {
 			/* Internet Explorer 10-11 */
-			color: rgba($lightColor, 1);
+			color: rgba($darkColor, 1);
+			text-transform: uppercase;
 			font-weight: normal;
-			.nav-form & {
-				color: #ccc;
-			}
+			
 		}
 	}
 	.type-selectbox {
