@@ -9,9 +9,10 @@
 	&.menu-wrap{
 		width: 320px;
 		position: fixed;
-		top: 62px;
+		top: 0;
+		bottom: 60px;
 		left: -320px;
-		height: 100%;
+		height: calc(100% - 60px) ;
 		z-index: 500;
 		padding: 0;
 	}
@@ -56,7 +57,7 @@
 			text-transform: none;
 			// letter-spacing: 1px;
 			// font-weight: bold;
-			// text-decoration: none;
+			text-decoration: none;
 			display: block;
 			
 			color: $lightColor; //Set color for menu items

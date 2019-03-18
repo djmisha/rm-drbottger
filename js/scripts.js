@@ -204,12 +204,13 @@
 				
 				if ($(".parallax").hasClass("parallax")) {
 					$(".will-parallax").waypoint(function() {
+						$(".parallax-welcome").parallax("50%", -0.3, true); 
+						$(".parallax-footer").parallax("50%", -0.1, true);
 						// $('.parallax-smileclub').parallax('50%', 0.5, true , 'is-parallaxing');
-						$(".parallax-internal-header").parallax("50%", -0.2, true);
-						$(".parallax-welcome").parallax("50%", -0.3, true); // $(".parallax-blur").parallax(
+						// $(".parallax-internal-header").parallax("50%", -0.2, true);
+						// $(".parallax-blur").parallax(
 						// 	"50%", // 	0.3, // 	true, //// );
 						// $(".parallax-primary-rhinoplasty").parallax("50%", -0.3, true);
-						$(".parallax-reviews").parallax("50%", -0.3, true);
 					});
 				}
 			}

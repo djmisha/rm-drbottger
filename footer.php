@@ -27,11 +27,10 @@
 
 
 <footer>
-
 	<div class="footer-cta">
 		<span>Schedule Your <br>Confidential Plastic Surgery Consultation</span>
 	</div>
-	<section class="upper-footer">
+	<section class="upper-footer will-parallax parallax-footer">
 		<div class="mobile-image">
 			<img src="<?php bloginfo('template_directory'); ?>/images/bg-footer.jpg" alt="logo">
 		</div>

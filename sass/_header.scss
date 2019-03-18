@@ -4,47 +4,82 @@
 	z-index: 9998;
 	position: relative;
 	position: fixed;
-	top: 0px;
+	bottom: 0px;
 	left: 0;
 	right: 0;
 	background: rgba($primaryColor, 0.8);
 	// border-top: 5px solid $primaryAlt;
 	height: 60px;
-	// display: flex;
+	display: flex;
 	// align-items: center;
 	// justify-content: flex-end;
 	// box-shadow: 1px 1px 5px rgba($darkColor, 0.2);
 	@include media($tablet) {
+		top: 0px;
 		// height: 100px;
 		padding-left: 20px;
 		padding-right: 20px;
 	}
+	@include media($desktop) {
+		
+	}
 }
 
 .menu-trigger {
-	width: 30px;
-	height: 20px;
-	position: relative;
-	.hamburger {
-		position: absolute;
-		width: 25px;
-		height: 2px;
-		background: $primaryAlt;
-		display: block;
-		left: 0;
-		&:nth-of-type(1) {
-			height: 2px;
-			top: 2px;
+	width: 60px;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	display: block;
+	@include media($desktop) {
+		display: none;
+	}
+	i {
+		position: relative;
+		top: 12px;
+		font-size: 30px;
+		color: $lightColor;
+	}
+}
+
+.nav-bar-extras {
+	height: 100%;
+	right: 0px;
+	width: auto;
+	position: absolute;
+	display:flex;
+	flex-wrap: nowrap;
+	align-items: center;
+	a {
+		text-decoration: none;
+		display: inline-block;
+		height: 100%;
+	}
+	.head-address {
+		width: 60px;
+		margin-right: 5px;
+		background:  rgba($primaryColor, .8); 
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		i {
+			font-size: 25px;
 		}
-		&:nth-of-type(2) {
-			height: 2px;
-			top: 7px;
-			width: 18px;
-		}
-		&:nth-of-type(3) {
-			height: 2px;
-			top: 13px;
-			width: 10px;
+	}
+	.head-phone {
+		background:  rgba($primaryColor, .8); 
+
+		padding: 0 20px 0 20px;
+		display: flex;
+		flex-wrap: nowrap;
+		align-items: center; 
+		font-size: 18px;
+		i {
+			font-size: 25px;
+			margin-right: 10px;
 		}
 	}
 }

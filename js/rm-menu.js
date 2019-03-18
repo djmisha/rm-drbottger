@@ -11,7 +11,7 @@ $desktop = 1080;
 $("<span class=\"nav-dropdown-button\"><span class=\"dropdown-arrow\"></span></span>").insertAfter(".menu-item-has-children > a");
 
 //Insert Close Button
-$("<span class=\"close-menu\"><i class=\"fa fa-times-circle\" aria-hidden=\"true\"></i></span>").insertAfter(".main-menu > .menu-item:last-of-type");
+// $("<span class=\"close-menu\"><i class=\"fa fa-times-circle\" aria-hidden=\"true\"></i></span>").insertAfter(".main-menu > .menu-item:last-of-type");
 
 //Add/Remove Off-Canvas Menu Classes
 var slideRightRemoveClass = true;

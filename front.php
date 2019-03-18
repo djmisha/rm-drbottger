@@ -7,57 +7,45 @@
 
 <div class="welcome-parallax will-parallax parallax-welcome">
 	<div class="welcome" id="skiptomaincontent">
-		<section class="welcome-cta">
+		<div class="welcome-cta">
 			<div class="wow fadeInUp"  data-wow-delay=".15s">
-			<h2><?php the_field('welcome_headline'); ?>
-				<strong><?php the_field('welcome_subheadline'); ?></strong> 
-			</h2>
-			<?php the_field('welcome_content'); ?>
-			<?php if(have_rows('welcome_buttons')): ?>
-				<ul>
-					<?php while(have_rows('welcome_buttons')): the_row(); ?>
-						<li>
-							<a href="<?php the_sub_field('link'); ?>" rel="nofollow" class="button"><?php the_sub_field('text'); ?></a>
-						</li>
-					<?php endwhile; ?>
-				</ul>
-			<?php endif; ?>
-			</div>
-			<div class="welcome-bottom">
-				<div class="wow fadeInUp" data-wow-delay=".15s">
-					
-				<?php if(have_rows('welcome_logos')): ?>
-					<div class="welcome-logos">
-						<?php while(have_rows('welcome_logos')): the_row(); ?>
-							<img src="<?php the_sub_field('image'); ?>" alt="logo">
+				<div class="home-logo">
+					<h1>
+						<img src="<?php bloginfo('template_directory'); ?>/images/logo.png" alt=" THIS IS THE H1">
+					</h1>
+				</div>
+				<div class="home-addy">
+					<?php if(have_rows('locations', 'option')): ?>
+						<?php while(have_rows('locations', 'option')): the_row(); ?>
+							<a href="<?php the_sub_field('map_link', 'option'); ?>" class="track-outbound" data-label="Address - Footer" target="_blank"  rel="noopener">
+								<?php the_sub_field('address', 'option'); ?> <?php the_sub_field('city', 'option'); ?>
+							</a>
 						<?php endwhile; ?>
-					</div>
-				<?php endif; ?>
-				<div class="sub-content">
-					<?php the_field('welcome_subcontent'); ?>
+					<?php endif; ?>
 				</div>
-				</div>
+				<a href="" class="button">Schedule a Consultation</a>
 			</div>
-		</section>
+		</div>
 	</div>
 </div> 
 
 
 <section class="home-doctor">
-	<h2 class="wow fadeIn" data-wow-offset="0" data-wow-delay=".15s"><?php the_field('doctor_headline'); ?></h2>
-	<img src="<?php bloginfo('template_directory'); ?>/images/img-doctor.jpg" alt="doctor picture" class="wow fadeInLeft" data-wow-offset="0" data-wow-delay=".15s">
-	<div class="wow fadeIn" data-wow-offset="0" data-wow-delay=".15s">
-		<?php the_field('doctor_content'); ?>
+	<div class="doc-content">
+		<img src="<?php bloginfo('template_directory'); ?>/images/img-doctor.jpg" alt="doctor">
+		<h2><?php the_field('doctor_head'); ?></h2>
+		<?php the_field('doctor_cont'); ?>
+		<?php if(have_rows('doctor_logos')): ?>
+			<ul class="home-buttons-list" >
+				<?php while(have_rows('doctor_logos')): the_row(); ?>
+					<li>
+						<img src="<?php the_sub_field('logo'); ?>" alt="logo image">
+					</li>
+				<?php endwhile; ?>
+			</ul>
+		<?php endif; ?>
+		<a href="<?php the_field('doctor_bio_button'); ?>" class="button">Read My Biography</a>
 	</div>
-	<?php if(have_rows('doctor_buttons')): ?>
-		<ul class="home-buttons-list wow fadeIn" data-wow-offset="0" data-wow-delay=".15s">
-			<?php while(have_rows('doctor_buttons')): the_row(); ?>
-				<li>
-					<a href="<?php the_sub_field('link'); ?>" rel="nofollow" class="button"><?php the_sub_field('text'); ?></a>
-				</li>
-			<?php endwhile; ?>
-		</ul>
-	<?php endif; ?>
 </section>
 
 

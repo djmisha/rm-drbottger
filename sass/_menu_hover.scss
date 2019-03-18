@@ -27,7 +27,8 @@ $menuHeight : 60px;
 			//show sub-menus on hover
 			&:hover{
 				> a {
-					color: $secondaryColor;
+					// color: $secondaryColor;
+					background: $primaryColor;
 					// border-bottom: 2px solid $tertiaryColor;
 
 					// border-top: 1px solid $tertiaryColor;
@@ -62,11 +63,8 @@ $menuHeight : 60px;
 					background: $darkColor;
 
 				}
-
-				
 			}
 		}
-		
 	}
 
 	a {
@@ -74,24 +72,23 @@ $menuHeight : 60px;
 		line-height: 22px;
 	}
 
-
 	.sub-menu {
 			background: $primaryAlt; //set to your own background color
-			border: 1px solid rgba($lightColor, .2); //for visual purposes.  can remove.
+			// border: 1px solid rgba($lightColor, .2); //for visual purposes.  can remove.
 			position: absolute;
-			top: 64px;
+			top: 60px;
 			left: 50%;
 			right: 50%;
 			transform: translate(-50%, 0);
 			opacity: 0;
 			visibility: hidden;
-			width: 302px;
+			width: 300px;
 			z-index: -5;
 			transition: .25s ease-in-out all;
 			// transition: .25s ease-in-out top, .25s ease-in-out opacity;
 			> li {
 
-				border-bottom: 1px solid rgba($lightColor, .2); //for visual purposes.  can remove.
+				border-bottom: 1px solid rgba($secondaryColor, .1); //for visual purposes.  can remove.
 				&:last-of-type {
 					border-bottom:none;
 				}
@@ -143,22 +140,21 @@ $menuHeight : 60px;
 
 				a {
 					color: $lightColor;
-					background: lighten($primaryColor, 15%); //set to your own background color
-					// background-color
-					// letter-spacing: 1px;
+					background: $darkColor;
+					padding: 12px 20px !important;
 
 				}
 				&:hover {
 					> a {
 						color: $lightColor;
-						// background: $primaryAlt;
 						border-bottom: none;
+						text-decoration: underline;
 					}
 				}
 			}
 			a{
 				text-align: left;
-				// padding: 15px 20px!important;
+				height: auto !important;
 				color: $lightColor;
 			}
 		}

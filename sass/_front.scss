@@ -1,8 +1,8 @@
-header,
-.welcome,
+// header,
+// .welcome,
 // footer,
+// .home-doctor,
 aside,
-.home-doctor,
 .home-doctor-quote,
 .home-patients,
 .home-reviews,
@@ -14,10 +14,6 @@ aside,
 .home h2 {
 	margin: 0;
 	font-family: $secondaryFont;
-	border-bottom: 1px solid rgba($secondaryColor, 0.5);
-	padding-bottom: 30px;
-	margin-bottom: 40px;
-	color: $primaryColor;
 	font-size: 26px;
 	@include media($tablet) {
 		font-size: 40px;
@@ -29,32 +25,7 @@ aside,
 	}
 }
 
-.home h3 {
-	font-family: $secondaryFont;
-	@include media($desktop) {
-		font-size: 30px;
-	}
-}
 
-ul.home-buttons-list {
-	margin-top: 30px;
-	padding-bottom: 20px;
-	list-style: none;
-	margin-bottom: 0;
-	padding-bottom: 0;
-	// clear: both;
-	li {
-		margin-bottom: 20px;
-			@include media($tablet) {
-				float: left;
-				margin-bottom: 0px;
-			&:last-of-type {
-				margin-left: 20px;
-				margin-bottom: 0 !important;
-			}
-		}
-	}
-}
 
 /*===============================================
 =            Welcome to my Website!             =
@@ -62,265 +33,222 @@ ul.home-buttons-list {
 
 .welcome-parallax {
 	@include media($desktop) {
-		background: #d6e0d4 url("images/bg-welcome.jpg") center center;
+		background: $secondaryColor url("images/bg-welcome.jpg") center center;
 		background-repeat: no-repeat;
 		background-size: cover;
 	}
 }
 
 .welcome {
-	background: #d6e0d4 url("images/bg-welcome.jpg") top right no-repeat;
+	background: #f8f8e2 url("images/bg-welcome.jpg") top right no-repeat;
 	background-size: 600px auto;
+	background-position-y: 175px; 
 	z-index: 1000;
-	height: auto;
-	min-height: 667px;
-	padding-top: 260px;
-
+	height: 500px;
 	@include media(500px) {
 		background-size: 750px auto;
 	}
-
 	@include media($tablet) {
 		padding-top: 0;
-		background: #d6e0d4 url("images/bg-welcome.jpg") center center no-repeat;
-		background-size: cover;
-		height: 800px;
+		background: #f8f8e2 url("images/bg-welcome.jpg") top center no-repeat;
+		background-size: 138% auto;
+		height: 550px;
 		max-height: none;
-		background-attachment: fixed;
 	}
 
 	@include media($desktop) {
 		background: none;
-		height: calc(100vh + 100px);
+		height: 100vh;
 		min-height: 768px;
 	}
 }
 
 .welcome .welcome-cta {
 	text-align: left;
-	padding-top: 40px;
-	background: rgba(#d6e0d4, 1);
-	background: linear-gradient(
-		0deg,
-		rgba(231, 237, 234, 1) 94%,
-		rgba(255, 255, 255, 0) 100%
-	);
 	@include media($tablet) {
-		// background: transparent;
+		max-width: 450px;
 		background: none;
 		padding-top: 170px;
+		padding-left: 50px;
 	}
 	@include media($desktop) {
-		padding-top: 30vh;
+		max-width: none;
+		padding-top: 35vh;
+		padding-left: 15vw;
 	}
-
-	h2 {
-		font-size: 20px;
-		line-height: 20px;
-		color: $secondaryColor;
-		margin: 0;
-		padding: 0;
-		border: 0;
-		font-family: $highlightFont;
-		@include media($tablet) {
-			font-size: 32px;
-			line-height: 37px;
-		}
-		@include media($desktop) {
-			margin-bottom: 10px;
-		}
+	a {
+		color: $darkColor;
+		text-decoration: none;
 	}
-
-	strong {
-		display: block;
-		font-weight: normal;
-		font-size: 40px;
-		line-height: 45px;
-		color: $secondaryColor;
-		margin: 0;
-		padding: 0;
-		margin-bottom: 10px;
-		border: 0;
-		font-family: $secondaryFont;
-		// font-weight: bold;
-		// margin-bottom: 20px;
-		letter-spacing: -2px;
-		@include media($tablet) {
-			margin-bottom: 30px;
-			font-size: 62px;
-			line-height: 55px;
-		}
-		@include media($desktop) {
-			letter-spacing: -4px;
-			margin-bottom: 30px;
-			font-size: 76px;
-			line-height: 70px;
-		}
-		span {
-			font-family: $highlightFont !important;
-			color: $primaryColor;
-		}
-	}
-	p,
-	h2,
-	h3 {
-		@include media($tablet) {
-			max-width: 400px;
-		}
-		@include media($desktop) {
-			max-width: 560px;
-		}
-	}
-	ul {
-		width: 100%;
-		margin-top: 30px;
+	.home-logo {
+		padding-left: 20px;
+		padding-top: 20px;
 		padding-bottom: 20px;
-		list-style: none;
-		display: block;
-		@include media($desktop) {
-			margin-top: 30px;
-		}
-		li {
-			float: left;
-			@include media(320px) {
-				margin-bottom: 20px;
-			}
-			@include media(370px) {
-				&:last-of-type {
-					margin-left: 10px;
-				}
-			}
-
-			.button {
-				padding: 3px 20px;
-				@include media($tablet) {
-					padding: 3px 30px;
-				}
-			}
-		}
-	}
-}
-
-.welcome .welcome-bottom {
-	font-size: 12px;
-	line-height: 18px;
-	font-style: italic;
-	display: block;
-	clear: both;
-	margin-top: 60px;
-
-	@include media($tablet) {
-		margin-top: 60px;
-		max-width: 380px;
-	}
-	@include media($desktop) {
-		margin-top: 0px;
-		max-width: 550px;
-		padding-top: 0px;
-		position: relative;
-		position: absolute;
-		bottom: 100px;
-
-		@media screen and (max-height: 900px) {
-			// padding-top: 140px !important;
-			margin-top: 170px;
-			// border: 1px solid red;
-			position: relative;
-		}
-	}
-
-	.sub-content {
-		font-size: 10px;
-		line-height: 12px;
-		display: block;
-		margin-top: 20px;
-		padding-bottom: 40px;
+		margin-bottom: 310px;
+		background: $lightColor;
 		@include media($tablet) {
-			padding-bottom: 0px;
-			font-size: 12px;
-			line-height: 18px;
+			padding: 0;
+			margin-bottom: 0;
+			background: transparent;
+		}
+		h1 {margin: 0 auto;}
+
+		img {
+			width: 80%;
+			// margin: 0 auto;
+			max-width: 300px;
+			min-height: 130px;
+			@include media($desktop) {
+				min-height: none;
+				max-width: none;
+				width: auto;
+			}
+		}
+	}
+	.home-addy {
+		margin-top: 50px;
+		margin-bottom: 25px;
+		display: none;
+		@include media($tablet) {
+			display: block;
+		}
+	}
+	.button {
+		width: 100%;
+		position: relative;
+		border-radius: 0;
+		@include media($tablet) {
+			border-radius: 4px;
+			max-width: 425px;
+			margin: 0;
+		}
+		&:after {
+			content: '';
+			position: absolute;
+			left: calc(50% + 100px;);
+			top: 12px;
+			background-image: url('images/icon-schedule.png');
+			background-size: 30px 29px;
+			width: 30px;
+			height: 29px;
+			z-index: 1;
+			@include media($tablet) {
+				left: 310px;
+				
+			}
+		}
+		&:hover {
+			background-color: $primaryColor;
 		}
 	}
 }
 
-.welcome-bottom .welcome-logos {
-	display: block;
-	width: 100%;
-	img {
-		margin-right: 10px;
-	}
-}
 
 /*===================================
 =            home-doctor            =
 ===================================*/
 
 .home-doctor {
-	background: url("images/bg-doctor.jpg") center right no-repeat;
-	background-size: auto 700px;
-	background-position-x: -800px;
+	background: #d8e1bf;
 	position: relative;
 	text-align: left;
 	padding-top: 40px;
 	padding-bottom: 40px;
+	position: relative;
 
 	@include media($tablet) {
-		background: url("images/bg-doctor.jpg") center right no-repeat;
-		background-position: auto;
-
 		padding-top: 60px;
 		padding-bottom: 80px;
 	}
 	@include media($desktop) {
-		background: url("images/bg-doctor.jpg") center center no-repeat;
-		height: 900px;
-		padding-top: 200px;
-		padding-bottom: 150px;
-		padding-left: 48%;
-	}
-	@include media(1800px) {
+		background: url("images/bg-doctor.jpg") center left no-repeat;
 		background-size: cover;
-	}
-	img {
-		position: relative;
-		float: right;
-		width: 120px;
-		margin-top: 0px;
-		margin-left: 20px;
-		margin-bottom: 20px;
-		@include media($tablet) {
-			width: 250px;
-			margin-left: 60px;
-			margin-bottom: 0px;
-		}
-		@include media($desktop) {
-			margin: 0;
-			position: absolute;
-			width: auto;
-			left: calc(50% - 580px);
-			top: 200px;
-		}
+		// height: 900px;
+		padding-top: 115px;
+		padding-bottom: 150px;
+		padding-left: 40%;
 	}
 	h2 {
+		margin-bottom: 40px;
 		@include media($desktop) {
+			max-width: 550px;
 			font-size: 45px;
 			line-height: 45px;
 		}
-		span {
+	}
+	.doc-content {
+		@include media($desktop) {
+			max-width: 650px;
+		}
+		img {
 			display: block;
-			color: $secondaryColor;
-			font-family: $highlightFont;
-			font-size: 23px;
+			float: left; 
+			margin-right: 20px;
+			margin-bottom: 10px;
+			width: 150px;
 			@include media($tablet) {
-				font-size: 32px;
+				width: auto;
+				margin-right: 40px;
+				margin-bottom: 40px;
+			}
+			@include media($desktop) {
+				display: none;
 			}
 		}
 	}
-	ul {
+	.button {
+		margin: 0 auto;
+		text-align: center;
+		display: block;
+		max-width: 230px;
+		padding-right: 40px;
 		margin-top: 30px;
-		padding-bottom: 20px;
+		@include media($desktop) {
+			margin: 0;
+			margin-top: 30px;
+		}
+		&:after {
+			content: '';
+			position: absolute;
+			left: calc(50% + 75px;);
+			top: 14px;
+			background-image: url('images/icon-bio.png');
+			background-size: 18px 24px;
+			width: 18px;
+			height: 24px;
+			z-index: 1;
+		}
+		&:hover {
+			background: $primaryColor !important;
+			color: $lightColor !important;
+		}
+	}
+	ul {
 		list-style: none;
-		
+		display: flex;
+		@include media($tablet) {
+			margin-top: 60px;
+			width: 100%;
+			justify-content: center;
+		}
+		border: 1px solid red;
+		@include media($desktop) {
+			flex-wrap: wrap;
+			justify-content: center;
+			margin-top: 0px;
+			position: absolute;
+			right: 50px;
+			top: 120px;
+			width:175px;
+			height: 400px;
+		}
+		li {
+			border: 1px solid red;
+			// display: flex;
+			// justify-content: center;
+			// align-items: center;
+			// margin-bottom: 20px;
+		}
 	}
 }
 
@@ -592,40 +520,40 @@ ul.home-buttons-list {
 		transition: all .35s ease-in-out;
 			// transition: all .2s ease-in-out;
 
-		@include media($tablet) {
-			padding-left: 40px;
-			padding-right: 40px;
-			padding-top: 300px;
-			padding-bottom: 80px;
-		}
-		@include media($desktop) {
-			padding-bottom: 80px;
-			padding-top: 340px;
-		}
-		.feat-content p {
-			max-width: 350px;
-			margin: 0 auto;
-			margin-bottom: 20px;
-		}
-		position: relative;
-		.feat-overlay {
-			top: 0;
-			left: 0;
-			right: 0;
-			bottom: 0;
-			width: 100%;
-			height: 100%;
-			position: absolute;
+			@include media($tablet) {
+				padding-left: 40px;
+				padding-right: 40px;
+				padding-top: 300px;
+				padding-bottom: 80px;
+			}
+			@include media($desktop) {
+				padding-bottom: 80px;
+				padding-top: 340px;
+			}
+			.feat-content p {
+				max-width: 350px;
+				margin: 0 auto;
+				margin-bottom: 20px;
+			}
+			position: relative;
+			.feat-overlay {
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				width: 100%;
+				height: 100%;
+				position: absolute;
 			// z-index: 8999;
 			// transition: all .2s ease-in-out;
-		transition: all .35s ease-in-out;
+			transition: all .35s ease-in-out;
 
 			background: transparent;
 		}
 		&:hover {
 			// padding-bottom: 100px;
 			@include media($desktop) {
-			padding-top: 320px;
+				padding-top: 320px;
 				
 			}
 			.feat-overlay {
@@ -652,7 +580,7 @@ ul.home-buttons-list {
 
 .home-primary-rhinoplasty {
 	background: $primaryHighlight url("images/bg-home-primary.jpg") top center
-		no-repeat;
+	no-repeat;
 	background-size: 150vw auto;
 	// background-position-x: -500px;
 	padding-top: 65vw;
@@ -660,7 +588,7 @@ ul.home-buttons-list {
 	text-align: left;
 	@include media($tablet) {
 		background: $primaryHighlight url("images/bg-home-primary.jpg") center
-			center no-repeat;
+		center no-repeat;
 		background-size: cover;
 		padding-top: 100px;
 		padding-bottom: 190px;

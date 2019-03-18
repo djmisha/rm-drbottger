@@ -8,11 +8,7 @@ Tags:
 */
 
 @import "utils/reset";
-// @import 'helpers/rm_bootstrap';
-// @import 'helpers/rm_bootstrap_extended';
-// @import "helpers/animate";
-// @import 'helpers/rm_variables'; not needed
-// @import 'helpers/rm_mixins'; not needed
+@import "helpers/animate";
 @import "variables";
 @import "mixins";
 @import "utils/utility";
@@ -22,3 +18,11 @@ Tags:
 @import "base";
 @import "utils/nonsym";
 @import "utils/print";
+
+
+
+// Chopping Blocks 
+// @import 'helpers/rm_bootstrap_extended';
+// @import 'helpers/rm_bootstrap';
+// @import 'helpers/rm_variables'; not needed
+// @import 'helpers/rm_mixins'; not needed
