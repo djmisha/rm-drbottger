@@ -7552,7 +7552,7 @@ footer,
 .home-reviews,
 .home-breast-aug,
 .home-aug-buttons,
-aside {
+.patient-testis {
   display: none !important;
 }
 
@@ -8230,19 +8230,6 @@ aside {
   }
 }
 
-.bg-procedures .the-slider {
-  height: 100%;
-  border: 1px solid #3b3f50;
-  padding: 20px 20px;
-  background: rgba(132, 211, 233, 0.8);
-}
-
-@media only screen and (min-width: 768px) {
-  .bg-procedures .the-slider {
-    background: transparent;
-  }
-}
-
 .bg-procedures h2 {
   margin-top: 0;
 }
@@ -8258,41 +8245,159 @@ aside {
   margin-top: 0;
 }
 
-.bg-procedures div {
+.bg-procedures .the-holder {
+  border: 1px solid #3b3f50;
+  position: relative;
+}
+
+.bg-procedures .the-slider {
+  max-width: 500px;
+  height: 100%;
+  height: 800px;
+  padding: 20px 20px;
+  background: rgba(132, 211, 233, 0.8);
+  /* smaller, dark, rounded square */
+  /* icon color */
+  /* position outside */
+}
+
+@media only screen and (min-width: 768px) {
+  .bg-procedures .the-slider {
+    padding: 60px 50px 60px 80px;
+    background: transparent;
+  }
+}
+
+.bg-procedures .the-slider div {
   text-align: left;
   display: block;
   clear: both;
   margin-bottom: 60px;
 }
 
-@media only screen and (min-width: 1080px) {
-  .bg-procedures div {
-    padding: 60px 650px 60px 80px;
-  }
-}
-
-.bg-procedures div img {
+.bg-procedures .the-slider div img {
   margin-bottom: 20px;
 }
 
 @media only screen and (min-width: 768px) {
-  .bg-procedures div img {
+  .bg-procedures .the-slider div img {
     float: left;
     margin-right: 40px;
   }
 }
 
 @media only screen and (min-width: 1080px) {
-  .bg-procedures div img {
+  .bg-procedures .the-slider div img {
     margin-bottom: 170px;
   }
 }
 
-.bg-procedures div:nth-of-type(even) {
+.bg-procedures .the-slider div:nth-of-type(even) {
   margin-bottom: 0 !important;
 }
 
+.bg-procedures .the-slider .carousel-cell {
+  width: 100%;
+  /* full width */
+  height: 360px;
+  /* height of carousel */
+}
+
+.bg-procedures .the-slider .flickity-button {
+  background: #3b3f50;
+}
+
+.bg-procedures .the-slider .flickity-prev-next-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+}
+
+.bg-procedures .the-slider .flickity-button-icon {
+  fill: white;
+}
+
+.bg-procedures .the-slider .flickity-prev-next-button.previous {
+  position: relative;
+  float: left;
+  margin-right: 25px;
+}
+
+.bg-procedures .the-slider .flickity-prev-next-button.next {
+  float: left;
+  position: relative;
+}
+
 .bg-procedures .button {
+  margin-top: 20px;
+}
+
+.patient-testis {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+@media only screen and (min-width: 768px) {
+  .patient-testis {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+}
+
+.patient-testis h2 {
+  margin-bottom: 40px;
+}
+
+@media only screen and (min-width: 768px) {
+  .patient-testis h2 {
+    margin-bottom: 80px;
+  }
+}
+
+.patient-testis ul {
+  list-style: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .patient-testis ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+.patient-testis li {
+  width: 100%;
+  margin-bottom: 60px;
+  font-family: orpheuspro, serif;
+  text-align: left;
+  font-size: 22px;
+  line-height: 44px;
+}
+
+@media only screen and (min-width: 768px) {
+  .patient-testis li {
+    margin-bottom: 0px;
+    width: 45%;
+  }
+}
+
+.patient-testis img {
+  max-width: 120px;
+  margin-bottom: 20px;
+}
+
+@media only screen and (min-width: 768px) {
+  .patient-testis img {
+    margin-right: 40px;
+    float: left;
+  }
+}
+
+.patient-testis .button {
   margin-top: 20px;
 }
 

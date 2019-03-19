@@ -40,7 +40,7 @@ function __themecss(){
 	wp_register_style( 'fontawesome' , TMPL_DIR_URI . '/fonts/fontawesome5/css/all.css' );
 	wp_register_style( 'twenty' , TMPL_DIR_URI . '/js/libs/twentytwenty-master/css/twentytwenty.css' );
 
-	wp_register_style( 'rm-theme' , get_stylesheet_uri() , array('fancybox' , 'fontawesome', 'owl') , '1' );
+	wp_register_style( 'rm-theme' , get_stylesheet_uri() , array('fancybox' , 'fontawesome', 'owl', 'flickity') , '1' );
 
 	wp_enqueue_style( 'rm-theme' );
 

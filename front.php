@@ -23,7 +23,7 @@
 						<?php endwhile; ?>
 					<?php endif; ?>
 				</div>
-				<a href="" class="button">Schedule a Consultation</a>
+				<a href="schedule_a_consultation_link" class="button" rel="nofollow">Schedule a Consultation</a>
 			</div>
 		</div>
 	</div>
@@ -61,11 +61,11 @@
 							<div class="the-seth-button">
 								<?php the_sub_field('headline'); ?>
 							</div>	
-								
+
 						</div>
 					</a>
 				</li>
-			<?php $count++; ?>
+				<?php $count++; ?>
 			<?php endwhile; ?>
 		</ul>
 	<?php endif; ?>
@@ -95,6 +95,7 @@
 	</div>
 </section>
 
+
 <section class="home-aug-buttons wow fadeInUp"  data-wow-delay=".15s">
 	<a href="" class="button" rel="nofollow">Learn More about Breast Augmentation</a>
 	<a href="" class="button" rel="nofollow">View Photo Gallery</a>
@@ -103,18 +104,48 @@
 
 <section class="bg-procedures">
 	<h2><?php the_field('featured_procedures_headline'); ?></h2>
-	<div class="the-slider">
-		<?php if(have_rows('featured_procedures_slideshow')): ?>
+	<div class="the-holder">
+		<div class="the-slider">
+
+			
+			<?php if(have_rows('two_procedures')): ?>
+				<?php while(have_rows('two_procedures')): the_row(); ?>
+
+			<?php if(have_rows('featured_procedures_slideshow')): ?>
 				<?php while(have_rows('featured_procedures_slideshow')): the_row(); ?>
-					<div>
+					<div class="carousel-cell">
 						<img src="<?php the_sub_field('image'); ?>" alt="icon">
 						<h3><?php the_sub_field('title'); ?></h3>
 						<?php the_sub_field('content'); ?>
 						<a href="<?php the_sub_field('link'); ?>" class="button">Learn More</a>
 					</div>
 				<?php endwhile; ?>
-		<?php endif; ?>
+			<?php endif; ?>
+					
+				<?php endwhile; ?>
+			<?php endif; ?>
+
+
+
+		</div>
 	</div>
+</section>
+
+
+
+<section class="patient-testis">
+	<h2><?php the_field('patient_testimonials_headline'); ?></h2>
+	<?php if(have_rows('patient_testis')): ?>
+		<ul>
+			<?php while(have_rows('patient_testis')): the_row(); ?>
+				<li>
+					<img src="<?php the_sub_field('image'); ?>" alt="icon">
+					<?php the_sub_field('content'); ?>
+				</li>
+			<?php endwhile; ?>
+		</ul>
+	<?php endif; ?>
+	<a href="<?php the_field('patient_testis_link'); ?>" rel="nofollow" class="button">More Testimonials</a>
 </section>
 
 <?get_footer()?>

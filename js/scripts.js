@@ -33,13 +33,14 @@
 
 		/* Homepage Procedures Slideshow */
 
-		// $('.bg-procedures .the-slider').flickity({
-		//   cellAlign: 'left',
-		//   contain: true,
-		//   autoPlay: 4000,
-		//   // fade: true, 
-		//   groupCells: 2
-		// });
+		$('.bg-procedures .the-slider').flickity({
+		  cellAlign: 'left',
+		  contain: true,
+		  autoPlay: 4000,
+		  wrapAround: true
+		  // fade: true, 
+		  // groupCells: 2
+		});
 
 
 		/*================================================================
@@ -59,7 +60,7 @@
 		=            Reviews Rotator            =
 		=======================================*/
 
-		// $(".bg-procedures .the-slider").owlCarousel({
+		// $(".the-slider").owlCarousel({
 		// 	items: 2,
 		// 	lazyLoad: true,
 		// 	loop: true,
