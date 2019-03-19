@@ -89,4 +89,16 @@
 </section>
 
 
+<section class="home-breast-aug will-parallax parallax-home-breast">
+	<div class="home-breast-content wow fadeInUp"  data-wow-delay=".15s">
+		<h2><?php the_field('breast_augmentation_headline'); ?></h2>
+		<?php the_field('breast_augmentation_content'); ?>
+	</div>
+</section>
+
+<section class="home-aug-buttons wow fadeInUp"  data-wow-delay=".15s">
+	<a href="" class="button">Learn More about Breast Augmentation</a>
+	<a href="" class="button">View Photo Gallery</a>
+</section> 
+
 <?get_footer()?>

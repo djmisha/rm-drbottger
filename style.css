@@ -3802,10 +3802,11 @@ img.alignleft {
   border: none;
   color: #ffffff !important;
   font-size: 14px;
+  line-height: 20px;
   font-weight: 100;
   text-transform: none;
   font-family: "Open Sans", sans-serif;
-  padding: 15px 30px;
+  padding: 17px 30px;
   border-radius: 4px;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
@@ -4221,6 +4222,7 @@ img.aligncenter,
 ------------------------ */
 html {
   font: 15px/28px "Open Sans", sans-serif;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -7542,15 +7544,7 @@ span.error {
 /* ------------------------
 	Home Page
 ------------------------ */
-header,
-.welcome,
-footer,
-.home-doctor,
-.home-featured-procedures,
-aside,
-.home-doctor-quote,
-.home-patients,
-.home-primary-rhinoplasty {
+aside {
   display: none !important;
 }
 
@@ -7558,10 +7552,12 @@ aside,
   margin: 0;
   font-family: orpheuspro, serif;
   font-size: 26px;
+  margin-bottom: 20px;
 }
 
 @media only screen and (min-width: 768px) {
   .home h2 {
+    margin-bottom: 40px;
     font-size: 40px;
     line-height: 45px;
   }
@@ -8108,6 +8104,99 @@ aside,
   left: calc( 50% - 20px);
 }
 
+.home-breast-aug {
+  background-size: cover;
+  background: url("images/bg-home-breast-aug-mobile.jpg");
+  background-position: left top;
+  background-size: 120vw auto;
+  padding-top: 60vw;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+@media only screen and (min-width: 1080px) {
+  .home-breast-aug {
+    background: #d8e1bf url("images/bg-home-breast-aug.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 0;
+    height: 745px;
+  }
+}
+
+.home-breast-aug .home-breast-content {
+  text-align: left;
+  z-index: 9999;
+}
+
+@media only screen and (min-width: 1080px) {
+  .home-breast-aug .home-breast-content {
+    width: 600px;
+    position: absolute;
+    right: calc(50% - 550px);
+    top: 100px;
+  }
+}
+
+@media only screen and (min-width: 1480px) {
+  .home-breast-aug .home-breast-content {
+    top: 200px;
+    right: calc(50% - 600px);
+  }
+}
+
+.home-breast-aug .home-breast-content img {
+  width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+  .home-breast-aug .home-breast-content img {
+    width: auto;
+  }
+}
+
+.home-breast-aug h2 {
+  margin-bottom: 20px;
+}
+
+@media only screen and (min-width: 1080px) {
+  .home-breast-aug h2 {
+    margin-bottom: 40px;
+  }
+}
+
+.home-aug-buttons {
+  background: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  height: 120px;
+}
+
+@media only screen and (min-width: 768px) {
+  .home-aug-buttons {
+    height: 200px;
+  }
+}
+
+.home-aug-buttons a {
+  display: block;
+}
+
+.home-aug-buttons a:last-of-type {
+  margin-right: 0;
+}
+
+.home-aug-buttons a {
+  margin-right: 20px;
+}
+
 /* ------------------------
 	Blog/Category/Archives
 ------------------------ */
@@ -8609,7 +8698,7 @@ aside,
 =            Slpit Section            =
 =====================================*/
 .flexible-split-section {
-  background-color: #d4c48f;
+  background-color: #d8e1bf;
 }
 
 @media only screen and (min-width: 768px) {
@@ -9217,7 +9306,7 @@ aside,
 }
 
 .back-btn .gallery-button i {
-  color: #d4c48f;
+  color: #d8e1bf;
   font-size: 20px;
   position: relative;
   top: 2px;

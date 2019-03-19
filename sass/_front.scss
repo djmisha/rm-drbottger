@@ -1,13 +1,11 @@
-header,
-.welcome,
-footer,
-.home-doctor,
-.home-featured-procedures,
+// header,
+// .welcome,
+// footer,
+// .home-doctor,
+// .home-featured-procedures,
 // .home-reviews,
 aside,
-.home-doctor-quote,
-.home-patients,
-.home-primary-rhinoplasty {
+ {
 	display: none !important;
 }
 
@@ -15,7 +13,9 @@ aside,
 	margin: 0;
 	font-family: $secondaryFont;
 	font-size: 26px;
+	margin-bottom: 20px;
 	@include media($tablet) {
+		margin-bottom: 40px;
 		font-size: 40px;
 		line-height: 45px;
 	}
@@ -432,3 +432,69 @@ aside,
 	}
 }
 
+
+
+.home-breast-aug {
+	background-size: cover;
+	background:  url('images/bg-home-breast-aug-mobile.jpg');
+	background-position: left top;
+	background-size: 120vw auto;
+	padding-top: 60vw;
+	background-repeat: no-repeat;
+	@include media($desktop) {
+		background: $tertiaryColor url('images/bg-home-breast-aug.jpg');
+	background-repeat: no-repeat;
+		background-size: cover;
+		padding-top: 0;
+		height: 745px;
+	}
+	position: relative;
+	.home-breast-content {
+		text-align: left;
+		@include media($desktop) {
+			width: 600px;
+			position: absolute;
+			right: calc(50% - 550px;);
+			top: 100px;
+		}
+		@include media($full) {
+			top: 200px;
+			right: calc(50% - 600px;);
+		}
+		z-index: 9999;
+		img {
+			width: 100%;
+			@include media($tablet) {
+				width: auto;
+			}
+		}
+	}
+	h2 {
+		margin-bottom: 20px;
+		@include media($desktop) {
+			margin-bottom: 40px;
+		}
+	}
+}
+
+
+.home-aug-buttons {
+	background: $lightColor;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	height: 120px;
+	@include media($tablet) {
+		height: 200px;
+	}
+	@include media($desktop) {
+		
+	}
+	a {
+		display: block; 
+		&:last-of-type {
+			margin-right: 0;
+		}
+	}
+	a {margin-right: 20px;}
+}

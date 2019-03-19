@@ -206,57 +206,11 @@
 					$(".will-parallax").waypoint(function() {
 						$(".parallax-welcome").parallax("50%", -0.3, true); 
 						$(".parallax-footer").parallax("50%", -0.1, true);
-						// $('.parallax-smileclub').parallax('50%', 0.5, true , 'is-parallaxing');
-						// $(".parallax-internal-header").parallax("50%", -0.2, true);
-						// $(".parallax-blur").parallax(
-						// 	"50%", // 	0.3, // 	true, //// );
-						// $(".parallax-primary-rhinoplasty").parallax("50%", -0.3, true);
+						$('.parallax-home-breast').parallax('50%', -0.3, true , 'is-parallaxing');
 					});
 				}
 			}
 		});
-
-
-
-		// (function(d) {
-		//     var a = d(window), k = a.height();
-		//     a.resize(function() {
-		//         k = a.height()
-		//     });
-		//     d.fn.parallax = function(e, f, b) {
-		//         function g() {
-		//             var h = a.scrollTop();
-		//             c.each(function() {
-		//                 var a = d(this), b = a.offset().top, a = l(a);
-		//                 b + a < h || b > h + k || c.css("backgroundPosition", e + " " + Math.round((j - h) * f) + "px")
-		//             })
-		//         }
-		//         var c = d(this), l, j;
-		//         c.each(function() {
-		//             j = c.offset().top
-		//         });
-		//         l = b ? function(a) {
-		//             return a.outerHeight(!0)
-		//         } : function(a) {
-		//             return a.height()
-		//         };
-		//         if (1 > arguments.length || null === e)
-		//             e = "50%";
-		//         if (2 > arguments.length || null === f)
-		//             f = 0.1;
-		//         if (3 > arguments.length || null ===
-		//         b)
-		//             b=!0;
-		//         a.scroll(g).resize(function() {
-		//             c.each(function() {
-		//                 j = c.offset().top
-		//             });
-		//             g()
-		//         });
-		//         g()
-		//     }
-		// })(jQuery);
-
 
 
 		/*============================================================
@@ -280,80 +234,80 @@
 		==================================================*/
 
 		// init Isotope
-		var $grid = $(".video-grid").isotope({
-			itemSelector: ".video-block",
-			percentPosition: true,
-			  masonry: {
-			    // use element for option
-			    columnWidth: '.video-block'
-			  }
-		});
-		var filterFns = {};
-		// bind filter button click
-		$(".button-group").on("click", ".sorter-button", function() {
-			var filterValue = $(this).attr("data-filter");
-			// use filterFn if matches value
-			filterValue = filterFns[filterValue] || filterValue;
-			$grid.isotope({ filter: filterValue });
-		});
-		// change is-checked class on buttons
-		$(".button-group").each(function(i, buttonGroup) {
-			var $buttonGroup = $(buttonGroup);
-			$buttonGroup.on("click", ".sorter-button", function() {
-				$buttonGroup.find(".is-checked").removeClass("is-checked");
-				$(this).addClass("is-checked");
-			});
-		});
+		// var $grid = $(".video-grid").isotope({
+		// 	itemSelector: ".video-block",
+		// 	percentPosition: true,
+		// 	  masonry: {
+		// 	    // use element for option
+		// 	    columnWidth: '.video-block'
+		// 	  }
+		// });
+		// var filterFns = {};
+		// // bind filter button click
+		// $(".button-group").on("click", ".sorter-button", function() {
+		// 	var filterValue = $(this).attr("data-filter");
+		// 	// use filterFn if matches value
+		// 	filterValue = filterFns[filterValue] || filterValue;
+		// 	$grid.isotope({ filter: filterValue });
+		// });
+		// // change is-checked class on buttons
+		// $(".button-group").each(function(i, buttonGroup) {
+		// 	var $buttonGroup = $(buttonGroup);
+		// 	$buttonGroup.on("click", ".sorter-button", function() {
+		// 		$buttonGroup.find(".is-checked").removeClass("is-checked");
+		// 		$(this).addClass("is-checked");
+		// 	});
+		// });
 
 		/*===============================================
 		=            Smooth Anchor Scrolling            =
 		===============================================*/
 		// Select all links with hashes
-		$('a[href*="#"]')
-			// Remove links that don't actually link to anything
-			.not('[href="#"]')
-			.not('[href="#0"]')
-			.click(function(event) {
-				// On-page links
-				if (
-					location.pathname.replace(/^\//, "") ==
-						this.pathname.replace(/^\//, "") &&
-					location.hostname == this.hostname
-				) {
-					// Figure out element to scroll to
-					var target = $(this.hash);
-					target = target.length
-						? target
-						: $("[name=" + this.hash.slice(1) + "]");
-					// Does a scroll target exist?
-					if (target.length) {
-						// Only prevent default if animation is actually gonna happen
-						event.preventDefault();
+		// $('a[href*="#"]')
+		// 	// Remove links that don't actually link to anything
+		// 	.not('[href="#"]')
+		// 	.not('[href="#0"]')
+		// 	.click(function(event) {
+		// 		// On-page links
+		// 		if (
+		// 			location.pathname.replace(/^\//, "") ==
+		// 				this.pathname.replace(/^\//, "") &&
+		// 			location.hostname == this.hostname
+		// 		) {
+		// 			// Figure out element to scroll to
+		// 			var target = $(this.hash);
+		// 			target = target.length
+		// 				? target
+		// 				: $("[name=" + this.hash.slice(1) + "]");
+		// 			// Does a scroll target exist?
+		// 			if (target.length) {
+		// 				// Only prevent default if animation is actually gonna happen
+		// 				event.preventDefault();
 
-						// if ($("html").hasClass("not--device")) {
-						$("html, body").animate(
-							{
-								scrollTop: target.offset().top
-							},
-							1200,
-							function() {
-								// Callback after animation
-								// Must change focus!
-								var $target = $(target);
-								$target.focus();
-								if ($target.is(":focus")) {
-									// Checking if the target was focused
-									return false;
-								} else {
-									// $target.attr("tabindex", "-1"); // Adding tabindex for elements not focusable
-									// $target.focus(); // Set focus again
-								}
-							}
-						);
-						// }
-					}
-				}
-			});
+		// 				// if ($("html").hasClass("not--device")) {
+		// 				$("html, body").animate(
+		// 					{
+		// 						scrollTop: target.offset().top
+		// 					},
+		// 					1200,
+		// 					function() {
+		// 						// Callback after animation
+		// 						// Must change focus!
+		// 						var $target = $(target);
+		// 						$target.focus();
+		// 						if ($target.is(":focus")) {
+		// 							// Checking if the target was focused
+		// 							return false;
+		// 						} else {
+		// 							// $target.attr("tabindex", "-1"); // Adding tabindex for elements not focusable
+		// 							// $target.focus(); // Set focus again
+		// 						}
+		// 					}
+		// 				);
+		// 				// }
+		// 			}
+		// 		}
+		// 	});
 
 		/*=============================================
 		=            Track Outbound Clicks            =

@@ -1,5 +1,5 @@
-
-<!-- 	<div class="footer-latest-news">
+<!-- 
+<div class="footer-latest-news">
 		<?php if( get_post_type() != 'post'): ?>
 			<?php
 			$args = array(
@@ -23,8 +23,8 @@
 			<?php wp_reset_query(); ?>
 		</ul>
 	<?php endif; ?>
-</div> -->
-
+</div> 
+ -->
 
 <footer>
 	<div class="footer-cta">
