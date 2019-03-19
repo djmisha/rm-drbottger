@@ -1,12 +1,12 @@
-// header,
-// .welcome,
-// footer,
-// .home-doctor,
+header,
+.welcome,
+footer,
+.home-doctor,
+.home-featured-procedures,
+// .home-reviews,
 aside,
 .home-doctor-quote,
 .home-patients,
-.home-reviews,
-.home-featured-procedures,
 .home-primary-rhinoplasty {
 	display: none !important;
 }
@@ -20,8 +20,8 @@ aside,
 		line-height: 45px;
 	}
 	@include media($desktop) {
-		font-size: 50px;
-		line-height: 55px;
+		font-size: 44px;
+		line-height: 47px;
 	}
 }
 
@@ -161,26 +161,37 @@ aside,
 		padding-bottom: 80px;
 	}
 	@include media($desktop) {
-		background: url("images/bg-doctor.jpg") center left no-repeat;
+		background: url("images/bg-doctor.jpg") center center no-repeat;
+		background-position-x: -200px; 
 		background-size: cover;
 		// height: 900px;
 		padding-top: 115px;
-		padding-bottom: 150px;
 		padding-left: 40%;
 	}
+	@include media($full) {
+		background: url("images/bg-doctor.jpg") center left no-repeat;
+		background-size: cover;
+		padding-bottom: 150px;
+	}
 	h2 {
-		margin-bottom: 40px;
+		margin-bottom: 20px;
+		@include media($tablet) {
+			margin-bottom: 40px;
+		}
 		@include media($desktop) {
 			max-width: 550px;
-			font-size: 45px;
-			line-height: 45px;
+			font-size: 44px;
+			line-height: 47px;
 		}
 	}
 	.doc-content {
 		@include media($desktop) {
-			max-width: 650px;
+			max-width: 600px;
 		}
-		img {
+		@include media($full) {
+			
+		}
+		img.doc-image {
 			display: block;
 			float: left; 
 			margin-right: 20px;
@@ -226,272 +237,41 @@ aside,
 	ul {
 		list-style: none;
 		display: flex;
+		margin-top: 40px;
+		width: 100%;
+		justify-content: center;
 		@include media($tablet) {
 			margin-top: 60px;
-			width: 100%;
-			justify-content: center;
 		}
-		border: 1px solid red;
 		@include media($desktop) {
+			margin-bottom: 40px;
+		}
+		@include media($full) {
+			margin-top: 0px;
+			top: 120px;
+			width: 175px;
+			height: 400px;
 			flex-wrap: wrap;
 			justify-content: center;
-			margin-top: 0px;
 			position: absolute;
-			right: 50px;
-			top: 120px;
-			width:175px;
-			height: 400px;
+			right: calc( 50% - 650px );
 		}
 		li {
-			border: 1px solid red;
-			// display: flex;
-			// justify-content: center;
-			// align-items: center;
-			// margin-bottom: 20px;
-		}
-	}
-}
-
-/*=========================================
-=            home-doctor-quote            =
-=========================================*/
-
-.home-doctor-quote {
-	padding-top: 80px;
-	padding-bottom: 40px;
-	background: $primaryColor;
-	@include media($tablet) {
-		padding-top: 100px;
-		padding-bottom: 60px;
-	}
-	> div {
-		font-family: $highlightFont;
-		font-size: 16px;
-		line-height: 26px;
-		font-style: italic;
-		position: relative;
-		color: $lightColor;
-		font-weight: normal;
-		@include media($tablet) {
-			font-size: 24px;
-			line-height: 38px;
-		}
-		strong {
-			font-size: 22px;
-			font-weight: normal;
-			font-style: normal;
-			@include media($tablet) {
-				font-size: 32px;
-			}
-		}
-		&:before {
-			content: "";
-			background: url("images/icon-quote.png");
-			background-size: 101px 80px;
-			background-repeat: no-repeat;
-			width: 101px;
-			height: 80px;
-			position: absolute;
-			top: -40px;
-			left: calc(50% - 50px);
-		}
-	}
-}
-
-/*=====================================
-=            home-patients            =
-=====================================*/
-
-.home-patients {
-	background: #e6edf2 url("images/bg-patient.jpg") top left no-repeat;
-	background-size: 920px auto;
-	background-position-x: -100px;
-	padding-top: 320px;
-	padding-bottom: 40px;
-	@include media($tablet) {
-		background: #e6edf2 url("images/bg-patient.jpg") top center no-repeat;
-		background-size: 1220px auto;
-		padding-top: 60px;
-		min-height: 1000px;
-		padding-bottom: 140px;
-	}
-	@include media($desktop) {
-		background: #e6edf2 url("images/bg-patient.jpg") top center no-repeat;
-		padding-top: 150px;
-	}
-	@include media($full) {
-		background-size: cover;
-	}
-
-	.home-patients-content {
-		text-align: left;
-		@include media($tablet) {
-			padding-left: 53%;
-		}
-		@include media($tablet) {
-			color: $lightColor;
-			h2 {
-				border-bottom: 1px solid rgba($lightColor, 0.3);
-				color: $lightColor;
-			}
-		}
-		.button {
-			@include media($tablet) {
-				margin-top: 10px;
-			}
-		}
-	}
-
-	.actual-patient-tab {
-		font-family: $highlightFont;
-		color: $darkColor;
-		padding: 5px 0px;
-		text-align: center;
-		background: $lightColor;
-		display: inline-block;
-		margin-bottom: 20px;
-		border-radius: 5px;
-		font-style: italic;
-		position: relative;
-		width: 130px;
-
-		&:before {
-			content: "";
-			position: absolute;
-			top: -5px;
-			left: calc(50% - 5px;);
-			background: $lightColor;
-			width: 10px;
-			height: 10px;
-			transform: rotate(45deg);
-			@include media($tablet) {
-				left: -5px;
-				top: calc(50% - 5px;);
-			}
-		}
-	}
-	.cases {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: space-around;
-		@include media($tablet) {
-			justify-content: space-around;
-		}
-		@include media($desktop) {
-			justify-content: space-between;
-		}
-		> div {
-			&:nth-of-type(1) {
-				display: inline-block;
-			}
-			&:nth-of-type(2) {
-				display: none;
-			}
-			&:nth-of-type(3) {
-				display: none;
-			}
-			@include media($tablet) {
-				&:nth-of-type(2) {
-					display: inline-block;
+			margin: 0 10px;
+			img {
+				width: 100%;
+				@include media($tablet) {
+					width: auto;
 				}
 			}
-			@include media($desktop) {
-				&:nth-of-type(3) {
-					display: inline-block;
-				}
+			@include media($full) {
+				margin: 0;
 			}
-		}
-	}
-	span {
-		font-style: italic;
-		font-size: 12px;
-	}
-	.twentytwenty-container {
-		margin-top: 40px;
-		margin-bottom: 20px;
-		width: 300px;
-		height: 530px;
-		@include media($tablet) {
-			margin-top: 140px;
-			margin-bottom: 20px;
-			width: 350px;
-		}
-		img {
-			width: 100%;
-		}
-	}
-	.last-button {
-		margin-top: 20px;
-		@include media($tablet) {
-			margin-top: 40px;
 		}
 	}
 }
 
-/*====================================
-=            home-reviews            =
-====================================*/
 
-.home-reviews {
-	display: none;
-	background-color: $primaryColor;
-	color: $lightColor;
-	position: relative;
-	@include media($tablet) {
-		padding-top: 120px;
-		padding-bottom: 80px;
-		display: block;
-	}
-	.split-line {
-		position: absolute;
-		left: calc(50% - 1px);
-		width: 1px;
-		height: 340px;
-		background-color: rgba($lightColor, 0.5);
-	}
-	ul {
-		margin: 0;
-		display: flex;
-		justify-content: space-between;
-		list-style: none;
-		li {
-			width: 44%;
-			font-family: $highlightFont;
-			font-size: 24px;
-			line-height: 38px;
-			font-style: italic;
-			position: relative;
-			&:before {
-				content: "";
-				background: url("images/icon-quote.png");
-				background-size: 101px 80px;
-				width: 101px;
-				height: 80px;
-				position: absolute;
-				top: -40px;
-				left: calc(50% - 50px);
-			}
-		}
-	}
-	.button {
-		background: $lightColor;
-		color: $primaryColor !important;
-	}
-	.fa-google {
-		color: #b73c16;
-		display: block;
-		margin-bottom: 10px;
-		font-size: 25px;
-	}
-	.fa-star {
-		color: #fcc55c;
-		font-size: 19px;
-	}
-	span {
-		font-style: normal;
-		font-size: 32px;
-	}
-}
 
 /*================================================
 =            home-featured-procedures            =
@@ -503,113 +283,152 @@ aside,
 		margin: 0;
 		color: $lightColor;
 		list-style: none;
-		@include media($desktop) {
 			display: flex;
+			flex-wrap: wrap;
+		@include media($tablet) {
+			flex-wrap: nowrap;
 			justify-content: center;
 		}
 	}
 	li {
-		width: 100%;
+		width: 50%;
 		background-position: center center;
 		background-repeat: no-repeat;
 		background-size: cover;
 		padding-left: 20px;
 		padding-right: 20px;
-		padding-top: 200px;
+		padding-top: 100px;
 		padding-bottom: 40px;
 		transition: all .35s ease-in-out;
-			// transition: all .2s ease-in-out;
-
+		position: relative;
+		@include media($tablet) {
+			padding-left: 40px;
+			padding-right: 40px;
+			padding-top: 300px;
+			padding-bottom: 80px;
+		}
+		@include media($desktop) {
+			padding-bottom: 80px;
+			padding-top: 370px;
+		}
+		a {text-decoration: none;}
+		.the-seth {
+			border-top: 1px solid $lightColor;
+			border-bottom: 1px solid $lightColor;
+			padding: 3px 0px;
 			@include media($tablet) {
-				padding-left: 40px;
-				padding-right: 40px;
-				padding-top: 300px;
-				padding-bottom: 80px;
+				padding: 7px 0px;
+			}
+		}
+		.the-seth-button {
+			transition: all .35s ease-in-out;
+			display: block;
+			padding: 5px 0px;
+			font-family: $secondaryFont;
+			color: $lightColor;
+			font-size: 20px;
+			z-index: 9999;
+			text-decoration: none;
+			border-radius: 4px;
+			background: transparent;
+			@include media($tablet) {
+				padding: 20px 0px;
+				font-size: 30px;
 			}
 			@include media($desktop) {
-				padding-bottom: 80px;
-				padding-top: 340px;
+				min-width: 200px;
 			}
-			.feat-content p {
-				max-width: 350px;
-				margin: 0 auto;
-				margin-bottom: 20px;
-			}
-			position: relative;
-			.feat-overlay {
-				top: 0;
-				left: 0;
-				right: 0;
-				bottom: 0;
-				width: 100%;
-				height: 100%;
-				position: absolute;
-			// z-index: 8999;
-			// transition: all .2s ease-in-out;
+		}
+		.feat-overlay {
+			z-index: -1;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			width: 100%;
+			height: 100%;
+			position: absolute;
 			transition: all .35s ease-in-out;
-
-			background: transparent;
+			background: rgba( $primaryColor, .6);
 		}
 		&:hover {
-			// padding-bottom: 100px;
-			@include media($desktop) {
-				padding-top: 320px;
-				
+			.the-seth-button {
+				background: $primaryColor;
 			}
 			.feat-overlay {
-				background: rgba( #000, .3);
+				background: transparent;
 			}
 		}
 	}
-	span {
-		font-family: $secondaryFont;
-		font-size: 30px;
-		line-height: 32px;
-		display: block;
-		margin-bottom: 10px;
+}
+
+
+
+
+/*====================================
+=            home-reviews            =
+====================================*/
+
+.home-reviews {
+	padding-top: 40px;	
+	padding-bottom: 60px;
+	@include media($tablet) {
+			padding-top: 75px;	
+			padding-bottom: 100px;
+		}	
+	.the-review {
+		border: 1px solid $primaryColor;
+		padding: 20px;
 		@include media($tablet) {
-			font-size: 35px;
-			line-height: 37px;
+			padding: 40px 80px;
+		}
+		.the-stars  {
+			margin-top: 20px;
+			margin-bottom: 20px;
+			font-size: 25px;
+			@include media($tablet) {
+				font-size: 30px;
+				
+			}
+		}
+	}
+	.fa-star {
+		transition: all .3s ease-in-out;
+	}
+	&:hover {
+		.fa-star {
+			color: orange;
+			margin-right: 3px;
+			margin-left: 3px;
+		}
+	}
+	p {
+		font-family: $secondaryFont;
+		font-size: 18px;
+		line-height: 30px;
+		@include media($tablet) {
+			font-size: 22px;
+			line-height: 44px;
+		}
+	}
+	.button {
+		margin-top: 20px;
+		padding: 10px 50px;
+		&:hover {
+			background: $primaryColor;
+			color: $lightColor !important;
+		}
+		&:before {
+			content: '';
+			width: 0px;
+			height: 0px;
+			border-bottom: 25px solid $primaryColor;
+			border-left: 20px solid rgba(#000, 0);
+			border-right: 20px solid rgba(#000, 0);
+			position: absolute;
+			top: -25px;
+			left: calc( 50% - 20px);
 		}
 	}
 }
 
-/*=================================================
-=            .home-primary-rhinoplasty            =
-=================================================*/
-
-.home-primary-rhinoplasty {
-	background: $primaryHighlight url("images/bg-home-primary.jpg") top center
-	no-repeat;
-	background-size: 150vw auto;
-	// background-position-x: -500px;
-	padding-top: 65vw;
-	padding-bottom: 40px;
-	text-align: left;
-	@include media($tablet) {
-		background: $primaryHighlight url("images/bg-home-primary.jpg") center
-		center no-repeat;
-		background-size: cover;
-		padding-top: 100px;
-		padding-bottom: 190px;
-		padding-right: 50%;
-	}
-	@include media($desktop) {
-		background-attachment: fixed;
-		padding-top: 200px;
-		padding-bottom: 190px;
-	}
-	// @include media(1800px) {
-	// }
-	// ul {
-	// 	margin-top: 30px;
-	// 	padding-bottom: 20px;
-	// 	list-style: none;
-	// 	li {
-	// 		float: left;
-	// 		&:last-of-type {
-	// 			margin-left: 20px;
-	// 		}
-	// 	}
-	// }
-}

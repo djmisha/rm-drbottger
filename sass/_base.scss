@@ -3,7 +3,7 @@
 ------------------------ */
 
 html {
-	font: 14px/24px $defaultfont;
+	font: 15px/28px $defaultfont;
 }
 
 body {
@@ -11,7 +11,7 @@ body {
 	background-color: $lightColor;
 	min-width: 320px;
 	text-align: center;
-	font: 14px/22px $defaultfont;
+	font: 15px/28px $defaultfont;
 	@include customfont();
 }
 

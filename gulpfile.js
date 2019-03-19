@@ -34,7 +34,7 @@ const myHost  = 'rosemontdev.com';
 
 /* src paths*/
 const _src_ = {
-    js : 'js/theme.js',
+    js : 'js/scrips.js',
     sass : 'sass/**/*.scss'
 };
 

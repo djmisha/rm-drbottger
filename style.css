@@ -4220,7 +4220,7 @@ img.aligncenter,
    Typography (and primary body style)
 ------------------------ */
 html {
-  font: 14px/24px "Open Sans", sans-serif;
+  font: 15px/28px "Open Sans", sans-serif;
 }
 
 body {
@@ -4228,7 +4228,7 @@ body {
   background-color: #ffffff;
   min-width: 320px;
   text-align: center;
-  font: 14px/22px "Open Sans", sans-serif;
+  font: 15px/28px "Open Sans", sans-serif;
 }
 
 p {
@@ -7542,11 +7542,14 @@ span.error {
 /* ------------------------
 	Home Page
 ------------------------ */
+header,
+.welcome,
+footer,
+.home-doctor,
+.home-featured-procedures,
 aside,
 .home-doctor-quote,
 .home-patients,
-.home-reviews,
-.home-featured-procedures,
 .home-primary-rhinoplasty {
   display: none !important;
 }
@@ -7566,8 +7569,8 @@ aside,
 
 @media only screen and (min-width: 1080px) {
   .home h2 {
-    font-size: 50px;
-    line-height: 55px;
+    font-size: 44px;
+    line-height: 47px;
   }
 }
 
@@ -7743,33 +7746,47 @@ aside,
 
 @media only screen and (min-width: 1080px) {
   .home-doctor {
-    background: url("images/bg-doctor.jpg") center left no-repeat;
+    background: url("images/bg-doctor.jpg") center center no-repeat;
+    background-position-x: -200px;
     background-size: cover;
     padding-top: 115px;
-    padding-bottom: 150px;
     padding-left: 40%;
   }
 }
 
+@media only screen and (min-width: 1480px) {
+  .home-doctor {
+    background: url("images/bg-doctor.jpg") center left no-repeat;
+    background-size: cover;
+    padding-bottom: 150px;
+  }
+}
+
 .home-doctor h2 {
-  margin-bottom: 40px;
+  margin-bottom: 20px;
+}
+
+@media only screen and (min-width: 768px) {
+  .home-doctor h2 {
+    margin-bottom: 40px;
+  }
 }
 
 @media only screen and (min-width: 1080px) {
   .home-doctor h2 {
     max-width: 550px;
-    font-size: 45px;
-    line-height: 45px;
+    font-size: 44px;
+    line-height: 47px;
   }
 }
 
 @media only screen and (min-width: 1080px) {
   .home-doctor .doc-content {
-    max-width: 650px;
+    max-width: 600px;
   }
 }
 
-.home-doctor .doc-content img {
+.home-doctor .doc-content img.doc-image {
   display: block;
   float: left;
   margin-right: 20px;
@@ -7778,7 +7795,7 @@ aside,
 }
 
 @media only screen and (min-width: 768px) {
-  .home-doctor .doc-content img {
+  .home-doctor .doc-content img.doc-image {
     width: auto;
     margin-right: 40px;
     margin-bottom: 40px;
@@ -7786,7 +7803,7 @@ aside,
 }
 
 @media only screen and (min-width: 1080px) {
-  .home-doctor .doc-content img {
+  .home-doctor .doc-content img.doc-image {
     display: none;
   }
 }
@@ -7829,350 +7846,59 @@ aside,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  border: 1px solid red;
+  margin-top: 40px;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 @media only screen and (min-width: 768px) {
   .home-doctor ul {
     margin-top: 60px;
-    width: 100%;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
   }
 }
 
 @media only screen and (min-width: 1080px) {
   .home-doctor ul {
+    margin-bottom: 40px;
+  }
+}
+
+@media only screen and (min-width: 1480px) {
+  .home-doctor ul {
+    margin-top: 0px;
+    top: 120px;
+    width: 175px;
+    height: 400px;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    margin-top: 0px;
     position: absolute;
-    right: 50px;
-    top: 120px;
-    width: 175px;
-    height: 400px;
+    right: calc( 50% - 650px);
   }
 }
 
 .home-doctor ul li {
-  border: 1px solid red;
+  margin: 0 10px;
 }
 
-/*=========================================
-=            home-doctor-quote            =
-=========================================*/
-.home-doctor-quote {
-  padding-top: 80px;
-  padding-bottom: 40px;
-  background: #3b3f50;
+.home-doctor ul li img {
+  width: 100%;
 }
 
 @media only screen and (min-width: 768px) {
-  .home-doctor-quote {
-    padding-top: 100px;
-    padding-bottom: 60px;
-  }
-}
-
-.home-doctor-quote > div {
-  font-family: vollkorn, serif;
-  font-size: 16px;
-  line-height: 26px;
-  font-style: italic;
-  position: relative;
-  color: #ffffff;
-  font-weight: normal;
-}
-
-@media only screen and (min-width: 768px) {
-  .home-doctor-quote > div {
-    font-size: 24px;
-    line-height: 38px;
-  }
-}
-
-.home-doctor-quote > div strong {
-  font-size: 22px;
-  font-weight: normal;
-  font-style: normal;
-}
-
-@media only screen and (min-width: 768px) {
-  .home-doctor-quote > div strong {
-    font-size: 32px;
-  }
-}
-
-.home-doctor-quote > div:before {
-  content: "";
-  background: url("images/icon-quote.png");
-  background-size: 101px 80px;
-  background-repeat: no-repeat;
-  width: 101px;
-  height: 80px;
-  position: absolute;
-  top: -40px;
-  left: calc(50% - 50px);
-}
-
-/*=====================================
-=            home-patients            =
-=====================================*/
-.home-patients {
-  background: #e6edf2 url("images/bg-patient.jpg") top left no-repeat;
-  background-size: 920px auto;
-  background-position-x: -100px;
-  padding-top: 320px;
-  padding-bottom: 40px;
-}
-
-@media only screen and (min-width: 768px) {
-  .home-patients {
-    background: #e6edf2 url("images/bg-patient.jpg") top center no-repeat;
-    background-size: 1220px auto;
-    padding-top: 60px;
-    min-height: 1000px;
-    padding-bottom: 140px;
-  }
-}
-
-@media only screen and (min-width: 1080px) {
-  .home-patients {
-    background: #e6edf2 url("images/bg-patient.jpg") top center no-repeat;
-    padding-top: 150px;
+  .home-doctor ul li img {
+    width: auto;
   }
 }
 
 @media only screen and (min-width: 1480px) {
-  .home-patients {
-    background-size: cover;
+  .home-doctor ul li {
+    margin: 0;
   }
-}
-
-.home-patients .home-patients-content {
-  text-align: left;
-}
-
-@media only screen and (min-width: 768px) {
-  .home-patients .home-patients-content {
-    padding-left: 53%;
-  }
-}
-
-@media only screen and (min-width: 768px) {
-  .home-patients .home-patients-content {
-    color: #ffffff;
-  }
-  .home-patients .home-patients-content h2 {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-    color: #ffffff;
-  }
-}
-
-@media only screen and (min-width: 768px) {
-  .home-patients .home-patients-content .button {
-    margin-top: 10px;
-  }
-}
-
-.home-patients .actual-patient-tab {
-  font-family: vollkorn, serif;
-  color: #3b3f50;
-  padding: 5px 0px;
-  text-align: center;
-  background: #ffffff;
-  display: inline-block;
-  margin-bottom: 20px;
-  border-radius: 5px;
-  font-style: italic;
-  position: relative;
-  width: 130px;
-}
-
-.home-patients .actual-patient-tab:before {
-  content: "";
-  position: absolute;
-  top: -5px;
-  left: calc(50% - 5px);
-  background: #ffffff;
-  width: 10px;
-  height: 10px;
-  -webkit-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-          transform: rotate(45deg);
-}
-
-@media only screen and (min-width: 768px) {
-  .home-patients .actual-patient-tab:before {
-    left: -5px;
-    top: calc(50% - 5px);
-  }
-}
-
-.home-patients .cases {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-}
-
-@media only screen and (min-width: 768px) {
-  .home-patients .cases {
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-  }
-}
-
-@media only screen and (min-width: 1080px) {
-  .home-patients .cases {
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
-}
-
-.home-patients .cases > div:nth-of-type(1) {
-  display: inline-block;
-}
-
-.home-patients .cases > div:nth-of-type(2) {
-  display: none;
-}
-
-.home-patients .cases > div:nth-of-type(3) {
-  display: none;
-}
-
-@media only screen and (min-width: 768px) {
-  .home-patients .cases > div:nth-of-type(2) {
-    display: inline-block;
-  }
-}
-
-@media only screen and (min-width: 1080px) {
-  .home-patients .cases > div:nth-of-type(3) {
-    display: inline-block;
-  }
-}
-
-.home-patients span {
-  font-style: italic;
-  font-size: 12px;
-}
-
-.home-patients .twentytwenty-container {
-  margin-top: 40px;
-  margin-bottom: 20px;
-  width: 300px;
-  height: 530px;
-}
-
-@media only screen and (min-width: 768px) {
-  .home-patients .twentytwenty-container {
-    margin-top: 140px;
-    margin-bottom: 20px;
-    width: 350px;
-  }
-}
-
-.home-patients .twentytwenty-container img {
-  width: 100%;
-}
-
-.home-patients .last-button {
-  margin-top: 20px;
-}
-
-@media only screen and (min-width: 768px) {
-  .home-patients .last-button {
-    margin-top: 40px;
-  }
-}
-
-/*====================================
-=            home-reviews            =
-====================================*/
-.home-reviews {
-  display: none;
-  background-color: #3b3f50;
-  color: #ffffff;
-  position: relative;
-}
-
-@media only screen and (min-width: 768px) {
-  .home-reviews {
-    padding-top: 120px;
-    padding-bottom: 80px;
-    display: block;
-  }
-}
-
-.home-reviews .split-line {
-  position: absolute;
-  left: calc(50% - 1px);
-  width: 1px;
-  height: 340px;
-  background-color: rgba(255, 255, 255, 0.5);
-}
-
-.home-reviews ul {
-  margin: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  list-style: none;
-}
-
-.home-reviews ul li {
-  width: 44%;
-  font-family: vollkorn, serif;
-  font-size: 24px;
-  line-height: 38px;
-  font-style: italic;
-  position: relative;
-}
-
-.home-reviews ul li:before {
-  content: "";
-  background: url("images/icon-quote.png");
-  background-size: 101px 80px;
-  width: 101px;
-  height: 80px;
-  position: absolute;
-  top: -40px;
-  left: calc(50% - 50px);
-}
-
-.home-reviews .button {
-  background: #ffffff;
-  color: #3b3f50 !important;
-}
-
-.home-reviews .fa-google {
-  color: #b73c16;
-  display: block;
-  margin-bottom: 10px;
-  font-size: 25px;
-}
-
-.home-reviews .fa-star {
-  color: #fcc55c;
-  font-size: 19px;
-}
-
-.home-reviews span {
-  font-style: normal;
-  font-size: 32px;
 }
 
 /*================================================
@@ -8186,13 +7912,17 @@ aside,
   margin: 0;
   color: #ffffff;
   list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
-@media only screen and (min-width: 1080px) {
+@media only screen and (min-width: 768px) {
   .home-featured-procedures ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -8200,13 +7930,13 @@ aside,
 }
 
 .home-featured-procedures li {
-  width: 100%;
+  width: 50%;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
   padding-left: 20px;
   padding-right: 20px;
-  padding-top: 200px;
+  padding-top: 100px;
   padding-bottom: 40px;
   -webkit-transition: all .35s ease-in-out;
   transition: all .35s ease-in-out;
@@ -8225,17 +7955,55 @@ aside,
 @media only screen and (min-width: 1080px) {
   .home-featured-procedures li {
     padding-bottom: 80px;
-    padding-top: 340px;
+    padding-top: 370px;
   }
 }
 
-.home-featured-procedures li .feat-content p {
-  max-width: 350px;
-  margin: 0 auto;
-  margin-bottom: 20px;
+.home-featured-procedures li a {
+  text-decoration: none;
+}
+
+.home-featured-procedures li .the-seth {
+  border-top: 1px solid #ffffff;
+  border-bottom: 1px solid #ffffff;
+  padding: 3px 0px;
+}
+
+@media only screen and (min-width: 768px) {
+  .home-featured-procedures li .the-seth {
+    padding: 7px 0px;
+  }
+}
+
+.home-featured-procedures li .the-seth-button {
+  -webkit-transition: all .35s ease-in-out;
+  transition: all .35s ease-in-out;
+  display: block;
+  padding: 5px 0px;
+  font-family: orpheuspro, serif;
+  color: #ffffff;
+  font-size: 20px;
+  z-index: 9999;
+  text-decoration: none;
+  border-radius: 4px;
+  background: transparent;
+}
+
+@media only screen and (min-width: 768px) {
+  .home-featured-procedures li .the-seth-button {
+    padding: 20px 0px;
+    font-size: 30px;
+  }
+}
+
+@media only screen and (min-width: 1080px) {
+  .home-featured-procedures li .the-seth-button {
+    min-width: 200px;
+  }
 }
 
 .home-featured-procedures li .feat-overlay {
+  z-index: -1;
   top: 0;
   left: 0;
   right: 0;
@@ -8245,61 +8013,99 @@ aside,
   position: absolute;
   -webkit-transition: all .35s ease-in-out;
   transition: all .35s ease-in-out;
-  background: transparent;
+  background: rgba(59, 63, 80, 0.6);
 }
 
-@media only screen and (min-width: 1080px) {
-  .home-featured-procedures li:hover {
-    padding-top: 320px;
-  }
+.home-featured-procedures li:hover .the-seth-button {
+  background: #3b3f50;
 }
 
 .home-featured-procedures li:hover .feat-overlay {
-  background: rgba(0, 0, 0, 0.3);
+  background: transparent;
 }
 
-.home-featured-procedures span {
+/*====================================
+=            home-reviews            =
+====================================*/
+.home-reviews {
+  padding-top: 40px;
+  padding-bottom: 60px;
+}
+
+@media only screen and (min-width: 768px) {
+  .home-reviews {
+    padding-top: 75px;
+    padding-bottom: 100px;
+  }
+}
+
+.home-reviews .the-review {
+  border: 1px solid #3b3f50;
+  padding: 20px;
+}
+
+@media only screen and (min-width: 768px) {
+  .home-reviews .the-review {
+    padding: 40px 80px;
+  }
+}
+
+.home-reviews .the-review .the-stars {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 25px;
+}
+
+@media only screen and (min-width: 768px) {
+  .home-reviews .the-review .the-stars {
+    font-size: 30px;
+  }
+}
+
+.home-reviews .fa-star {
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+.home-reviews:hover .fa-star {
+  color: orange;
+  margin-right: 3px;
+  margin-left: 3px;
+}
+
+.home-reviews p {
   font-family: orpheuspro, serif;
-  font-size: 30px;
-  line-height: 32px;
-  display: block;
-  margin-bottom: 10px;
+  font-size: 18px;
+  line-height: 30px;
 }
 
 @media only screen and (min-width: 768px) {
-  .home-featured-procedures span {
-    font-size: 35px;
-    line-height: 37px;
+  .home-reviews p {
+    font-size: 22px;
+    line-height: 44px;
   }
 }
 
-/*=================================================
-=            .home-primary-rhinoplasty            =
-=================================================*/
-.home-primary-rhinoplasty {
-  background: #3b3f50 url("images/bg-home-primary.jpg") top center no-repeat;
-  background-size: 150vw auto;
-  padding-top: 65vw;
-  padding-bottom: 40px;
-  text-align: left;
+.home-reviews .button {
+  margin-top: 20px;
+  padding: 10px 50px;
 }
 
-@media only screen and (min-width: 768px) {
-  .home-primary-rhinoplasty {
-    background: #3b3f50 url("images/bg-home-primary.jpg") center center no-repeat;
-    background-size: cover;
-    padding-top: 100px;
-    padding-bottom: 190px;
-    padding-right: 50%;
-  }
+.home-reviews .button:hover {
+  background: #3b3f50;
+  color: #ffffff !important;
 }
 
-@media only screen and (min-width: 1080px) {
-  .home-primary-rhinoplasty {
-    background-attachment: fixed;
-    padding-top: 200px;
-    padding-bottom: 190px;
-  }
+.home-reviews .button:before {
+  content: '';
+  width: 0px;
+  height: 0px;
+  border-bottom: 25px solid #3b3f50;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  position: absolute;
+  top: -25px;
+  left: calc( 50% - 20px);
 }
 
 /* ------------------------

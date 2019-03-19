@@ -32,7 +32,7 @@
 
 <section class="home-doctor">
 	<div class="doc-content">
-		<img src="<?php bloginfo('template_directory'); ?>/images/img-doctor.jpg" alt="doctor">
+		<img src="<?php bloginfo('template_directory'); ?>/images/img-doctor.jpg" alt="doctor" class="doc-image">
 		<h2><?php the_field('doctor_head'); ?></h2>
 		<?php the_field('doctor_cont'); ?>
 		<?php if(have_rows('doctor_logos')): ?>
@@ -49,60 +49,24 @@
 </section>
 
 
-<section class="home-doctor-quote">
-	<div class="wow fadeIn" data-wow-offset="0" data-wow-delay=".30s" data-wow-duration="1.5s">
-		<?php the_field('doctor_quote'); ?>
-	</div>
-</section>
-
-
-<section class="home-patients">
-	<div class="home-patients-content wow fadeInUp" data-wow-offset="0" data-wow-delay=".15s" data-wow-duration="1.5s">
-		<div class="actual-patient-tab">Actual Patient</div>
-		<h2><?php the_field('patient_results_headline'); ?></h2>
-		<?php the_field('patient_results_content'); ?>
-		<a href="<?php the_field('patient_results_button_link-1'); ?>" rel="nofollow" class="button">Schedule a Consultation</a>
-	</div>
-	<div class="results-slides wow fadeInUp" data-wow-offset="0" data-wow-delay=".30s" data-wow-duration="1.5s">
-
-	<?php if( have_rows('case') ): ?>
-		<div class="cases">
-			<?php while( have_rows('case') ): the_row();
-				$category = get_sub_field('category');
-				$patient = get_sub_field('patient');
-				?>
-
-				<?php 
-				 
-				echo do_shortcode( '[bnacasecustom category="' . $category . '" patient="' . $patient . '"  imageset="3" casecount="1" addtags="false" ]' ) ?>
-
-			<?php endwhile; ?>
-		</div>
-	<?php endif; ?>
-
-	</div>
-	<div class="last-button wow fadeInUp" data-wow-offset="100" data-wow-delay=".3">
-		<a href="<?php the_field('view_our_gallery_button_link-1'); ?>" rel="nofollow" class="button">View Our Gallery</a>
-	</div>
-</section>
-
-
 <div class="home-featured-procedures">
-	<?php if(have_rows('featured_procedures')): ?>
+	<?php if(have_rows('featured_procedures_1')): ?>
 		<?php $count = 3 ?>
 		<ul>
-			<?php while(have_rows('featured_procedures')): the_row(); ?>
+			<?php while(have_rows('featured_procedures_1')): the_row(); ?>
 				<li style="background-image: url('<?php the_sub_field('image'); ?>');" class="wow fadeIn" data-wow-offset="0" data-wow-delay=".<?echo $count; ?>0s" data-wow-duration="1.5s" >
+						<a href="<?php the_sub_field('link'); ?>" rel="nofollow">
+
 					<div class="feat-overlay"></div>
-					<span>
-						<?php the_sub_field('headline'); ?>
-					</span>
-					<div class="feat-content">
-						<?php the_sub_field('content'); ?>
+					<div class="the-seth">
+						<div class="the-seth-button">
+							<?php the_sub_field('headline'); ?>
+						</div>	
+							
 					</div>
-					<a href="<?php the_sub_field('link'); ?>" class="button" rel="nofollow">Learn More</a>
+						</a>
 				</li>
-		<?php $count++; ?>
+			<?php $count++; ?>
 			<?php endwhile; ?>
 		</ul>
 	<?php endif; ?>
@@ -110,44 +74,19 @@
 
 
 <section class="home-reviews">
-	<div class="split-line wow fadeIn" data-wow-offset="0" data-wow-delay=".30s" data-wow-duration="1.5s"></div>
-	<?php if(have_rows('home_reviews')): ?>
-		<ul class="wow fadeIn" data-wow-offset="0" data-wow-delay=".30s">
-			<?php while(have_rows('home_reviews')): the_row(); ?>
-				<li>
-					<?php the_sub_field('quote'); ?>
-					<i class="fab fa-google"></i>
-					<span><?php the_sub_field('name'); ?></span>
-					<div class="reviews-stars">
-						<i class="fas fa-star"></i>	
-						<i class="fas fa-star"></i>	
-						<i class="fas fa-star"></i>	
-						<i class="fas fa-star"></i>	
-						<i class="fas fa-star"></i>	
-					</div>
-				</li>
-			<?php endwhile; ?>
-		</ul>
-	<?php endif; ?>
-	<a href="<?php the_field('reviews_button_link'); ?>" class="button">Reviews</a>
-</section>
-
-
-<section class="home-primary-rhinoplasty">
-<!-- <section class="home-primary-rhinoplasty parallax-primary-rhinoplasty will-parallax"> -->
-	<div class="wow fadeIn" data-wow-offset="0" data-wow-delay=".30s" data-wow-duration=".5s">
-	<h2><?php the_field('primary_rhinoplasty_headline'); ?></h2>
-	<?php the_field('primary_rhinoplasty_content'); ?>
-	<?php if(have_rows('primary_rhinoplasty_buttons')): ?>
-		<ul class="home-buttons-list">
-			<?php while(have_rows('primary_rhinoplasty_buttons')): the_row(); ?>
-				<li>
-					<a href="<?php the_sub_field('link'); ?>" rel="nofollow" class="button"><?php the_sub_field('text'); ?></a>
-				</li>
-			<?php endwhile; ?>
-		</ul>
-	<?php endif; ?>
+	<div class="the-review">
+		<h2><?php the_field('home_reviews_headline'); ?></h2>
+		<div class="the-stars">
+			<i class="fas fa-star"></i>
+			<i class="fas fa-star"></i>
+			<i class="fas fa-star"></i>
+			<i class="fas fa-star"></i>
+			<i class="fas fa-star"></i>
+		</div>
+		<?php the_field('home_reviews_content'); ?>
+		<span class="button">RevMary Jo Martin <i class="fas fa-facebook"></i></span>
 	</div>
 </section>
+
 
 <?get_footer()?>
