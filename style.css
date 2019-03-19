@@ -7544,6 +7544,14 @@ span.error {
 /* ------------------------
 	Home Page
 ------------------------ */
+header,
+.welcome,
+footer,
+.home-doctor,
+.home-featured-procedures,
+.home-reviews,
+.home-breast-aug,
+.home-aug-buttons,
 aside {
   display: none !important;
 }
@@ -8118,6 +8126,7 @@ aside {
   .home-breast-aug {
     background: #d8e1bf url("images/bg-home-breast-aug.jpg");
     background-repeat: no-repeat;
+    background-position: center center;
     background-size: cover;
     padding-top: 0;
     height: 745px;
@@ -8195,6 +8204,96 @@ aside {
 
 .home-aug-buttons a {
   margin-right: 20px;
+}
+
+.bg-procedures {
+  background: #d8e1bf url("images/bg-procedure-slider.jpg") center center no-repeat;
+  background-position-x: -800px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  min-height: 800px;
+}
+
+@media only screen and (min-width: 768px) {
+  .bg-procedures {
+    padding-top: 40px;
+    background: #d8e1bf url("images/bg-procedure-slider.jpg") center center no-repeat;
+    min-height: 1200px;
+  }
+}
+
+@media only screen and (min-width: 1080px) {
+  .bg-procedures {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-size: cover;
+  }
+}
+
+.bg-procedures .the-slider {
+  height: 100%;
+  border: 1px solid #3b3f50;
+  padding: 20px 20px;
+  background: rgba(132, 211, 233, 0.8);
+}
+
+@media only screen and (min-width: 768px) {
+  .bg-procedures .the-slider {
+    background: transparent;
+  }
+}
+
+.bg-procedures h2 {
+  margin-top: 0;
+}
+
+@media only screen and (min-width: 1080px) {
+  .bg-procedures h2 {
+    margin-bottom: 60px;
+  }
+}
+
+.bg-procedures h3 {
+  font-family: orpheuspro, serif;
+  margin-top: 0;
+}
+
+.bg-procedures div {
+  text-align: left;
+  display: block;
+  clear: both;
+  margin-bottom: 60px;
+}
+
+@media only screen and (min-width: 1080px) {
+  .bg-procedures div {
+    padding: 60px 650px 60px 80px;
+  }
+}
+
+.bg-procedures div img {
+  margin-bottom: 20px;
+}
+
+@media only screen and (min-width: 768px) {
+  .bg-procedures div img {
+    float: left;
+    margin-right: 40px;
+  }
+}
+
+@media only screen and (min-width: 1080px) {
+  .bg-procedures div img {
+    margin-bottom: 170px;
+  }
+}
+
+.bg-procedures div:nth-of-type(even) {
+  margin-bottom: 0 !important;
+}
+
+.bg-procedures .button {
+  margin-top: 20px;
 }
 
 /* ------------------------

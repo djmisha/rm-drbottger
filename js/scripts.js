@@ -30,140 +30,28 @@
 			// mobile: false,
 		}).init();
 
-		/*=========================================
-		=            Sticky Footer Bar            =
-		=========================================*/
 
-		var stickyBarTop = 400;
+		/* Homepage Procedures Slideshow */
 
-		var stickyContact = function() {
-			var scrollTop = $(window).scrollTop();
-
-			if (scrollTop > stickyBarTop) {
-				$(".schedule-bar").addClass("fixed-bar");
-			} else {
-				$(".schedule-bar").removeClass("fixed-bar");
-			}
-		};
-
-		stickyContact();
-
-		$(window).scroll(function() {
-			stickyContact();
-		});
+		// $('.bg-procedures .the-slider').flickity({
+		//   cellAlign: 'left',
+		//   contain: true,
+		//   autoPlay: 4000,
+		//   // fade: true, 
+		//   groupCells: 2
+		// });
 
 
-		/*==========================================================
-		=            Clone Stuff for Overlay Navigation            =
-		==========================================================*/
-
-		// $(".nav-bar-logo")
-		// 	.clone()
-		// 	// .removeClass("nav-overlay")
-		// 	.addClass("nav-overlay-logo")
-		// 	.insertAfter(".menu-wrap");
-
-		$(".nav-bar-social").clone().addClass("nav-bar-social-overlay").insertAfter(".menu-wrap");
-		$(".nav-form").insertAfter(".menu-wrap");
-
-
-		/* Append Virtual Consult button */
-
-		// $(".tmpl_type_page .virtual-consulation, .from-blog .virtual-consulation, .tmpl_type_page_faqs .virtual-consulation").addClass("virtual-consulation-page-title").appendTo(".page-title");
-		
 		/*================================================================
 		=            Custom Landing Page Header, Append Items            =
 		================================================================*/
 
-		$(".tmpl_type_page_landing .site-crumbs").appendTo("header");
-		$(".tmpl_type_page_landing .page-title").appendTo("header");
-		$(".tmpl_type_page_landing .flexible-jump-links").appendTo("header");
+		// $(".tmpl_type_page_landing .site-crumbs").appendTo("header");
+		// $(".tmpl_type_page_landing .page-title").appendTo("header");
+		// $(".tmpl_type_page_landing .flexible-jump-links").appendTo("header");
 
-		/*==========================================
-		=            Twenty Sliders BNA            =
-		==========================================*/
+	
 
-		// $(window).load(function() {
-		// 	setTimeout(function() {
-		// 		$(".twentytwenty-container").twentytwenty();
-		// 	}, 300);
-		// });
-
-		/*=========================================
-		=            Sticky Nav Bar            =
-		=========================================*/
-
-		// $(".nav-bar")
-		// 	.clone()
-		// 	.addClass("sticky-nav-bar")
-		// 	.insertAfter(".nav-bar");
-
-		// var stickyNavTop = 600;
-
-		// var stickyNav = function() {
-		// 	var scrollTop = $(window).scrollTop();
-
-		// 	if (scrollTop > stickyNavTop) {
-		// 		$(".sticky-nav-bar").addClass("fixed-nav");
-		// 	} else {
-		// 		$(".sticky-nav-bar").removeClass("fixed-nav");
-		// 	}
-		// };
-
-		// stickyNav();
-
-		// $(window).scroll(function() {
-		// 	stickyNav();
-		// });
-
-		/*========================================================
-		=            Better Scroll Up Navigation Show            =
-		========================================================*/
-
-		// if ($("html").hasClass("not--device") || $(window).width() > $desktop) {
-		// http://jsfiddle.net/mariusc23/s6mLJ/31/
-
-		// Hide Header on on scroll down
-		var didScroll;
-		var lastScrollTop = 120;
-		var delta = 5;
-		var navbarHeight = $(".nav-bar").outerHeight();
-
-		$(window).scroll(function(event) {
-			didScroll = true;
-		});
-
-		setInterval(function() {
-			if (didScroll) {
-				hasScrolled();
-				didScroll = false;
-			}
-		}, 250);
-
-		function hasScrolled() {
-			var st = $(this).scrollTop();
-
-			// Make sure they scroll more than delta
-			if (Math.abs(lastScrollTop - st) <= delta) return;
-
-			// If they scrolled down and are past the navbar, add class .nav-up.
-			// This is necessary so you never see what is "behind" the navbar.
-			if (st > lastScrollTop && st > navbarHeight) {
-				// Scroll Down
-				$(".nav-bar")
-					.removeClass("nav-down")
-					.addClass("nav-up");
-			} else {
-				// Scroll Up
-				if (st + $(window).height() < $(document).height()) {
-					$(".nav-bar")
-						.removeClass("nav-up")
-						.addClass("nav-down");
-				}
-			}
-
-			lastScrollTop = st;
-		}
 
 		// }
 
@@ -171,18 +59,18 @@
 		=            Reviews Rotator            =
 		=======================================*/
 
-		$(".home-our-reviews").owlCarousel({
-			items: 1,
-			lazyLoad: true,
-			loop: true,
-			nav: false,
-			dots: true,
-			autoplay: true,
-			autoplayTimeout: 5000,
-			smartSpeed: 700
-		});
+		// $(".bg-procedures .the-slider").owlCarousel({
+		// 	items: 2,
+		// 	lazyLoad: true,
+		// 	loop: true,
+		// 	nav: false,
+		// 	dots: true,
+		// 	autoplay: true,
+		// 	autoplayTimeout: 5000,
+		// 	smartSpeed: 700
+		// });
 
-		$(".owl-dots").appendTo(".reviews-box");
+		// $(".owl-dots").appendTo(".reviews-box");
 
 
 

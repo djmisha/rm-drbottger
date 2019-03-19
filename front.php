@@ -55,16 +55,15 @@
 		<ul>
 			<?php while(have_rows('featured_procedures_1')): the_row(); ?>
 				<li style="background-image: url('<?php the_sub_field('image'); ?>');" class="wow fadeIn" data-wow-offset="0" data-wow-delay=".<?echo $count; ?>0s" data-wow-duration="1.5s" >
-						<a href="<?php the_sub_field('link'); ?>" rel="nofollow">
-
-					<div class="feat-overlay"></div>
-					<div class="the-seth">
-						<div class="the-seth-button">
-							<?php the_sub_field('headline'); ?>
-						</div>	
-							
-					</div>
-						</a>
+					<a href="<?php the_sub_field('link'); ?>" rel="nofollow">
+						<div class="feat-overlay"></div>
+						<div class="the-seth">
+							<div class="the-seth-button">
+								<?php the_sub_field('headline'); ?>
+							</div>	
+								
+						</div>
+					</a>
 				</li>
 			<?php $count++; ?>
 			<?php endwhile; ?>
@@ -97,8 +96,25 @@
 </section>
 
 <section class="home-aug-buttons wow fadeInUp"  data-wow-delay=".15s">
-	<a href="" class="button">Learn More about Breast Augmentation</a>
-	<a href="" class="button">View Photo Gallery</a>
+	<a href="" class="button" rel="nofollow">Learn More about Breast Augmentation</a>
+	<a href="" class="button" rel="nofollow">View Photo Gallery</a>
 </section> 
+
+
+<section class="bg-procedures">
+	<h2><?php the_field('featured_procedures_headline'); ?></h2>
+	<div class="the-slider">
+		<?php if(have_rows('featured_procedures_slideshow')): ?>
+				<?php while(have_rows('featured_procedures_slideshow')): the_row(); ?>
+					<div>
+						<img src="<?php the_sub_field('image'); ?>" alt="icon">
+						<h3><?php the_sub_field('title'); ?></h3>
+						<?php the_sub_field('content'); ?>
+						<a href="<?php the_sub_field('link'); ?>" class="button">Learn More</a>
+					</div>
+				<?php endwhile; ?>
+		<?php endif; ?>
+	</div>
+</section>
 
 <?get_footer()?>

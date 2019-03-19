@@ -1,30 +1,3 @@
-<!-- 
-<div class="footer-latest-news">
-		<?php if( get_post_type() != 'post'): ?>
-			<?php
-			$args = array(
-				'numberposts' => 3,
-				'post_status'=>"publish",
-				'post_type'=>"post",
-				'orderby'=>"post_date");
-
-			$postslist = get_posts( $args );
-
-			echo '<ul class="latest-posts">';
-
-			foreach ($postslist as $post) :  setup_postdata($post); ?>
-				<li>
-					<a href="<?the_permalink();?>">
-						<img src="<?php bloginfo('template_directory'); ?>/images/icon-file.png" alt="icon">
-						<?the_title();?>
-					</a>
-				</li>
-			<?php endforeach; ?>
-			<?php wp_reset_query(); ?>
-		</ul>
-	<?php endif; ?>
-</div> 
- -->
 
 <footer>
 	<div class="footer-cta">

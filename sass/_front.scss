@@ -1,9 +1,11 @@
-// header,
-// .welcome,
-// footer,
-// .home-doctor,
-// .home-featured-procedures,
-// .home-reviews,
+header,
+.welcome,
+footer,
+.home-doctor,
+.home-featured-procedures,
+.home-reviews,
+.home-breast-aug,
+.home-aug-buttons,
 aside,
  {
 	display: none !important;
@@ -443,7 +445,8 @@ aside,
 	background-repeat: no-repeat;
 	@include media($desktop) {
 		background: $tertiaryColor url('images/bg-home-breast-aug.jpg');
-	background-repeat: no-repeat;
+		background-repeat: no-repeat;
+		background-position: center center;
 		background-size: cover;
 		padding-top: 0;
 		height: 745px;
@@ -497,4 +500,76 @@ aside,
 		}
 	}
 	a {margin-right: 20px;}
+}
+
+
+
+
+.bg-procedures {
+	background: $tertiaryColor url('images/bg-procedure-slider.jpg') center center no-repeat;
+	background-position-x: -800px; 
+	// background-size: cover;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	min-height: 800px;
+	@include media($tablet) {
+		padding-top: 40px;
+		background: $tertiaryColor url('images/bg-procedure-slider.jpg') center center no-repeat;
+		min-height: 1200px;
+	}
+	@include media($desktop) {
+		padding-top: 100px;
+		padding-bottom: 100px;
+		background-size: cover;
+	}
+	.the-slider {
+		// width: 100% !important;
+		height: 100%;
+		border: 1px solid $primaryColor;
+		padding: 20px 20px;
+		background: rgba( #84d3e9, .8);
+		@include media($tablet) {
+			// padding: 60px 250px 60px 80px;
+			background: transparent;
+		}
+		@include media($desktop) {
+		}
+	}
+	h2 {
+		margin-top: 0;
+		@include media($desktop) {
+			margin-bottom: 60px;
+		}
+	}
+	h3 {
+		font-family: $secondaryFont;
+		margin-top: 0;
+	}
+	 div {
+		text-align: left;
+		display: block;
+		@include media($desktop) {
+			// max-width: 400px;
+			padding: 60px 650px 60px 80px;
+		}
+		img {
+			margin-bottom: 20px;
+			@include media($tablet) {
+			float: left;
+			margin-right: 40px;
+				
+			}
+			@include media($desktop) {
+				margin-bottom: 170px;
+			}
+		}
+		clear: both;
+		margin-bottom: 60px;
+		&:nth-of-type(even) {
+			margin-bottom: 0 !important;
+		}
+	}
+	.button {
+		margin-top: 20px;
+	}
 }
