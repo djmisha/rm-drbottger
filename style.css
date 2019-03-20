@@ -8206,129 +8206,148 @@ footer,
   margin-right: 20px;
 }
 
-.bg-procedures {
+.home-more-procedures {
   background: #d8e1bf url("images/bg-procedure-slider.jpg") center center no-repeat;
   background-position-x: -800px;
   padding-top: 20px;
-  padding-bottom: 20px;
+  padding-bottom: 60px;
   min-height: 800px;
 }
 
 @media only screen and (min-width: 768px) {
-  .bg-procedures {
+  .home-more-procedures {
     padding-top: 40px;
     background: #d8e1bf url("images/bg-procedure-slider.jpg") center center no-repeat;
+    background-size: cover;
     min-height: 1200px;
   }
 }
 
 @media only screen and (min-width: 1080px) {
-  .bg-procedures {
+  .home-more-procedures {
     padding-top: 100px;
     padding-bottom: 100px;
-    background-size: cover;
   }
 }
 
-.bg-procedures h2 {
+.home-more-procedures .bg-p-overlay {
+  position: absolute;
+  width: 100%;
+  height: 1253px;
+  background: rgba(59, 63, 80, 0.6);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(132, 211, 233, 0.8);
+  z-index: 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .home-more-procedures .bg-p-overlay {
+    display: none;
+  }
+}
+
+.home-more-procedures h2 {
+  z-index: 1;
+  position: relative;
   margin-top: 0;
 }
 
 @media only screen and (min-width: 1080px) {
-  .bg-procedures h2 {
+  .home-more-procedures h2 {
     margin-bottom: 60px;
   }
 }
 
-.bg-procedures h3 {
+.home-more-procedures h3 {
   font-family: orpheuspro, serif;
   margin-top: 0;
 }
 
-.bg-procedures .the-holder {
+.home-more-procedures .the-holder {
   border: 1px solid #3b3f50;
   position: relative;
 }
 
-.bg-procedures .the-slider {
-  max-width: 500px;
-  height: 100%;
-  height: 800px;
+.home-more-procedures .the-slider {
+  border: 1px solid red;
+  max-width: 550px;
+  height: 1000px;
   padding: 20px 20px;
-  background: rgba(132, 211, 233, 0.8);
   /* smaller, dark, rounded square */
   /* icon color */
   /* position outside */
 }
 
 @media only screen and (min-width: 768px) {
-  .bg-procedures .the-slider {
+  .home-more-procedures .the-slider {
     padding: 60px 50px 60px 80px;
     background: transparent;
   }
 }
 
-.bg-procedures .the-slider div {
+.home-more-procedures .the-slider div {
   text-align: left;
   display: block;
   clear: both;
   margin-bottom: 60px;
 }
 
-.bg-procedures .the-slider div img {
+.home-more-procedures .the-slider div img {
   margin-bottom: 20px;
 }
 
 @media only screen and (min-width: 768px) {
-  .bg-procedures .the-slider div img {
+  .home-more-procedures .the-slider div img {
     float: left;
     margin-right: 40px;
   }
 }
 
-@media only screen and (min-width: 1080px) {
-  .bg-procedures .the-slider div img {
-    margin-bottom: 170px;
-  }
-}
-
-.bg-procedures .the-slider div:nth-of-type(even) {
+.home-more-procedures .the-slider div:nth-of-type(even) {
   margin-bottom: 0 !important;
 }
 
-.bg-procedures .the-slider .carousel-cell {
+.home-more-procedures .the-slider .carousel-cell {
   width: 100%;
   /* full width */
-  height: 360px;
+  height: 900px;
   /* height of carousel */
 }
 
-.bg-procedures .the-slider .flickity-button {
+@media only screen and (min-width: 1080px) {
+  .home-more-procedures .the-slider .carousel-cell {
+    height: 860px;
+    /* height of carousel */
+    border: 1px solid red;
+  }
+}
+
+.home-more-procedures .the-slider .flickity-button {
   background: #3b3f50;
 }
 
-.bg-procedures .the-slider .flickity-prev-next-button {
+.home-more-procedures .the-slider .flickity-prev-next-button {
   width: 40px;
   height: 40px;
   border-radius: 4px;
 }
 
-.bg-procedures .the-slider .flickity-button-icon {
+.home-more-procedures .the-slider .flickity-button-icon {
   fill: white;
 }
 
-.bg-procedures .the-slider .flickity-prev-next-button.previous {
-  position: relative;
-  float: left;
+.home-more-procedures .the-slider .flickity-prev-next-button.previous {
   margin-right: 25px;
 }
 
-.bg-procedures .the-slider .flickity-prev-next-button.next {
-  float: left;
+.home-more-procedures .the-slider .flickity-page-dots {
   position: relative;
 }
 
-.bg-procedures .button {
+.home-more-procedures .button {
   margin-top: 20px;
 }
 

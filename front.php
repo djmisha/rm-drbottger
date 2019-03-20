@@ -11,7 +11,7 @@
 			<div class="wow fadeInUp"  data-wow-delay=".15s">
 				<div class="home-logo">
 					<h1>
-						<img src="<?php bloginfo('template_directory'); ?>/images/logo.png" alt=" THIS IS THE H1">
+						<img src="<?php bloginfo('template_directory'); ?>/images/logo.png" alt="THIS IS THE H1">
 					</h1>
 				</div>
 				<div class="home-addy">
@@ -102,31 +102,27 @@
 </section> 
 
 
-<section class="bg-procedures">
+<section class="home-more-procedures">
+	<div class="bg-p-overlay"></div>
 	<h2><?php the_field('featured_procedures_headline'); ?></h2>
 	<div class="the-holder">
 		<div class="the-slider">
-
-			
-			<?php if(have_rows('two_procedures')): ?>
-				<?php while(have_rows('two_procedures')): the_row(); ?>
-
-			<?php if(have_rows('featured_procedures_slideshow')): ?>
-				<?php while(have_rows('featured_procedures_slideshow')): the_row(); ?>
+			<?php if(have_rows('two-procedures')): ?>
+				<?php while(have_rows('two-procedures')): the_row(); ?>
 					<div class="carousel-cell">
-						<img src="<?php the_sub_field('image'); ?>" alt="icon">
-						<h3><?php the_sub_field('title'); ?></h3>
-						<?php the_sub_field('content'); ?>
-						<a href="<?php the_sub_field('link'); ?>" class="button">Learn More</a>
+					<?php if(have_rows('featured_procedures_slideshow')): ?>
+						<?php while(have_rows('featured_procedures_slideshow')): the_row(); ?>
+							<div>
+								<img src="<?php the_sub_field('image'); ?>" alt="icon">
+								<h3><?php the_sub_field('title'); ?></h3>
+								<?php the_sub_field('content'); ?>
+								<a href="<?php the_sub_field('link'); ?>" class="button">Learn More</a>
+							</div>
+						<?php endwhile; ?>
+					<?php endif; ?>
 					</div>
 				<?php endwhile; ?>
 			<?php endif; ?>
-					
-				<?php endwhile; ?>
-			<?php endif; ?>
-
-
-
 		</div>
 	</div>
 </section>

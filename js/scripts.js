@@ -33,7 +33,7 @@
 
 		/* Homepage Procedures Slideshow */
 
-		$('.bg-procedures .the-slider').flickity({
+		$('.the-slider').flickity({
 		  cellAlign: 'left',
 		  contain: true,
 		  autoPlay: 4000,

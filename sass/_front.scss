@@ -8,9 +8,6 @@ footer,
 .home-aug-buttons,
 .patient-testis 
 {
-
-// aside,
- // {
  	display: none !important;
  }
 
@@ -508,24 +505,42 @@ footer,
 
 
 
-.bg-procedures {
+.home-more-procedures {
 	background: $tertiaryColor url('images/bg-procedure-slider.jpg') center center no-repeat;
 	background-position-x: -800px; 
 	// background-size: cover;
 	padding-top: 20px;
-	padding-bottom: 20px;
+	padding-bottom: 60px;
 	min-height: 800px;
 	@include media($tablet) {
 		padding-top: 40px;
 		background: $tertiaryColor url('images/bg-procedure-slider.jpg') center center no-repeat;
+		background-size: cover;
 		min-height: 1200px;
 	}
 	@include media($desktop) {
 		padding-top: 100px;
 		padding-bottom: 100px;
-		background-size: cover;
+	}
+	.bg-p-overlay {
+		position: absolute;
+		width: 100%;
+		// height: 100%;
+		height: 1253px;
+		background: rgba( $primaryColor, .6);
+		top: 0;
+		bottom: 0;
+		left:0;
+		right: 0;
+		background: rgba( #84d3e9, .8);
+		z-index: 0;
+		@include media($tablet) {
+			display: none;
+		}
 	}
 	h2 {
+		z-index: 1;
+		position: relative;
 		margin-top: 0;
 		@include media($desktop) {
 			margin-bottom: 60px;
@@ -540,13 +555,11 @@ footer,
 		position: relative;
 	}
 	.the-slider {
-		max-width: 500px;
-		// border: 1px solid red;
-		// width: 100% !important;
-		height: 100%;
-		height: 800px;
+	  	border: 1px solid red;
+
+		max-width: 550px;
+		height: 1000px;
 		padding: 20px 20px;
-		background: rgba( #84d3e9, .8);
 		@include media($tablet) {
 			padding: 60px 50px 60px 80px;
 			background: transparent;
@@ -567,7 +580,7 @@ footer,
 				margin-right: 40px;
 			}
 			@include media($desktop) {
-				margin-bottom: 170px;
+				// margin-bottom: 170px;
 			}
 		}
 		clear: both;
@@ -580,7 +593,11 @@ footer,
 
 	.carousel-cell {
 	  width: 100%; /* full width */
-	  height: 360px; /* height of carousel */
+	  height: 900px; /* height of carousel */
+	  @include media($desktop) {
+		  height: 860px; /* height of carousel */
+		  	border: 1px solid red;
+	  }
 	}
 
 
@@ -603,16 +620,16 @@ footer,
 	}
 	/* position outside */
 	.flickity-prev-next-button.previous {
-		position: relative;
-		float: left;
+		// position: relative;
+		// float: left;
 		margin-right: 25px;
 	}
 	.flickity-prev-next-button.next {
-		float: left;
-		position: relative;
+		// float: left;
+		// position: relative;
 	}
 	.flickity-page-dots {
-		// position: relative;
+		position: relative;
 		// bottom: 5px;
 		// left: 0px;
 
