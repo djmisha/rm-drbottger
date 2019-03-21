@@ -1,16 +1,14 @@
 <? get_header();?>
 <main class="interior">
 
-<section class="back-btn"><a href="<?php bloginfo('url'); ?>/gallery/" class="button gallery-button"><i class="fas fa-th"></i> Gallery</a>
-<h2><?php the_title();?></h2>
-</section>
+<div class="back-btn"><a href="<?php bloginfo('url'); ?>/gallery/" class="button gallery-button"><i class="fas fa-th"></i> Gallery</a>
+<!-- <h2><?php the_title();?></h2> -->
+</div>
 	<section class="gallery-cat-wrap">
-		
-
 
 		<?if ( have_posts() ) : while ( have_posts() ) : the_post();?>
 				<?php
-				$limit = 0;// could probably set this as an wp option
+				$limit = 3;// could probably set this as an wp option
 				foreach ($post->cases as $key => $value) {
 					$case_link = $rmg_case::make_case_link(array('position' => $value['position'] , 'category_id' => $post->ID));
 					$case_name = $rmg_case::make_case_name(array('position' => $value['position']));
@@ -20,6 +18,7 @@
 
 
 					echo '<div class="bna-group">';
+					echo '<div class="bna-group-border">';
 					$i = 0;//required
 					echo '<h2>'.  $case_name .'</h2>';
 
@@ -45,8 +44,14 @@
 
 				// hover overlay
 
-						echo '<div class="hover-overlay"><a href="' . $case_link . '" class="button">More Photos and Details</a></div>';
+						echo '<div class="case-details"> '. $case_content .'</div>';
+						
 
+
+
+						echo '<div class="hover-overlay"><a href="' . $case_link . '" class="button">Enlarge Photos</a></div>';
+
+					echo '</div>';
 					echo '</div>';
 
 				

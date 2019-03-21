@@ -23,8 +23,8 @@
 			margin-bottom: 10px;
 			border-bottom: none;
 			@include media($tablet) {
-				font-size: 30px;
-				line-height: 30px;
+				font-size: 35px;
+				// line-height: 30px;
 			}
 			a {
 				font-family: $secondaryFont !important;
@@ -53,21 +53,27 @@
 			width: 150px;
 			float: left;
 			margin-right: 20px;
-
 			position: relative;
 			margin-bottom: 20px;
+			@include media($tablet) {
+				width: 350px;
+				margin-right: 50px;
+			}
 			img {
 				width: 100%;
 				height: auto;
 			}
 		}
 		.excerpt {
-			border-bottom: 1px solid #ccc;
-			padding-bottom: 60px;
+			padding-top: 40px;
+			padding-bottom: 40px;
 			@include media($tablet) {
+				padding-top: 60px;
 				padding-bottom: 60px;
-				// width: 48%;
 				width: 100%;
+			}
+			h2 {
+				margin-top: 0;
 			}
 			.para {
 				margin-top: 20px;
@@ -89,13 +95,23 @@
 		}
 	}
 	.meta-data {
-		margin-bottom: 30px;
-		color: $secondaryColor;
-		font-family: $highlightFont !important;
-		letter-spacing: 1px;
+		margin-top: 10px;
+		width: auto;
+		display: inline-block;
+		padding-bottom: 5px;
+		border-bottom: 2px solid $primaryColor;
+		margin-bottom: 0px;
+		color: $primaryColor;
+		font-family: $secondaryFont !important;
+		// letter-spacing: 1px;
+		font-size: 15px;
+		@include media($tablet) {
+			font-size: 18px;
+		}
 		a {
-			font-family: $highlightFont !important;
-			color: $secondaryColor !important;
+			text-decoration: none;
+			font-family: $secondaryFont !important;
+			color: $primaryColor !important;
 		}
 	}
 	.button {
@@ -104,10 +120,49 @@
 	}
 }
 
+
+
+.tmpl_type_single {
+	.button {
+		text-decoration: none;
+	}
+	h1 {
+		font-family: $secondaryFont;
+		color: $primaryColor;
+		font-size: 30px;
+		margin-bottom: 10px;
+		font-weight: 100;
+		@include media($tablet) {
+			font-size: 44px;
+			line-height: 47px;
+		}
+	}
+	.meta-data {
+		margin-top: 10px;
+		width: auto;
+		display: inline-block;
+		padding-bottom: 5px;
+		border-bottom: 2px solid $primaryColor;
+		margin-bottom: 20px;
+		color: $primaryColor;
+		font-family: $secondaryFont !important;
+		// letter-spacing: 1px;
+		font-size: 15px;
+		@include media($tablet) {
+			font-size: 18px;
+		}
+		a {
+			text-decoration: none;
+			font-family: $secondaryFont !important;
+			color: $primaryColor !important;
+		}
+	}
+}
+
 .from-blog {
 	.next-prev {
-		margin-top: 50px;
-		margin-bottom: 50px;
+		margin-top: 80px;
+		// margin-bottom: 50px;
 		display: flex;
 		justify-content: space-between;
 		flex-wrap: wrap;
@@ -125,7 +180,7 @@
 			&:hover {
 				color: $lightColor;
 				i {
-					color: $lightColor;
+					color: $darkColor;
 				}
 			}
 		}
@@ -144,7 +199,7 @@
 		&:hover {
 			color: $lightColor;
 			&:before {
-				color: $lightColor;
+				color: $darkColor;
 			}
 		}
 	}
@@ -163,40 +218,45 @@
 		&:hover {
 			color: $lightColor;
 			&:after {
-				color: $lightColor;
+				color: $darkColor;
 			}
 		}
 	}
 }
 
-.tmpl_type_single {
-	.button {
-		text-decoration: none;
+
+.blog-pagination {
+	margin-top: 40px;
+	@include media($desktop) {
+		margin-top: 60px;
 	}
-	h1 {
-		font-family: $secondaryFont;
-		color: $primaryColor;
-		font-size: 26px;
-		font-weight: 100;
-		@include media($tablet) {
-			font-size: 40px;
-			line-height: 45px;
-		}
-		@include media($desktop) {
-			font-size: 40px;
-			line-height: 42px;
-		}
-	}
-	.meta-data {
-		margin-bottom: 10px;
-		color: $secondaryColor;
-		font-family: $highlightFont !important;
-		letter-spacing: 1px;
-		a {
-			font-family: $highlightFont !important;
-			color: $secondaryColor !important;
-		}
-	}
+}
+.navigation-links {
+	// margin-top: 60px;
+	// display: block;
+  a.page-numbers {
+    text-decoration: none;
+    background: $primaryColor;
+    padding: 5px 10px;
+    // width: 60px;
+    // height: 60px;
+    border: 2px solid $primaryColor;
+    // min-width: 40px;
+    // min-height: 40px;
+    display: inline;
+    color: $lightColor;
+    border-radius: 4px;
+  	margin-bottom: 5px;
+  	display: inline-block;
+    &:hover {
+      color: $lightColor;
+      // background: $fourthFont;
+    }
+  }
+  span.page-numbers, 
+  span.dots {
+    padding: 0 5px;
+  } 
 }
 
 // .tmpl_type_single {

@@ -81,7 +81,7 @@
 			<?php $category_title =  get_the_title($post->in_cat_ID); ?>
 			<h1><?php echo $category_title ?> Gallery</h1>
 		<?php elseif(this_is('gallery')): ?>
-			<h1>Photo Gallery</h1>
+			<h1>Plastic Surgery Before & After Photos</h1>
 		<?php elseif (get_post_type() =='news-room'): ?>
 			<div class="heading-text"> Newsroom </div>
 		<?php elseif (is_search()): ?>

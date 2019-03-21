@@ -334,6 +334,41 @@ add_shortcode( 'sitemap', 'sitemap_function' );
 
 
 
+/*===================================================================================
+=            Displays navigation to next/previous pages when applicable.            =
+===================================================================================*/
+
+if ( ! function_exists( 'mishas_happenstance_content_nav' ) ) {
+	function mishas_happenstance_content_nav( $html_id ) {
+		global $wp_query;
+		$html_id = esc_attr( $html_id );
+		if ( $wp_query->max_num_pages > 1 ) : ?>
+			<div id="<?php echo $html_id; ?>" class="navigation" role="navigation">
+				<div class="navigation-inner">
+					<!-- <h2 class="navigation-headline section-heading"><?php _e( 'Post navigation', 'happenstance' ); ?></h2> -->
+					<div class="nav-wrapper">
+						<p class="navigation-links">
+							<?php $big = 999999999;
+							echo paginate_links( array(
+								'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+								'format' => '?paged=%#%',
+								'current' => max( 1, get_query_var('paged') ),
+								'prev_text' => __( '&larr; Previous', 'happenstance' ),
+								'next_text' => __( 'Next &rarr;', 'happenstance' ),
+								'total' => $wp_query->max_num_pages,
+								'add_args' => false
+							) );
+							?>
+						</p>
+					</div>
+				</div>
+			</div>
+		<?php endif;
+	}
+}
+
+
+
 /*==========================================================
 =            Disable the WordPress Core Emoji's            =
 ==========================================================*/

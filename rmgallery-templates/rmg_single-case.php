@@ -1,6 +1,10 @@
 <? get_header();?>
 
 <section class="gallery-nav">
+
+		<a href="<?php bloginfo('url'); ?>/gallery/" class="button gallery-button"><i class="fas fa-th"></i> Gallery</a>
+
+
 	<div class="gal-prev-next">
 		<?php
 
@@ -14,11 +18,11 @@
 
 	$rmg_case::prev( array(
 		'class' => 'button-rmg button-gallery-prev button' ,
-		'title'  => ' <i class="fal fa-angle-left" aria-hidden="true"></i> Previous') );
+		'title'  => '<i class="fas fa-angle-left"></i>') );
 
 	$rmg_case::next( array(
 		'class' => 'button-rmg button-gallery-next button' ,
-		'title' => 'Next <i class="fal fa-angle-right" aria-hidden="true"></i>') );
+		'title' => '<i class="fas fa-angle-right"></i>') );
 		?>
 	</div>
 	<div class="single-case-title">
@@ -28,6 +32,7 @@
 
 <main class="interior">
 	<div class="single-case-content">
+	<div class="single-case-border">
 		<div class="case-wrap">
 			<?if ( have_posts() ) : while ( have_posts() ) : the_post();?>
 			<div class="img-wrap">
@@ -50,6 +55,7 @@
 			<?php endif; ?>
 			<?endwhile; endif;?>
 		</div>
+	</div>
 	</div>
 
 </main>

@@ -8,40 +8,21 @@ aside {
 	}
 
 	@include media($desktop) {
-		width: 350px;
+		width: 100%;
 		display: block;
 		> div {
-			width: 350px;
-		}
-	}
-
-	.gallery-cta {
-		padding: 30px 0px;
-		transition: all 0.1s ease-in;
-		margin-bottom: 30px;
-
-		span {
-			margin-left: 10px;
-			font-size: 20px !important;
-			font-family: $secondaryFont;
-			font-weight: lighter;
-
-			@include media($tablet) {
-				font-size: 25px !important;
-			}
-		}
-
-		&:hover {
-			background: darken($primaryColor, 8%);
+			width: 100%;
 		}
 	}
 }
 
 .sidebar-block {
-	border-top: 6px solid $primaryColor;
+	border: 1px solid rgba( $primaryColor , .3);
 	margin-bottom: 30px;
-	padding: 20px 30px;
-	background-color: #f3f5f3;
+	padding: 20px;
+	@include media($tablet) {
+		padding: 40px 60px;
+	}
 
 	.sb-heading {
 		font-weight: lighter;
@@ -49,32 +30,54 @@ aside {
 		font-size: 25px;
 		color: $primaryColor;
 		margin-bottom: 20px;
-		// margin-top: 5px;
 		padding-top: 5px;
+		text-align: center;
+		@include media($tablet) {
+			font-size: 35px;
+		}
 		a {
 			text-decoration: none;
 		}
 	}
+	ul {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
 	li {
-		border-bottom: 1px solid rgba($darkColor, 0.2);
-		padding: 8px 0 8px 22px;
+		height: 25px;
+		width: auto;
+		padding-right: 5px;
+		padding-left: 5px;
 		position: relative;
-		&:first-of-type {
-			border-top: 1px solid rgba($darkColor, 0.2);
+		@include media($tablet) {
+			padding-right: 15px;
+			padding-left: 15px;
+			border-left: 1px solid rgba($darkColor, 0.2);
+			&:first-of-type {
+				border-left: none;
+			}
+			&:last-of-type {
+
+			}
+			@include media($tablet) {
+				margin-bottom: 10px;
+			}
 		}
-		&:before {
-			content: "\f15c";
-			font-family: "Font Awesome 5 Pro";
-			color: $primaryColor;
-			position: absolute;
-			left: 0;
-			top: 5px;
-			font-size: 16px;
-		}
+		// &:before {
+		// 	content: "\f15c";
+		// 	font-family: "Font Awesome 5 Pro";
+		// 	color: $primaryColor;
+		// 	position: absolute;
+		// 	left: 2px;
+		// 	top: 7px;
+		// 	font-size: 16px;
+		// }
 		a {
+			// border: 1px solid red;
 			text-decoration: none;
-			width: 100%;
-			display: block;
+			// width: auto;
+			// display: block;
 			color: $darkColor;
 			line-height: 1.5em;
 			&:hover {
@@ -83,129 +86,6 @@ aside {
 		}
 		&.current_page_item {
 			// Style this to differentiate (or remove);
-		}
-	}
-}
-
-.sidebar-block-schedule {
-	.from-blog & {
-		margin-top: 40px;
-	}
-	background: $primaryColor;
-	margin-bottom: 30px;
-	padding: 20px 30px 30px 30px;
-	.sb-heading {
-		font-weight: lighter;
-		font-family: $secondaryFont;
-		font-size: 25px;
-		color: $lightColor;
-		margin-bottom: 20px;
-		padding-top: 5px;
-		padding-bottom: 25px;
-		border-bottom: 1px solid rgba($lightColor, 0.2);
-	}
-	.sb-sushi {
-		color: $lightColor;
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-	}
-	.sushi-or {
-		display: none;
-		@include media($tablet) {
-			display: flex;
-		}
-		align-items: center;
-		justify-content: center;
-		width: 35px;
-		height: 35px;
-		border-radius: 50px;
-		background: lighten($primaryColor, 10%);
-		font-style: italic;
-		font-family: $highlightFont;
-	}
-	.sushi-call {
-		font-size: 18px;
-		span {
-			font-size: 14px;
-			display: block;
-		}
-		a {
-			text-decoration: none;
-		}
-	}
-	.button {
-		background: $lightColor;
-		color: $primaryColor !important;
-	}
-}
-
-.sidebar-button {
-	position: relative;
-	padding: 20px 20px 20px 70px;
-	margin-bottom: 10px;
-	background: $primaryColor;
-	color: $lightColor;
-	font-family: $secondaryFont;
-	font-size: 20px;
-	line-height: 23px;
-	text-align: left;
-	.sb-heading {
-		color: $lightColor;
-		font-size: 22px;
-	}
-	p {
-		font-style: 22px;
-		line-height: 28px;
-		font-family: $highlightFont;
-		font-style: italic;
-	}
-	i {
-		position: absolute;
-		left: 25px;
-		font-size: 27px;
-		top: 17px;
-	}
-	.fa-plane {
-		transform: rotate(-45deg);
-	}
-}
-aside a {
-	text-decoration: none !important;
-}
-
-.virtual-consulation {
-	width: 100%;
-	display: block;
-	font-size: 24px;
-	.page-559 & {
-		display: none !important;
-	}
-	text-decoration: none;
-	margin-bottom: 30px;
-	i {
-		position: absolute;
-		left: 25px;
-	}
-	.fa-user-tie {
-		font-size: 24px;
-	}
-	.fa-comment-alt {
-		// position: relative;
-		font-size: 18px;
-		top: 16px;
-		left: 45px;
-	}
-	&.virtual-consulation-page-title {
-		margin-bottom: 0;
-		position: absolute;
-		right: 40px;
-		top: 0;
-		width: 350px;
-		float: right;
-		display: none;
-		@include media($desktop) {
-			display: inline-block;
 		}
 	}
 }

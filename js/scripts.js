@@ -27,7 +27,7 @@
 		================================*/
 
 		new WOW({
-			// mobile: false,
+			mobile: false,
 		}).init();
 
 

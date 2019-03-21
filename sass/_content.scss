@@ -6,7 +6,7 @@
 		// max-width: 1020px;
 		// margin: 0 auto;
 		// width: calc(100% - 350px);
-		padding-right: 60px;
+		// padding-right: 60px;
 	}
 	b,
 	strong {
@@ -37,58 +37,51 @@
 }
 
 .page-title {
-	// margin: 0 auto;
-	// border: 1px solid red;
-	// width: 100%;
-	// max-width: 1190px;
-	text-align: left;
+	text-align: center;
 	position: relative;
 	margin-bottom: 0;
 	padding-bottom: 0;
-	// padding: 0 20px;
+	margin-top: 40px;
+	width: auto;
+	display: inline-block;
 	@include media($tablet) {
-		// padding: 0 40px;
-	}
-
-	.heading-text {
-		margin-top: 20px;
-		margin-bottom: 0;
-		// border: 1px solid red;
+		margin-top: 55px;
+		margin-bottom: 65px;
 	}
 	.heading-text,
 	h1 {
-		width: 100%;
-		// position: relative;
-		text-align: left;
-		// font-family: $secondaryFont;
+		margin-bottom: 0;
+		font-family: $secondaryFont;
+		border-bottom: 2px solid $primaryColor;
+		padding-left: 20px;
+		padding-right: 20px;
+		text-align: center;
 		font-size: 28px;
 		line-height: 26px;
 		font-weight: 400;
 		color: $primaryColor;
 		display: block !important;
-		// border-bottom: 1px solid #ccc;
-		// padding-bottom: 20px;
+		padding-bottom: 10px;
 		@include media($tablet) {
-			// padding-bottom: 40px;
-			font-size: 50px;
+			font-size: 44px;
 			line-height: 55px;
-		}
-		@include media($desktop) {
-			padding-right: 375px;
-			// max-width: 750px;
-			// padding-right: 350px;
 		}
 	}
 }
 
 .site-crumbs {
+	padding-top: 7px;
+	padding-bottom: 1px;
+	background: $secondaryAlt;
 	text-align: left;
 	font-family: $primaryFont;
-	font-size: 9px;
+	font-size: 10px;
 	line-height: 14px;
 	@include media($tablet) {
-		font-size: 12px;
-		line-height: 16px;
+		padding-top: 25px;
+		padding-bottom: 5px;
+		font-size: 15px;
+		line-height: 15px;
 	}
 	.salacious-crumb {
 		color: $primaryAlt;
@@ -96,49 +89,23 @@
 		font-style: italic;
 		a {
 			font-family: $primaryFont;
-			
 			text-decoration: none;
-			color: $darkColor;
-			font-size: 9px;
+			color: #d4c48f;
+			font-size: 10px;
 			line-height: 14px;
 			@include media($tablet) {
-				font-size: 12px;
-				line-height: 16px;
+				font-size: 15px;
+				line-height: 15px;
 			}
 		}
 		.crumb-sep {
 			margin: 0 8px;
-			color: $darkColor;
+			color: #d4c48f;
 		}
 		.current-crumb-item {
 			text-decoration: none;
-			color: $darkColor;
+			color: #d4c48f;
 		}
-	}
-}
-
-body.inside {
-	background: url("images/bg-inside-logo.png") top left;
-	background-repeat: no-repeat;
-	background-position-x: calc(40px);
-	background-position-y: 450px;
-	background-size: 200px auto;
-	@include media($tablet) {
-		background: url("images/bg-inside-logo.png") top left;
-		background-repeat: no-repeat;
-		// background-position-x: calc(50% - 60px);
-		background-size: 300px auto;
-		background-position-x: 60px;
-		background-position-y: 450px;
-	}
-	@include media($desktop) {
-		background: url("images/bg-inside-logo.png") top left;
-		background-repeat: no-repeat;
-		background-position-x: calc(50% - 360px);
-		background-position-y: 450px;
-	}
-	&.tmpl_type_page_landing {
-		background-image: none;
 	}
 }
 
@@ -149,8 +116,8 @@ body.inside {
 		padding-bottom: 100px;
 	}
 	@include media($desktop) {
-		display: flex;
-		justify-content: space-between;
+		// display: flex;
+		// justify-content: space-between;
 	}
 	.content {
 		overflow-wrap: break-word;
@@ -799,7 +766,7 @@ body.inside {
 		width: 100%;
 		margin-bottom: 0;
 		@include media($desktop) {
-		margin-bottom: 40px;
+			margin-bottom: 40px;
 			width: 31%;
 		}
 	}
@@ -1198,7 +1165,7 @@ body.inside {
 			.field-113,
 			.field-114,
 			// .field-115,
-			 {
+			{
 				background: #ebf1f5;
 			}
 			.field-124,
