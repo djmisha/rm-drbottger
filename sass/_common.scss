@@ -168,6 +168,16 @@ img.aligncenter,
 .iframe-container-16x9 {
 	padding-bottom: 56.25%;
 	margin-bottom: 20px;
+	margin-top: 20px;
+	display: block;
+	@include media($tablet) {
+		width: 600px;
+		height: 360px !important;
+		margin: 0 auto;
+		padding-bottom: 0px;
+		margin-top: 40px;
+		margin-bottom: 40px;
+	}
 }
 
 /* 4x3 Aspect Ratio */

@@ -1,4 +1,4 @@
-.contact-us {
+.contact {
 	.button {
 		margin-bottom: 10px;
 	}
@@ -34,14 +34,14 @@
 				background: #fff;
 				// box-shadow: 3px 3px 4px 0px rgba(0, 0, 0, 0.1) inset;
 				width: 100%;
-				border: 1px solid #edf2f4;
-				background: #edf2f4;
+				border: 1px solid transparent;
+				background: $secondaryAlt;
 				// border: none;
 				font-size: 14px;
 				// line-height: 18px;
 				// padding: 7px 10px;
 				padding: 16px 20px;
-				// border-radius: 5px;
+				border-radius: 4px;
 				// font-weight: 300;
 				.nav-form & {
 					background: transparent;
@@ -113,7 +113,7 @@
 
 	.contact-content {
 		width: 100%;
-		padding-bottom: 50px;
+		// padding-bottom: 50px;
 		text-align: left;
 		@include media($tablet) {
 			// padding-left: 40px;
@@ -234,6 +234,11 @@ form {
 	.submit-btn {
 		// padding: 10px 30px;
 		// border: none;
+		
+		&:hover {
+			color: $darkColor;
+			background: $secondaryColor !important;
+		}
 	}
 	.type-text {
 		@include font(12px);

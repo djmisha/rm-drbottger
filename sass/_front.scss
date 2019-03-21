@@ -141,6 +141,7 @@ footer,
 		}
 		&:hover {
 			background-color: $primaryColor;
+			color: $lightColor !important;
 		}
 	}
 }

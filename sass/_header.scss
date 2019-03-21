@@ -84,12 +84,34 @@
 
 .int-header {
 	background-color: $secondaryAlt;
+	background-position: center right;
 	background-repeat: no-repeat;
 	background-size: cover;
 	height: 150px;
 
 	@include media($tablet) {
-		height: 545px;
+		height: 500px;
+	}
+	@include media($desktop) {
+		// background-position: center right no-repeat !important;
+		
+	}
+	@include media($full) {
+		height: 600px;
+	}
+}
+
+.inside-header-logo {
+	float: left;
+	margin-top: 20px;
+	@include media($tablet) {
+		margin-top: 200px;
+	}
+	img {
+		width: 200px;
+		@include media($tablet) {
+			width: auto;
+		}
 	}
 }
 

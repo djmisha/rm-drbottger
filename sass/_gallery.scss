@@ -376,8 +376,7 @@
 		border: 1px solid $primaryColor;
 		padding: 20px 15px; 
 		@include media($tablet) {
-		padding: 40px 15px; 
-			
+			padding: 40px 15px; 
 		}
 	}
 	.single-case-content {

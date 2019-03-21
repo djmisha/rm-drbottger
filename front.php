@@ -10,10 +10,7 @@
 		<div class="welcome-cta">
 			<div class="wow fadeInUp"  data-wow-delay=".15s">
 				<div class="home-logo">
-					<h1>
-						<img src="<?php bloginfo('template_directory'); ?>/images/logo.png" alt="THIS IS THE H1">
-					</h1>
-				</div>
+				<h1> <a href="<?php bloginfo('url'); ?>"> <img src="<?php bloginfo('template_directory'); ?>/images/logo.png" alt="David A. Bottger, MD"> </a> </h1> </div>
 				<div class="home-addy">
 					<?php if(have_rows('locations', 'option')): ?>
 						<?php while(have_rows('locations', 'option')): the_row(); ?>
@@ -23,7 +20,7 @@
 						<?php endwhile; ?>
 					<?php endif; ?>
 				</div>
-				<a href="schedule_a_consultation_link" class="button" rel="nofollow">Schedule a Consultation</a>
+				<a href="<?php the_field('schedule_a_consultation_link'); ?>" class="button" rel="nofollow">Schedule a Consultation</a>
 			</div>
 		</div>
 	</div>
@@ -89,16 +86,18 @@
 
 
 <section class="home-breast-aug will-parallax parallax-home-breast">
-	<div class="home-breast-content wow fadeInUp"  data-wow-delay=".15s">
+	<div class="home-breast-content">
+	<!-- <div class="home-breast-content wow fadeInUp"  data-wow-delay=".15s"> -->
 		<h2><?php the_field('breast_augmentation_headline'); ?></h2>
 		<?php the_field('breast_augmentation_content'); ?>
 	</div>
 </section>
 
 
-<section class="home-aug-buttons wow fadeInUp"  data-wow-delay=".15s">
-	<a href="" class="button" rel="nofollow">Learn More about Breast Augmentation</a>
-	<a href="" class="button" rel="nofollow">View Photo Gallery</a>
+<section class="home-aug-buttons">
+<!-- <section class="home-aug-buttons wow fadeInUp"  data-wow-delay=".15s"> -->
+	<a href="<?php the_field('learn_more_about_breast_augmentation_button'); ?>" class="button" rel="nofollow">Learn More about Breast Augmentation</a>
+	<a href="<?php the_field('view_photo_gallery_button'); ?>" class="button" rel="nofollow">View Photo Gallery</a>
 </section> 
 
 

@@ -54,7 +54,11 @@
 		if(!is_front_page() and !is_page_template('page-landing.php')): 
 	 ?>
 		<section>
-			<div class="inside-header-logo"></div>
+			<div class="inside-header-logo">
+				<a href="<?php bloginfo('url'); ?>">
+					<img src="<?php bloginfo('template_directory'); ?>/images/logo.png" alt="logo">
+				</a>
+			</div>
 		</section>
 	<?php endif; ?>
 

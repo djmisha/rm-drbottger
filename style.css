@@ -3903,6 +3903,19 @@ img.alignleft {
 .iframe-container-16x9 {
   padding-bottom: 56.25%;
   margin-bottom: 20px;
+  margin-top: 20px;
+  display: block;
+}
+
+@media only screen and (min-width: 768px) {
+  .iframe-container-16x9 {
+    width: 600px;
+    height: 360px !important;
+    margin: 0 auto;
+    padding-bottom: 0px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
 }
 
 /* 4x3 Aspect Ratio */
@@ -4511,6 +4524,7 @@ main,
 /* Inside Page Headers */
 .int-header {
   background-color: #faf9ec;
+  background-position: center right;
   background-repeat: no-repeat;
   background-size: cover;
   height: 150px;
@@ -4518,7 +4532,34 @@ main,
 
 @media only screen and (min-width: 768px) {
   .int-header {
-    height: 545px;
+    height: 500px;
+  }
+}
+
+@media only screen and (min-width: 1480px) {
+  .int-header {
+    height: 600px;
+  }
+}
+
+.inside-header-logo {
+  float: left;
+  margin-top: 20px;
+}
+
+@media only screen and (min-width: 768px) {
+  .inside-header-logo {
+    margin-top: 200px;
+  }
+}
+
+.inside-header-logo img {
+  width: 200px;
+}
+
+@media only screen and (min-width: 768px) {
+  .inside-header-logo img {
+    width: auto;
   }
 }
 
@@ -4921,9 +4962,9 @@ main,
 .page-title {
   text-align: center;
   position: relative;
-  margin-bottom: 0;
   padding-bottom: 0;
-  margin-top: 40px;
+  margin-top: 30px;
+  margin-bottom: 40px;
   width: auto;
   display: inline-block;
 }
@@ -6561,7 +6602,8 @@ aside li {
 =            Upper Footer            =
 ====================================*/
 /* Hide Footer on Contact Page */
-.contact-us .upper-footer {
+.contact .upper-footer,
+.contact .footer-cta {
   display: none;
 }
 
@@ -7082,130 +7124,130 @@ aside li {
 /* ------------------------
 	Forms & Form Elements
 ------------------------ */
-.contact-us .button {
+.contact .button {
   margin-bottom: 10px;
 }
 
-.contact-us .seaforms .type-checkbox input + label {
+.contact .seaforms .type-checkbox input + label {
   display: inline;
 }
 
-.contact-us .seaforms .type-text > p {
+.contact .seaforms .type-text > p {
   color: #3b3f50;
   margin: 0;
   margin-bottom: 20px;
 }
 
-.contact-us h2 {
+.contact h2 {
   margin-top: 0;
 }
 
-.contact-us form span {
+.contact form span {
   color: #3b3f50;
 }
 
-.contact-us form label {
+.contact form label {
   font-family: "Open Sans", sans-serif;
 }
 
-.contact-us form .type-singlelinetext input,
-.contact-us form .type-singlelinetext textarea,
-.contact-us form .type-textarea input,
-.contact-us form .type-textarea textarea {
+.contact form .type-singlelinetext input,
+.contact form .type-singlelinetext textarea,
+.contact form .type-textarea input,
+.contact form .type-textarea textarea {
   background: #fff;
   width: 100%;
-  border: 1px solid #edf2f4;
-  background: #edf2f4;
+  border: 1px solid transparent;
+  background: #faf9ec;
   font-size: 14px;
   padding: 16px 20px;
+  border-radius: 4px;
 }
 
-.nav-form .contact-us form .type-singlelinetext input, .nav-form
-.contact-us form .type-singlelinetext textarea, .nav-form
-.contact-us form .type-textarea input, .nav-form
-.contact-us form .type-textarea textarea {
+.nav-form .contact form .type-singlelinetext input, .nav-form
+.contact form .type-singlelinetext textarea, .nav-form
+.contact form .type-textarea input, .nav-form
+.contact form .type-textarea textarea {
   background: transparent;
   border: 1px solid #ccc;
 }
 
-.contact-us form .type-singlelinetext ::-webkit-input-placeholder,
-.contact-us form .type-textarea ::-webkit-input-placeholder {
+.contact form .type-singlelinetext ::-webkit-input-placeholder,
+.contact form .type-textarea ::-webkit-input-placeholder {
   /* WebKit, Blink, Edge */
   color: #3b3f50;
   font-weight: normal;
 }
 
-.nav-form .contact-us form .type-singlelinetext ::-webkit-input-placeholder, .nav-form
-.contact-us form .type-textarea ::-webkit-input-placeholder {
+.nav-form .contact form .type-singlelinetext ::-webkit-input-placeholder, .nav-form
+.contact form .type-textarea ::-webkit-input-placeholder {
   color: #ccc;
 }
 
-.contact-us form .type-singlelinetext :-moz-placeholder,
-.contact-us form .type-textarea :-moz-placeholder {
+.contact form .type-singlelinetext :-moz-placeholder,
+.contact form .type-textarea :-moz-placeholder {
   /* Mozilla Firefox 4 to 18 */
   color: #3b3f50;
   font-weight: normal;
   opacity: 1;
 }
 
-.nav-form .contact-us form .type-singlelinetext :-moz-placeholder, .nav-form
-.contact-us form .type-textarea :-moz-placeholder {
+.nav-form .contact form .type-singlelinetext :-moz-placeholder, .nav-form
+.contact form .type-textarea :-moz-placeholder {
   color: #ccc;
 }
 
-.contact-us form .type-singlelinetext ::-moz-placeholder,
-.contact-us form .type-textarea ::-moz-placeholder {
+.contact form .type-singlelinetext ::-moz-placeholder,
+.contact form .type-textarea ::-moz-placeholder {
   /* Mozilla Firefox 19+ */
   color: #3b3f50;
   font-weight: normal;
   opacity: 1;
 }
 
-.nav-form .contact-us form .type-singlelinetext ::-moz-placeholder, .nav-form
-.contact-us form .type-textarea ::-moz-placeholder {
+.nav-form .contact form .type-singlelinetext ::-moz-placeholder, .nav-form
+.contact form .type-textarea ::-moz-placeholder {
   color: #ccc;
 }
 
-.contact-us form .type-singlelinetext :-ms-input-placeholder,
-.contact-us form .type-textarea :-ms-input-placeholder {
+.contact form .type-singlelinetext :-ms-input-placeholder,
+.contact form .type-textarea :-ms-input-placeholder {
   /* Internet Explorer 10-11 */
   color: #3b3f50;
   font-weight: normal;
 }
 
-.nav-form .contact-us form .type-singlelinetext :-ms-input-placeholder, .nav-form
-.contact-us form .type-textarea :-ms-input-placeholder {
+.nav-form .contact form .type-singlelinetext :-ms-input-placeholder, .nav-form
+.contact form .type-textarea :-ms-input-placeholder {
   color: #ccc;
 }
 
 @media only screen and (min-width: 768px) {
-  .contact-us fieldset {
+  .contact fieldset {
     float: left;
     width: 50%;
     height: 270px;
   }
-  .contact-us fieldset div input {
+  .contact fieldset div input {
     font-size: 14px;
   }
 }
 
-.contact-us .content {
+.contact .content {
   width: 100% !important;
   padding-right: 0;
 }
 
-.contact-us.thank-you .content {
+.contact.thank-you .content {
   padding-right: 50px;
 }
 
-.contact-us .contact-content {
+.contact .contact-content {
   width: 100%;
-  padding-bottom: 50px;
   text-align: left;
 }
 
 @media only screen and (min-width: 768px) {
-  .contact-us .contact-content {
+  .contact .contact-content {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -7213,7 +7255,7 @@ aside li {
 }
 
 @media only screen and (min-width: 768px) {
-  .contact-us .contact-content section {
+  .contact .contact-content section {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -7222,39 +7264,39 @@ aside li {
 }
 
 @media only screen and (min-width: 768px) {
-  .contact-us .contact-form {
+  .contact .contact-form {
     width: 50%;
     padding-right: 50px;
   }
 }
 
 @media only screen and (min-width: 768px) {
-  .contact-us .office-info {
+  .contact .office-info {
     width: 50%;
   }
 }
 
-.contact-us h2 {
+.contact h2 {
   font-size: 28px;
   font-size: 1.75rem;
 }
 
-.contact-us .the-address {
+.contact .the-address {
   margin-bottom: 40px;
 }
 
-.contact-us .gmaps {
+.contact .gmaps {
   width: 100%;
   margin-bottom: 16px;
 }
 
-.contact-us .gmaps iframe {
+.contact .gmaps iframe {
   width: 100%;
   height: 400px;
 }
 
 @media only screen and (min-width: 768px) {
-  .contact-us .addy-hours {
+  .contact .addy-hours {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
@@ -7264,16 +7306,16 @@ aside li {
   }
 }
 
-.contact-us .address {
+.contact .address {
   width: 50%;
 }
 
-.contact-us .the-hours {
+.contact .the-hours {
   margin-top: 40px;
 }
 
 @media only screen and (min-width: 768px) {
-  .contact-us .the-hours {
+  .contact .the-hours {
     margin-top: 0px;
     width: 50%;
   }
@@ -7326,6 +7368,11 @@ form textarea {
 
 form input[type="radio"] {
   margin-right: 10px;
+}
+
+form .submit-btn:hover {
+  color: #3b3f50;
+  background: #f6e8b4 !important;
 }
 
 form .type-text {
@@ -7564,6 +7611,7 @@ span.error {
 
 .welcome .welcome-cta .button:hover {
   background-color: #3b3f50;
+  color: #ffffff !important;
 }
 
 /*===================================

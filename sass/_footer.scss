@@ -4,7 +4,9 @@
 
 /* Hide Footer on Contact Page */
 
-.contact-us .upper-footer {
+.contact .upper-footer, 
+.contact .footer-cta 
+{
 	display: none;
 }
 

@@ -8,7 +8,7 @@
 
 		<?if ( have_posts() ) : while ( have_posts() ) : the_post();?>
 				<?php
-				$limit = 3;// could probably set this as an wp option
+				$limit = 1;// could probably set this as an wp option
 				foreach ($post->cases as $key => $value) {
 					$case_link = $rmg_case::make_case_link(array('position' => $value['position'] , 'category_id' => $post->ID));
 					$case_name = $rmg_case::make_case_name(array('position' => $value['position']));
@@ -19,7 +19,7 @@
 
 					echo '<div class="bna-group">';
 					echo '<div class="bna-group-border">';
-					$i = 0;//required
+					$i = 1;//required
 					echo '<h2>'.  $case_name .'</h2>';
 
 					echo '<div class="img-set">';
@@ -44,7 +44,7 @@
 
 				// hover overlay
 
-						echo '<div class="case-details"> '. $case_content .'</div>';
+						//echo '<div class="case-details"> '. $case_content .'</div>';
 						
 
 
