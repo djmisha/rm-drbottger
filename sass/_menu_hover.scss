@@ -49,27 +49,30 @@ $menuHeight : 60px;
 				position: static;
 			}
 			a{	
-				// background-color: $lightColor;
 				display: block;
 				text-decoration: none;
-				padding: 20px 16px;
+				padding: 20px 10px;
 				transition: .25s ease-in-out background;
 				color: $lightColor; //set this color
 				height: $menuHeight;
 				text-transform: uppercase;
-				// border: 1px solid red;
+				@include media(1220px) {
+					padding: 20px 16px;
+				}
 				&:hover {
 					color: $lightColor;
 					background: $darkColor;
-
 				}
 			}
 		}
 	}
 
 	a {
-		font-size: 14px; //reset font-size for inline-block hack
+		font-size: 13px; 
 		line-height: 22px;
+		@include media(1220px) {
+			font-size: 14px; 
+		}
 	}
 
 	.sub-menu {

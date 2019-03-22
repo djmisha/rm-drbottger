@@ -45,13 +45,13 @@
 		</div> 
 		<div class="menu-trigger">
 			<i class="fal fa-bars"></i>
+			<i class="fal fa-window-close"></i>
 		</div>
 	</div>
 
 	<?php 
 		// Inside Page Logo
-		// Does not show on Homepage or Custom Landing Pages 
-		if(!is_front_page() and !is_page_template('page-landing.php')): 
+		if(!is_front_page()): 
 	 ?>
 		<section>
 			<div class="inside-header-logo">
@@ -97,6 +97,7 @@
 		<?php else: ?> 
 			<h1><?the_title();?></h1>
 		<?php endif; ?>
+		<div class="page-title-line"></div>
 	</section>
 
 <?php endif; ?>

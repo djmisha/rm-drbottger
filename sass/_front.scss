@@ -198,9 +198,12 @@ footer,
 			display: block;
 			float: left; 
 			margin-right: 20px;
-			margin-bottom: 10px;
-			width: 150px;
+			margin-bottom: 40px;
+			width: 90px;
+			// width: 100%;
+			// max-width: 350px;
 			@include media($tablet) {
+				max-width: none;
 				width: auto;
 				margin-right: 40px;
 				margin-bottom: 40px;
@@ -313,6 +316,9 @@ footer,
 		@include media($desktop) {
 			padding-bottom: 80px;
 			padding-top: 370px;
+		}
+		@include media($full) {
+			background-size: 110% auto;
 		}
 		a {text-decoration: none;}
 		.the-seth {
@@ -487,20 +493,28 @@ footer,
 	display: flex;
 	align-items: center;
 	justify-content: flex-start;
-	height: 120px;
+	margin-bottom: 40px;
+	flex-wrap: wrap;
+	text-align: center;
 	@include media($tablet) {
+		margin-bottom: 0px;
+		flex-wrap: no-wrap;
 		height: 200px;
 	}
-	@include media($desktop) {
-		
-	}
 	a {
+		margin-bottom: 20px;
 		display: block; 
+		width: 100%;
+		@include media($tablet) {
+			width: auto;
+			display: inline-block;
+			margin-bottom: 0;
+			margin-right: 20px;
+		}
 		&:last-of-type {
 			margin-right: 0;
 		}
 	}
-	a {margin-right: 20px;}
 }
 
 
@@ -581,7 +595,7 @@ footer,
 				margin-right: 40px;
 			}
 			@include media($desktop) {
-				// margin-bottom: 170px;
+				margin-bottom: 200px;
 			}
 		}
 		&:nth-of-type(even) {

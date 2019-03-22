@@ -66,16 +66,16 @@ h2,
 		line-height: 45px;
 	}
 	@include media($desktop) {
-		font-size: 40px;
-		line-height: 42px;
+		// font-size: 40px;
+		// line-height: 42px;
 	}
 }
 
 h3 {
 	font-size: 20px;
 	@include media($tablet) {
-		font-size: 30px;
-		line-height: 32px;
+		font-size: 34px;
+		line-height: 38px;
 	}
 }
 
@@ -90,7 +90,7 @@ h5,
 h6 {
 	font-size: 18px;
 	@include media($desktop) {
-		font-size: 20px;
+		font-size: 28px;
 	}
 }
 

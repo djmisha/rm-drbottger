@@ -10,7 +10,10 @@ function sc__feature( $atts , $content = null ){
 ?>
 		<div class="page-feature full-width">
 			<div class="feature-content">
+				<div class="feature-border">
+					
 				<?php the_field('callout_section_content'); ?>
+				</div>
 			</div>
 			<div class="feature-image" style="background: url(<?php the_field('callout_section_image'); ?>);" >
 				

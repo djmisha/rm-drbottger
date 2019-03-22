@@ -77,7 +77,7 @@ function __themejs(){
 	// wp_register_script('rm-search', TMPL_DIR_URI . '/js/libs/hideseek/jquery.hideseek.min.js', array('jquery','modernizr'), '1.0', true );
 
 	wp_register_script('rm-wow', TMPL_DIR_URI . '/js/libs/wow/wow.min.js', array('jquery','modernizr'), '1.0', true );
-	// wp_register_script('rm-harvey', TMPL_DIR_URI . '/js/libs/harvey.min.js', array('jquery','modernizr'), '1.0', true );
+	wp_register_script('rm-harvey', TMPL_DIR_URI . '/js/libs/harvey.min.js', array('jquery','modernizr'), '1.0', true );
 
 	// twentytwenty  slide show
 	// wp_register_script('rm-twenty', TMPL_DIR_URI . '/js/libs/twentytwenty-master/js/jquery.twentytwenty.js', array('jquery','modernizr'), '1.0', true );
@@ -113,7 +113,7 @@ function __themejs(){
 	wp_enqueue_script( 'rm-wow');
 	// wp_enqueue_script( 'rm-twenty');
 	// wp_enqueue_script( 'rm-move');
-	// wp_enqueue_script( 'rm-harvey');
+	wp_enqueue_script( 'rm-harvey');
 	//Enqueue RM Scripts
 	wp_enqueue_script( 'rm-menu');
 	// wp_enqueue_script( 'rm-maps');

@@ -10,15 +10,16 @@
 		width: 320px;
 		position: fixed;
 		top: 0;
-		bottom: 60px;
+		bottom: 50px;
 		left: -320px;
-		height: calc(100% - 60px) ;
+		height: calc(100% - 50px) ;
 		z-index: 500;
 		padding: 0;
 	}
 
 	.main-menu{
-		border-right: 1px solid rgba($secondaryColor, .2);
+		border-right: 1px solid rgba($secondaryColor, .1);
+		border-bottom: 1px solid rgba($secondaryColor, .1);
 		background: rgba($primaryColor, .98);
 		height: 100%;
 		width: 320px;
@@ -70,12 +71,12 @@
 		.menu-item{
 			> a{
 				padding: 16px 20px;
-				border-bottom: 1px solid rgba($secondaryColor, .2);
+				border-bottom: 1px solid rgba($secondaryColor, .1);
 			}
 		}
 
 		.first.menu-item{
-			border-top: 1px solid rgba($secondaryColor, .2);
+			border-top: 1px solid rgba($secondaryColor, .1);
 		}
 
 		//General Sub-Menu Styling
@@ -83,6 +84,7 @@
 			display: none;
 			a{
 				font-size: .85em;
+				padding-left: 40px;
 			}
 		}
 
@@ -123,12 +125,12 @@
     right: 0;
     top: 0px;
     cursor: pointer;
-    border-left:  1px solid rgba($secondaryColor, .2);
+    border-left:  1px solid rgba($secondaryColor, .1);
 		&:after{
 			content: '';
-			width: 12px;
-			height: 20px;
-			background-size: 12px 20px;
+			width: 8px;
+			height: 14px;
+			background-size: 8px 14px;
 			transition: .2s linear transform;
 			position: absolute;
 			top: 50%;
@@ -154,7 +156,7 @@
 		text-align: center;
 		font-size: 15px; //match to other font-size
 		cursor: pointer;
-		// border-bottom: 1px solid rgba($secondaryColor, .2);
+		// border-bottom: 1px solid rgba($secondaryColor, .1);
 
 		// &:before{
 		// 	content: '';

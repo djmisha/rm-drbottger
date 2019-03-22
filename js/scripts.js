@@ -27,7 +27,7 @@
 		================================*/
 
 		new WOW({
-			mobile: false,
+			// mobile: false,
 		}).init();
 
 
@@ -48,7 +48,7 @@
 		================================================================*/
 
 		// $(".tmpl_type_page_landing .site-crumbs").appendTo("header");
-		// $(".tmpl_type_page_landing .page-title").appendTo("header");
+		$(".tmpl_type_page_landing .page-title").appendTo("header");
 		// $(".tmpl_type_page_landing .flexible-jump-links").appendTo("header");
 
 		/*=======================================
@@ -88,7 +88,7 @@
 				
 				if ($(".parallax").hasClass("parallax")) {
 					$(".will-parallax").waypoint(function() {
-						$(".parallax-welcome").parallax("100%", -0.3, true); 
+						$(".parallax-welcome").parallax("50%", -0.3, true); 
 						$(".parallax-footer").parallax("100%", -0.1, true);
 						$('.parallax-home-breast').parallax('100%', -0.3, true , 'is-parallaxing');
 						$(".parallax-internal-header").parallax("100%", -0.2, true);

@@ -1,73 +1,63 @@
 .flexible-jump-links {
 	.jump-link-list {
-		@include media($desktop) {
-			position: absolute;
-			bottom: 0px;
-			left: 0;
-			right: 0;
+		background: rgba($tertiaryColor, 1);
+	}
+	.jump-link-list-border {
+		width: auto;
+		padding-top: 20px;
+		padding-bottom: 20px;
+		padding-left: 20px;
+		padding-right: 20px;
+		@include media($tablet) {
+			padding-left: 40px;
+			padding-right: 40px;
+			padding-top: 60px;
+			padding-bottom: 60px;
+
 		}
 	}
 	.jump-link-list ul {
 		list-style: none;
-		background: rgba($primaryColor, 0.85);
 		display: flex;
-		justify-content: baseline;
+		justify-content: center;
 		flex-wrap: wrap;
-		padding: 20px 40px 40px 40px;
+		padding: 30px 20px;
 		margin: 0;
-		margin-top: 40px;
+		border: 1px solid rgba($primaryColor, .3);
+
 		@include media($tablet) {
-			// padding: 0 40px;
-		}
-		@include media(1190px) {
-			margin-top: 0px;
-			padding: 60px calc(40px + (50% - (1190px / 2)));
-			padding-top: 40px;
+			margin: 0 auto;
+			// margin-top: 40px;
+			// margin-bottom: 40px;
+			max-width: 1200px;
+			padding: 40px 40px 40px 40px;
 		}
 		li {
-			// margin-bottom: 0 !important;
-			// border-bottom: 1px solid $secondaryColor;
+			// font-family: $secondaryFont;
 			position: relative;
-			padding: 0 !important;
-			width: 100%;
+			flex-wrap: nowrap;
+			font-size: 12px;
+			line-height: 14px;
 			@include media($tablet) {
-				width: 48%;
+				font-size: 14px;
+				line-height: 27px;
+				padding: 0 10px !important;
+				// height: 20px;
+				
+			border-left: 1px solid rgba($primaryColor, .6);
+			&:first-of-type() {
+				border-left: 1px solid transparent;
 			}
-			@include media($desktop) {
-				margin-right: 20px;
-				width: 31%;
 			}
-			// margin-left: 20px;
-			&:before {
-				// display: none !important;
-				content: "\f0c1";
-				font-family: "Font Awesome 5 Pro";
-				color: $lightColor;
-				position: absolute;
-				left: 0px;
-				transform: rotate(45deg);
-			}
-			margin-top: 20px;
-			a {
-				padding: 0px 10px;
-				padding-left: 20px;
-				border-bottom: 1px solid rgba($lightColor, 0.3);
-				text-align: left;
-				text-decoration: none !important;
-				// background: none !important;
-				display: block;
-				bottom: 0;
-				width: 100%;
-				// font-size: 20px;
-				// color: $primaryColor;
-				// font-family: $secondaryFont;
-				// background: transparent;
-			}
+		}
+		&:before {
+			display: none;
+		}
+		a {
+			text-decoration: none;
+			border-bottom: 2px solid transparent;
 			&:hover {
-				// background: $secondaryColor;
-				a {
-					// color: $lightColor;
-				}
+				border-bottom: 2px solid $primaryColor;
 			}
 		}
 	}
