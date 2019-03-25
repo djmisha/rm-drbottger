@@ -12,6 +12,7 @@
       <div class="column-section" id="<?php echo $id; ?>">
         <?php if(!empty($heading) ): ?>
           <h2><?php echo $heading; ?></h2>
+        <div class="page-title-line-custom"></div>       
         <?php endif; ?>
           <?php if( ($content) ) echo $content; ?>
       </div>

@@ -7,8 +7,9 @@
   ?>
 
     <section class="flexible-feature" id="<?php echo $id; ?>" style="background-image: url(<?php echo $bg; ?>)">
-      <!-- <div class="featured-content" data-position="<?php echo $position; ?>"> -->
+      <div class="featured-content" data-position="<?php echo $position; ?>">
       	<?php if( $hdng ) echo '<h2>'.$hdng.'</h2>'; ?>
+        <div class="page-title-line-custom"></div>       
 				<?php echo $content; ?>
-      <!-- </div> -->
+      </div>
     </section>

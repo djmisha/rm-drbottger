@@ -12,7 +12,8 @@
       
     </div>
     <div class="with-content">
-      <h2><?php echo $headline; ?></h2>        
+      <h2><?php echo $headline; ?></h2> 
+      <div class="page-title-line-custom"></div>       
         <?php echo $content; ?>
     </div>
   </div>

@@ -5525,6 +5525,7 @@ main,
   height: auto;
 }
 
+/* Guttenberg Img for Mobile */
 .wp-block-image img {
   width: 150px;
   height: auto;
@@ -5536,9 +5537,6 @@ main,
   }
 }
 
-/*====================================
-=            faqs-section            =
-====================================*/
 /*==============================================
 =            Langing Page Sections             =
 ==============================================*/
@@ -5587,6 +5585,12 @@ main,
   margin-bottom: 20px;
 }
 
+@media only screen and (min-width: 768px) {
+  .tmpl_type_page_landing header .inside-header-logo {
+    margin-top: 400px;
+  }
+}
+
 .tmpl_type_page_landing .flexible-content-page {
   padding-bottom: 0;
 }
@@ -5596,6 +5600,206 @@ main,
   width: 100%;
   padding-right: 0px;
   padding-bottom: 0;
+}
+
+/* Breast Augmentation Page */
+.page-170 #WhatisBreastAugmentation {
+  background-color: #faf9ec;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+@media only screen and (min-width: 1080px) {
+  .page-170 #BreastAugmentationCandidates .two-column {
+    max-height: 350px;
+  }
+}
+
+.page-170 #BreastAugmentationCandidates .page-title-line-custom {
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+@media only screen and (min-width: 768px) {
+  .page-170 #BreastAugmentationCandidates .page-title-line-custom {
+    margin-bottom: 60px;
+  }
+}
+
+.page-170 .view-gallery-callout {
+  height: 350px;
+  text-align: center;
+  background-position: center right;
+  background-size: cover;
+}
+
+@media only screen and (min-width: 768px) {
+  .page-170 .view-gallery-callout {
+    background-size: cover;
+  }
+}
+
+.page-170 .view-gallery-callout .page-title-line-custom {
+  display: none;
+}
+
+.page-170 .view-gallery-callout h2 {
+  color: #ffffff !important;
+}
+
+@media only screen and (min-width: 1080px) {
+  .page-170 .view-gallery-callout {
+    padding-right: 50%;
+  }
+}
+
+.page-170 .view-gallery-callout .button {
+  display: inline-block;
+  color: #3b3f50 !important;
+  background-color: #f6e8b4;
+}
+
+.page-170 #SalinevsSiliconeImplants .page-title-line-custom {
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+@media only screen and (min-width: 768px) {
+  .page-170 #SalinevsSiliconeImplants > div {
+    width: 40%;
+  }
+}
+
+@media only screen and (min-width: 1080px) {
+  .page-170 #SalinevsSiliconeImplants > div {
+    width: 45%;
+  }
+}
+
+.page-170 #TypesofBreastImplants {
+  text-align: left;
+  background-size: cover;
+}
+
+@media only screen and (min-width: 768px) {
+  .page-170 #TypesofBreastImplants {
+    padding-right: 35%;
+  }
+}
+
+@media only screen and (min-width: 1080px) {
+  .page-170 #TypesofBreastImplants {
+    padding-right: 45%;
+  }
+}
+
+.page-170 #TypesofBreastImplants h2 {
+  text-align: left;
+}
+
+@media only screen and (min-width: 768px) {
+  .page-170 #TypesofBreastImplants .featured-content {
+    border: 1px solid rgba(59, 63, 80, 0.4);
+    padding: 60px;
+  }
+}
+
+.page-170 #ChoosingtheRightSizeandShapeForYourImplants {
+  color: #ffffff;
+  border: 1px solid rgba(59, 63, 80, 0.4);
+  text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+  .page-170 #ChoosingtheRightSizeandShapeForYourImplants {
+    padding-bottom: 80px;
+  }
+}
+
+.page-170 #ChoosingtheRightSizeandShapeForYourImplants h2 {
+  color: #ffffff;
+}
+
+@media only screen and (min-width: 768px) {
+  .page-170 #ChoosingtheRightSizeandShapeForYourImplants .featured-content {
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    padding: 60px;
+  }
+}
+
+.page-170 #ChoosingtheRightSizeandShapeForYourImplants .page-title-line-custom {
+  margin: 0 auto;
+  margin-bottom: 20px;
+  background-color: #ffffff;
+}
+
+.page-170 #ImplantTypesTwo {
+  text-align: center;
+  padding-bottom: 80px !important;
+}
+
+.page-170 #ImplantTypesTwo > div:first-of-type {
+  margin-bottom: 60px;
+}
+
+@media only screen and (min-width: 768px) {
+  .page-170 #ImplantTypesTwo > div:first-of-type {
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .page-170 #ImplantTypesTwo > div {
+    width: 40%;
+  }
+}
+
+.page-170 #ImplantTypesTwo .page-title-line-custom {
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.page-170 #benefits-drawbacks {
+  text-align: center;
+  padding-top: 0px;
+  padding-bottom: 40px;
+}
+
+@media only screen and (min-width: 768px) {
+  .page-170 #benefits-drawbacks {
+    padding-bottom: 100px;
+  }
+}
+
+.page-170 #ImplantPlacement {
+  text-align: left;
+  background-size: cover;
+  background-size: auto 75vw;
+  background-position: top right;
+  padding-top: 75vw;
+  background-color: #faf9ec;
+}
+
+@media only screen and (min-width: 1080px) {
+  .page-170 #ImplantPlacement {
+    padding-top: 100px;
+    background-position: center center;
+    background-size: auto auto;
+    padding-right: 45%;
+  }
+}
+
+.page-170 #ImplantPlacement h2 {
+  text-align: left;
+}
+
+@media only screen and (min-width: 768px) {
+  .page-170 #ImplantPlacement .featured-content {
+    border: 1px solid rgba(59, 63, 80, 0.4);
+    padding: 60px;
+  }
 }
 
 /* ------------------------
@@ -7499,6 +7703,7 @@ span.error {
   .tmpl_type_category .content h2,
   .tmpl_type_archive .content h2,
   .tmpl_type_index .content h2 {
+    text-align: left;
     font-size: 35px;
   }
 }
@@ -7912,7 +8117,7 @@ span.error {
 @media only screen and (min-width: 768px) {
   .flexible-basic-content {
     padding-top: 100px;
-    padding-bottom: 60px;
+    padding-bottom: 80px;
   }
 }
 
@@ -7935,15 +8140,15 @@ span.error {
 }
 
 .flexible-multicolumn {
-  text-align: center;
-}
-
-.flexible-multicolumn > div {
-  margin-bottom: 40px;
+  text-align: left;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 
 @media only screen and (min-width: 768px) {
   .flexible-multicolumn {
+    padding-top: 100px;
+    padding-bottom: 100px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -7952,9 +8157,6 @@ span.error {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
-  .flexible-multicolumn > div {
-    width: 45%;
-  }
 }
 
 @media only screen and (min-width: 1080px) {
@@ -7962,9 +8164,6 @@ span.error {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-  }
-  .flexible-multicolumn > div {
-    width: 31%;
   }
 }
 
@@ -7975,19 +8174,9 @@ span.error {
   }
 }
 
-.flexible-multicolumn h2 {
-  margin: 0;
-  margin-top: 10px;
-  margin-bottom: 20px;
-}
-
 .flexible-multicolumn ul {
   list-style: none;
   margin: 0 !important;
-}
-
-.flexible-multicolumn ul li:before {
-  display: none;
 }
 
 .flexible-multicolumn ul a {
@@ -8042,6 +8231,10 @@ span.error {
   }
 }
 
+.flexible-split-section h2 {
+  text-align: left;
+}
+
 .flexible-split-section .with-bg {
   background-size: cover;
   background-position: center center;
@@ -8065,6 +8258,13 @@ span.error {
   .flexible-split-section .with-content {
     padding: 100px 70px;
   }
+}
+
+.page-title-line-custom {
+  height: 2px;
+  background: #3b3f50;
+  width: 150px !important;
+  margin-bottom: 20px;
 }
 
 /*====================================

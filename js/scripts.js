@@ -114,6 +114,39 @@
 		});
 
 
+
+		/*=============================================
+		=            Gallery Nudity Pop Up            =
+		=============================================*/
+
+		if ($("body.rmgallery-child").length) {
+			if ($.cookie("gallerypop") == null) {
+				console.log(theme_path);
+				$.fancybox.open({
+					src: theme_path + "/popup.php",
+					type: "ajax",
+					opts: {
+						scrolling: "no",
+						transitionEffect: "fade",
+						modal: true,
+						helpers: {
+							overlay: {
+								css: {
+									background: "rgba(0, 0, 0, 0.96)"
+								}
+							}
+						},
+						live: true,
+						afterClose: function() {
+							$.cookie("gallerypop", "rmg", {
+								expires: 1,
+								path: "/"
+							});
+						}
+					}
+				});
+			} //end cookies check
+		}
 		
 
 		/*=============================================
