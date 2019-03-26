@@ -5262,114 +5262,6 @@ main,
   color: #3b3f50;
 }
 
-.interior .content .bna-set {
-  margin: 40px 0px;
-}
-
-@media only screen and (min-width: 768px) {
-  .interior .content .bna-set {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-  }
-  .interior .content .bna-set > div {
-    max-width: 47%;
-  }
-}
-
-.interior .content .bna-case-container {
-  text-align: center;
-  background: #f3f5f3;
-  padding: 20px;
-  max-width: 320px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
-@media only screen and (min-width: 768px) {
-  .interior .content .bna-case-container {
-    max-width: none;
-    width: auto;
-    padding-bottom: 10px;
-    float: left;
-    margin-top: 40px;
-    margin-bottom: 40px;
-    margin-right: 40px;
-    margin-bottom: 20px;
-    padding: 35px;
-  }
-}
-
-.interior .content .bna-case-container .button {
-  margin: 0 auto;
-  text-align: center;
-  margin-top: 20px;
-}
-
-.interior .content .bnacase-imgset, .interior .content .twentytwenty-wrapper {
-  width: 280px;
-}
-
-.interior .content .cases .bnacase-imgset {
-  clear: both;
-  margin: 0 auto;
-  border: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  text-align: left;
-  text-transform: uppercase;
-  width: 100%;
-  margin-bottom: 40px;
-}
-
-@media only screen and (min-width: 768px) {
-  .interior .content .cases .bnacase-imgset {
-    margin-bottom: 80px;
-    width: 49%;
-  }
-}
-
-.interior .content .cases .bnacase-imgset .before,
-.interior .content .cases .bnacase-imgset .after {
-  width: 48%;
-}
-
-.interior .content .cases .bnacase-imgset .before img,
-.interior .content .cases .bnacase-imgset .after img {
-  margin-bottom: 0px;
-}
-
-@media only screen and (min-width: 768px) {
-  .interior .content .cases .bnacase-imgset .before,
-  .interior .content .cases .bnacase-imgset .after {
-    width: 48%;
-  }
-}
-
-.interior .content .cases .bnacase-imgset .before span,
-.interior .content .cases .bnacase-imgset .after span {
-  text-transform: none;
-  font-family: orpheuspro, serif;
-  display: block;
-  padding-top: 5px;
-  font-size: 19px;
-}
-
-.interior .content .cases .bnacase-imgset .before {
-  margin-right: 5px;
-}
-
 /*==========================================
 =            Fill Width Section            =
 ==========================================*/
@@ -5603,6 +5495,10 @@ main,
 }
 
 /* Breast Augmentation Page */
+.page-170 .jump-links-content {
+  display: none;
+}
+
 .page-170 #WhatisBreastAugmentation {
   background-color: #faf9ec;
   -webkit-box-orient: horizontal;
@@ -5967,6 +5863,51 @@ main,
 
 .page-170 #FinalDoctorSection li {
   margin-bottom: 20px;
+}
+
+/* Tummy Tuck Page */
+.page-187 #Tummy-Tuck-Candidates {
+  background-color: #faf9ec;
+}
+
+@media only screen and (min-width: 768px) {
+  .page-187 #Tummy-Tuck-Candidates {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+}
+
+.page-187 #Tummy-Tuck-Procedure {
+  background-color: #faf9e3;
+}
+
+.page-187 #TummyBNA {
+  background: url("images/bg-tummy-bna.jpg");
+  background-size: cover;
+}
+
+.page-187 #TummyTwoColumn h2 {
+  text-align: left;
+}
+
+@media only screen and (min-width: 768px) {
+  .page-187 #TummyTwoColumn > div {
+    width: 45%;
+  }
+}
+
+.page-187 #Abdominoplasty-Risks {
+  background-color: #faf9ec;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+.page-187 #Tummy-Tuck-Recovery {
+  background-color: #faf9ec;
 }
 
 /* ------------------------
@@ -8199,6 +8140,11 @@ span.error {
 /* ------------------------
 	Flexible Content
 ------------------------ */
+.flexible-jump-links .jump-links-content {
+  margin-top: 40px;
+  margin-bottom: 60px;
+}
+
 .flexible-jump-links .jump-link-list {
   background: #d8e1bf;
 }
@@ -8446,51 +8392,115 @@ span.error {
 
 @media only screen and (min-width: 768px) {
   .flexible-bna {
-    padding-top: 60px;
+    background-position: bottom center !important;
+    padding-top: 150px;
     padding-bottom: 60px;
-  }
-}
-
-.flexible-bna h2 {
-  text-align: left;
-  border-bottom: none;
-  color: #ffffff;
-}
-
-.flexible-bna .cases {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  width: 100%;
-}
-
-@media only screen and (min-width: 768px) {
-  .flexible-bna .cases > div {
-    margin: 0;
-    width: 25%;
+    padding-right: 20%;
   }
 }
 
 @media only screen and (min-width: 1080px) {
-  .flexible-bna .cases > div {
-    width: 30%;
+  .flexible-bna {
+    padding-right: 50%;
   }
+}
+
+.flexible-bna h2 {
+  text-align: center;
+  font-family: orpheuspro, serif;
+  color: #ffffff;
 }
 
 .flexible-bna .more {
   margin: 0 auto;
-  margin-top: 50px;
+  margin-top: 20px;
 }
 
 @media only screen and (min-width: 768px) {
   .flexible-bna .more {
     margin-bottom: 50px;
   }
+}
+
+.flexible-bna .more a {
+  color: #3b3f50 !important;
+  background-color: #f6e8b4;
+}
+
+.flexible-bna .bnacase-imgset {
+  clear: both;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: left;
+  text-transform: uppercase;
+  width: 1005;
+  margin-bottom: 20px;
+}
+
+@media only screen and (min-width: 768px) {
+  .flexible-bna .bnacase-imgset {
+    margin-bottom: 0;
+    width: 500px;
+  }
+}
+
+.flexible-bna .bnacase-imgset .before,
+.flexible-bna .bnacase-imgset .after {
+  width: 48%;
+  margin-bottom: 10px;
+}
+
+.flexible-bna .bnacase-imgset .before img,
+.flexible-bna .bnacase-imgset .after img {
+  margin-bottom: 0px;
+}
+
+@media only screen and (min-width: 768px) {
+  .flexible-bna .bnacase-imgset .before,
+  .flexible-bna .bnacase-imgset .after {
+    width: 48%;
+  }
+}
+
+.flexible-bna .bnacase-imgset .before span,
+.flexible-bna .bnacase-imgset .after span {
+  color: #3b3f50;
+  text-transform: uppercase;
+  font-family: "Open Sans", sans-serif;
+  font-size: 15px;
+  padding-left: 20px;
+  display: block;
+  padding-top: 10px;
+}
+
+.flexible-bna .bnacase-imgset .before {
+  margin-right: 10px;
+}
+
+.flexible-bna .bnacase-imgset div:last-of-type {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.flexible-bna .bnacase-imgset div:last-of-type a {
+  text-transform: none;
+  text-decoration: none;
+  color: #3b3f50;
+}
+
+.flexible-bna .bnacase-imgset div:last-of-type a:hover {
+  text-decoration: underline;
 }
 
 /*==============================================

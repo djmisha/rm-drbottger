@@ -1,4 +1,8 @@
 .flexible-jump-links {
+	.jump-links-content {
+		margin-top: 40px;
+		margin-bottom: 60px;
+	}
 	.jump-link-list {
 		background: rgba($tertiaryColor, 1);
 	}
@@ -200,44 +204,86 @@
 	padding-top: 40px;
 	padding-bottom: 40px;
 	@include media($tablet) {
-		padding-top: 60px;
+		background-position: bottom center !important;
+		padding-top: 150px;
 		padding-bottom: 60px;
+		padding-right: 20%;
+	}
+	@include media($desktop) {
+		padding-right: 50%;
 	}
 	h2 {
-		text-align: left;
-		border-bottom: none;
+		text-align: center;
+		font-family: $secondaryFont;
 		color: $lightColor;
 	}
-	.cases {
-		// @include media($tablet) {
-			display: flex;
-			justify-content: space-between;
-			flex-wrap: nowrap;
-			width: 100%;
-		// }
-		> div {
-			// max-width: 280px;
-			// margin: 0 auto;
-			@include media($tablet) {
-				margin: 0;
-				width: 25%;
-			}
-			@include media($desktop) {
-				width: 30%;
-			}
-		}
-		div {
-			&:nth-of-type(2) {
-				// margin-right: 10px;
-				// margin-left: 10px;
-			}
-		}
-	}
+
 	.more {
 		margin: 0 auto;
-		margin-top: 50px;
+		margin-top: 20px;
 		@include media($tablet) {
 			margin-bottom: 50px;
+		}
+		a {
+			color: $primaryColor !important;
+			background-color: $secondaryColor;
+		}
+	}
+
+	.bnacase-imgset {
+		clear: both;
+		margin: 0 auto;
+		// border: 1px solid red;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+		// padding: 20px;
+		text-align: left;
+		text-transform: uppercase;
+		width: 1005;
+		margin-bottom: 20px;
+
+		@include media($tablet) {
+			margin-bottom: 0;
+			width: 500px;
+		}
+
+		.before,
+		.after {
+			width: 48%;
+			margin-bottom: 10px;
+			img {
+				margin-bottom: 0px;
+			}
+
+			@include media($tablet) {
+				width: 48%;
+			}
+			span {
+				color: $primaryColor;
+				text-transform: uppercase;
+				font-family: $primaryFont;
+				font-size: 15px;
+				padding-left: 20px;
+				display: block;
+				padding-top: 10px;
+			}
+		}
+		.before {
+			margin-right: 10px;
+		}
+
+		div:last-of-type {
+			align-self: center;
+			a {
+				text-transform: none;
+				text-decoration: none;
+				color: $primaryColor;
+				&:hover {
+					text-decoration: underline;
+				}
+			}
 		}
 	}
 }
@@ -250,16 +296,12 @@
 	text-align: left;
 	padding-top: 40px;
 	padding-bottom: 40px;
-
 	@include media($desktop) {
 		padding-top: 90px;
 		padding-bottom: 90px;
 	}
-
 	h2 {
-		@include media($desktop) {
-			// font-size: 40px;
-		}
+
 	}
 	.virtual-consulation {
 		margin-top: 40px;

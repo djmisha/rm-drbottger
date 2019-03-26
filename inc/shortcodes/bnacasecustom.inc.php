@@ -67,30 +67,34 @@ add_shortcode('bnacasecustom',function( $atts , $content = null ){
 		foreach( $imgsResults as $imgsStack ):
 			if($imgsCounted > $imageset ) continue;
 			?>
-			<div class=" bncacase-<?=$caseResult['case_id'];?> twentytwenty-container">
-						<img src="<?=$rmg_case::get_image($imgsStack['before_image_path'], 'full'); ?>" alt="bna-sample"  class="alignnone size-full" />
-					<?php
-					/**
-					* Include tags : addtags="true" or addtags="false"
-					*/
-						if($addtags == true):?><span class="label">Before</span><?php endif;
-					?>
-						<img src="<?=$rmg_case::get_image($imgsStack['after_image_path'], 'full'); ?>" alt="bna-sample"  class="alignnone size-full" />
-					<?php
-					/**
-					* Include tags : addtags="true" or addtags="false"
-					*/
-						if($addtags == true):?><span class="label">After</span><?php endif;
-					?>
+		<div class="bnacase-imgset bncacase-<?=$caseResult['case_id'];?>">
+			<div class="before">
+				<a href="<?=$makeCaseLink; ?>"><img src="<?=$rmg_case::get_image($imgsStack['before_image_path'], 'medium'); ?>" alt="bna-sample"  class="alignnone size-full" /></a>
 				<?php
-					if( $catbtn == false ):
-						if($casebtn == true):?><div><a href="<?=$makeCaseLink; ?>" class="button"><?=$casebtntxt;?></a></div><?php endif;
-					else:
-						$getCatPost = get_post($category);
-						?> <div><a href="<?=get_permalink($getCatPost->ID);?>"><?=$getCatPost->post_title;?></a></div> <?php
-					endif;
+				/**
+				* Include tags : addtags="true" or addtags="false"
+				*/
+					if($addtags == true):?><span class="label">Before</span><?php endif;
 				?>
 			</div>
+			<div class="after">
+				<a href="<?=$makeCaseLink; ?>"><img src="<?=$rmg_case::get_image($imgsStack['after_image_path'], 'medium'); ?>" alt="bna-sample"  class="alignnone size-full" /></a>
+				<?php
+				/**
+				* Include tags : addtags="true" or addtags="false"
+				*/
+					if($addtags == true):?><span class="label">After</span><?php endif;
+				?>
+			</div>
+			<?php
+				if( $catbtn == false ):
+					if($casebtn == true):?><div><a href="<?=$makeCaseLink; ?>"><?=$casebtntxt;?></a></div><?php endif;
+				else:
+					$getCatPost = get_post($category);
+					?> <div><a href="<?=get_permalink($getCatPost->ID);?>"><?=$getCatPost->post_title;?></a></div> <?php
+				endif;
+			?>
+		</div>
 			<?php
 			$imgsCounted++;
 		endforeach;/* END OF IMGS */

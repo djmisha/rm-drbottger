@@ -19,12 +19,12 @@
 				$patient = get_sub_field('patient');
 				?>
 
-				<?php echo do_shortcode( '[bnacasecustom category="' . $category . '" patient="' . $patient . '"  imageset="3" casecount="1" addtags="false" ]' ) ?>
+				<?php echo do_shortcode( '[bnacasecustom category="' . $category . '" patient="' . $patient . '"  imageset="2" casecount="1" addtags="false" ]' ) ?>
 
 			<?php endwhile; ?>
 		</div>
 	<?php endif; ?>
-	<div class="more"><a href="<?php bloginfo('url'); ?>/gallery/" class="button" rel="nofollow">Visit Our Gallery</a></div>
+	<div class="more"><a href="<?php bloginfo('url'); ?>/gallery/" class="button" rel="nofollow">View Photo Gallery</a></div>
 
 	<?php if ($content) echo '<div class="bna-content">' . $content . '</div>'; ?>
 
