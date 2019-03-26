@@ -395,8 +395,8 @@
 	.feature-content {
 		.feature-border {
 			@include media($tablet) {
-			padding-left: 40px;
-			padding-right: 40px;
+				padding-left: 40px;
+				padding-right: 40px;
 				max-width: 550px;
 				margin: 0 auto !important;
 				border: 1px solid rgba($primaryColor, .3);
@@ -618,7 +618,7 @@
 			}
 		}
 	}
-	#ChoosingtheRightSizeandShapeForYourImplants {
+	#ImplantSizeandShape {
 		color: $lightColor;
 		border: 1px solid rgba($primaryColor, .4);
 		text-align: center;
@@ -689,6 +689,126 @@
 				border: 1px solid rgba($primaryColor, .4);
 				padding: 60px;
 			}
+		}
+	}
+	#IncisionPlacement {
+		text-align: center;
+		.page-title-line-custom {
+			margin: 0 auto;
+			margin-bottom: 20px;
+		}
+	}
+	#theIncisions {
+		padding-top: 0;
+		h3 {text-align: left;}
+		> div {
+			margin-bottom: 40px;
+		}
+		@include media($tablet) {
+			display: flex !important;
+			> div {  
+				width: 45%;
+				margin-bottom: 60px; 
+			}
+		}
+		@include media($desktop) {
+			flex-wrap: nowrap;
+			> div {
+				width: 20%;
+			}
+		}
+	}
+	#BreastAugmentationProcedure {
+		color: $lightColor;
+		h2 {color: $lightColor;}
+		.page-title-line-custom {
+			margin: 0 auto;
+			margin-bottom: 20px;
+			background-color: $lightColor;
+		}
+	}
+	#FourBlock {
+		> div {
+			margin-bottom: 80px;
+		} 
+		@include media($tablet) {
+			flex-wrap: wrap !important;
+			> div {
+				width: 46%;
+				img {
+					margin-bottom: 40px;
+				}
+				h2 {
+					font-size: 33px;
+					line-height: 37px;
+				}
+			}
+		}
+	}
+	#ReflectionofYourFuture {
+		text-align: left;
+		color: $lightColor;
+		background-size: 1000px auto;
+		padding-right: 45%;
+		@include media($tablet) {
+			background-size: cover;
+		}
+		h2 {color: $lightColor;
+			text-align: left;
+		}
+		.featured-content {
+			@include media($tablet) {
+				border: 1px solid rgba($lightColor, .4);
+				padding: 60px;
+			}
+		}
+		.page-title-line-custom {
+			margin-bottom: 20px;
+			background-color: $lightColor;
+		}
+	}
+	#ChoosingaBreastAugmentationSurgeon {
+		background-color: #faf9ec;
+		.page-title-line-custom {
+			margin: 0 auto;
+			margin-bottom: 20px;
+			margin-top: 30px;
+		}
+		@include media($tablet) {
+			h2, p {
+				max-width: 820px;
+				margin: 0 auto;
+			}
+		}
+	}
+	#FinalDoctorSection {
+		background-size: auto 450px;
+		background-position: top left;
+		padding-top: 470px;
+		@include media($tablet) {
+			background-size: auto 600px;
+			background-position: top left;
+		}
+		@include media($desktop) {
+			padding-top: 100px;
+			background-size: auto 750px;
+			background-position: top center;
+
+			padding-left: 40%;
+		}
+		@include media($full) {
+			background-size: cover;
+		}
+		.featured-content {
+			background-color: #faf9ec;
+			padding-top: 40px;
+			padding-bottom: 40px;
+		}
+		.page-title-line-custom {
+			display: none ;
+		}
+		li {
+			margin-bottom: 20px;
 		}
 	}
 }

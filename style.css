@@ -5706,30 +5706,30 @@ main,
   }
 }
 
-.page-170 #ChoosingtheRightSizeandShapeForYourImplants {
+.page-170 #ImplantSizeandShape {
   color: #ffffff;
   border: 1px solid rgba(59, 63, 80, 0.4);
   text-align: center;
 }
 
 @media only screen and (min-width: 768px) {
-  .page-170 #ChoosingtheRightSizeandShapeForYourImplants {
+  .page-170 #ImplantSizeandShape {
     padding-bottom: 80px;
   }
 }
 
-.page-170 #ChoosingtheRightSizeandShapeForYourImplants h2 {
+.page-170 #ImplantSizeandShape h2 {
   color: #ffffff;
 }
 
 @media only screen and (min-width: 768px) {
-  .page-170 #ChoosingtheRightSizeandShapeForYourImplants .featured-content {
+  .page-170 #ImplantSizeandShape .featured-content {
     border: 1px solid rgba(255, 255, 255, 0.4);
     padding: 60px;
   }
 }
 
-.page-170 #ChoosingtheRightSizeandShapeForYourImplants .page-title-line-custom {
+.page-170 #ImplantSizeandShape .page-title-line-custom {
   margin: 0 auto;
   margin-bottom: 20px;
   background-color: #ffffff;
@@ -5800,6 +5800,173 @@ main,
     border: 1px solid rgba(59, 63, 80, 0.4);
     padding: 60px;
   }
+}
+
+.page-170 #IncisionPlacement {
+  text-align: center;
+}
+
+.page-170 #IncisionPlacement .page-title-line-custom {
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.page-170 #theIncisions {
+  padding-top: 0;
+}
+
+.page-170 #theIncisions h3 {
+  text-align: left;
+}
+
+.page-170 #theIncisions > div {
+  margin-bottom: 40px;
+}
+
+@media only screen and (min-width: 768px) {
+  .page-170 #theIncisions {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+  }
+  .page-170 #theIncisions > div {
+    width: 45%;
+    margin-bottom: 60px;
+  }
+}
+
+@media only screen and (min-width: 1080px) {
+  .page-170 #theIncisions {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+  .page-170 #theIncisions > div {
+    width: 20%;
+  }
+}
+
+.page-170 #BreastAugmentationProcedure {
+  color: #ffffff;
+}
+
+.page-170 #BreastAugmentationProcedure h2 {
+  color: #ffffff;
+}
+
+.page-170 #BreastAugmentationProcedure .page-title-line-custom {
+  margin: 0 auto;
+  margin-bottom: 20px;
+  background-color: #ffffff;
+}
+
+.page-170 #FourBlock > div {
+  margin-bottom: 80px;
+}
+
+@media only screen and (min-width: 768px) {
+  .page-170 #FourBlock {
+    -ms-flex-wrap: wrap !important;
+        flex-wrap: wrap !important;
+  }
+  .page-170 #FourBlock > div {
+    width: 46%;
+  }
+  .page-170 #FourBlock > div img {
+    margin-bottom: 40px;
+  }
+  .page-170 #FourBlock > div h2 {
+    font-size: 33px;
+    line-height: 37px;
+  }
+}
+
+.page-170 #ReflectionofYourFuture {
+  text-align: left;
+  color: #ffffff;
+  background-size: 1000px auto;
+  padding-right: 45%;
+}
+
+@media only screen and (min-width: 768px) {
+  .page-170 #ReflectionofYourFuture {
+    background-size: cover;
+  }
+}
+
+.page-170 #ReflectionofYourFuture h2 {
+  color: #ffffff;
+  text-align: left;
+}
+
+@media only screen and (min-width: 768px) {
+  .page-170 #ReflectionofYourFuture .featured-content {
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    padding: 60px;
+  }
+}
+
+.page-170 #ReflectionofYourFuture .page-title-line-custom {
+  margin-bottom: 20px;
+  background-color: #ffffff;
+}
+
+.page-170 #ChoosingaBreastAugmentationSurgeon {
+  background-color: #faf9ec;
+}
+
+.page-170 #ChoosingaBreastAugmentationSurgeon .page-title-line-custom {
+  margin: 0 auto;
+  margin-bottom: 20px;
+  margin-top: 30px;
+}
+
+@media only screen and (min-width: 768px) {
+  .page-170 #ChoosingaBreastAugmentationSurgeon h2, .page-170 #ChoosingaBreastAugmentationSurgeon p {
+    max-width: 820px;
+    margin: 0 auto;
+  }
+}
+
+.page-170 #FinalDoctorSection {
+  background-size: auto 450px;
+  background-position: top left;
+  padding-top: 470px;
+}
+
+@media only screen and (min-width: 768px) {
+  .page-170 #FinalDoctorSection {
+    background-size: auto 600px;
+    background-position: top left;
+  }
+}
+
+@media only screen and (min-width: 1080px) {
+  .page-170 #FinalDoctorSection {
+    padding-top: 100px;
+    background-size: auto 750px;
+    background-position: top center;
+    padding-left: 40%;
+  }
+}
+
+@media only screen and (min-width: 1480px) {
+  .page-170 #FinalDoctorSection {
+    background-size: cover;
+  }
+}
+
+.page-170 #FinalDoctorSection .featured-content {
+  background-color: #faf9ec;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.page-170 #FinalDoctorSection .page-title-line-custom {
+  display: none;
+}
+
+.page-170 #FinalDoctorSection li {
+  margin-bottom: 20px;
 }
 
 /* ------------------------
@@ -8072,11 +8239,12 @@ span.error {
   .flexible-jump-links .jump-link-list ul {
     margin: 0 auto;
     max-width: 1200px;
-    padding: 40px 40px 40px 40px;
+    padding: 40px 20px 40px 20px;
   }
 }
 
 .flexible-jump-links .jump-link-list ul li {
+  font-family: orpheuspro, serif;
   position: relative;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
@@ -8086,7 +8254,7 @@ span.error {
 
 @media only screen and (min-width: 768px) {
   .flexible-jump-links .jump-link-list ul li {
-    font-size: 14px;
+    font-size: 18px;
     line-height: 27px;
     padding: 0 10px !important;
     border-left: 1px solid rgba(59, 63, 80, 0.6);
