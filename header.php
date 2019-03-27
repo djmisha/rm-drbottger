@@ -15,6 +15,16 @@
 
 	<?php wp_head()?>
 
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-7670521-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-7670521-1');
+	</script>
+
 </head>
 
 <?php bodyClass(); ?>
@@ -92,7 +102,9 @@
 		 <?php elseif (is_home() or is_archive()): ?>
 			<div class="heading-text"> Blog</div>
 		<?php elseif (is_single()): ?>
-			<div class="heading-text"> Blog</div>
+			<h1><?php the_title(); ?></h1>
+			<div class="meta-data">Posted on <?the_time('M');?> <?the_time('j');?>, <? the_time('Y'); ?> <?php the_category(', '); ?></div>
+			
 		<?php else: ?> 
 			<h1><?the_title();?></h1>
 		<?php endif; ?>

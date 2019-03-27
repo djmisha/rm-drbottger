@@ -93,10 +93,15 @@ footer,
 			margin-bottom: 0;
 			background: transparent;
 		}
-		h1 {margin: 0 auto;}
+		h1 {
+			margin: 0 auto;
+			span {
+				display: none;
+			}
+		}
 
 		img {
-			width: 80%;
+			width: 300px;
 			// margin: 0 auto;
 			max-width: 300px;
 			min-height: 130px;
@@ -379,6 +384,7 @@ footer,
 ====================================*/
 
 .home-reviews {
+	text-align: center;
 	padding-top: 40px;	
 	padding-bottom: 60px;
 	@include media($tablet) {

@@ -133,21 +133,25 @@
 		font-size: 30px;
 		margin-bottom: 10px;
 		font-weight: 100;
+		text-align: center;
+		margin-top: 0;
 		@include media($tablet) {
 			font-size: 44px;
 			line-height: 47px;
 		}
 	}
 	.meta-data {
+		text-align: center;
+		// border: 1px solid red;
+		margin: 0 auto;
 		margin-top: 10px;
-		width: auto;
-		display: inline-block;
+		// width: auto;
+		display: block;
+		max-width: 500px;
 		padding-bottom: 5px;
-		border-bottom: 2px solid $primaryColor;
-		margin-bottom: 20px;
+		// border-bottom: 2px solid $primaryColor;
 		color: $primaryColor;
 		font-family: $secondaryFont !important;
-		// letter-spacing: 1px;
 		font-size: 15px;
 		@include media($tablet) {
 			font-size: 18px;

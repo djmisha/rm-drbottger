@@ -5010,7 +5010,7 @@ main,
   font-weight: 400;
   color: #3b3f50;
   display: block !important;
-  padding-bottom: 10px;
+  padding-bottom: 30px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -5172,6 +5172,13 @@ main,
 .interior .content ul.styled-links li {
   margin-left: 20px;
   margin-right: 20px;
+  font-size: 16px;
+}
+
+@media only screen and (min-width: 768px) {
+  .interior .content ul.styled-links li {
+    font-size: 18px;
+  }
 }
 
 .interior .content ul.styled-links li:before {
@@ -5180,11 +5187,11 @@ main,
   background: transparent;
   font-family: "Font Awesome 5 Pro";
   position: absolute;
-  left: 7px;
+  left: 5px;
   -webkit-transform: rotate(45deg);
       -ms-transform: rotate(45deg);
           transform: rotate(45deg);
-  color: #3b3f50;
+  color: #51566d;
 }
 
 .interior .content ul.styled-links li a {
@@ -6112,6 +6119,53 @@ main,
   background-color: #ffffff;
 }
 
+.page-201 #Mommy-Makeover-Tips {
+  background-color: #faf9ec;
+}
+
+.page-201 #Mommy-Makeover-Tips .page-title-line-custom {
+  margin: 0 auto;
+  margin-bottom: 20px;
+  margin-top: 30px;
+}
+
+.page-201 #Mommy-Makeover-Recovery-Tips-List {
+  background-color: #faf9ec;
+  padding-top: 0;
+}
+
+.page-201 #Mommy-Makeover-Recovery-Tips-List > div {
+  margin-bottom: 80px;
+}
+
+@media only screen and (min-width: 768px) {
+  .page-201 #Mommy-Makeover-Recovery-Tips-List > div {
+    width: 45%;
+  }
+}
+
+@media only screen and (min-width: 1080px) {
+  .page-201 #Mommy-Makeover-Recovery-Tips-List > div {
+    width: 22%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .page-201 #Scars-Cost > div {
+    width: 45%;
+  }
+}
+
+.page-201 #Scars-Cost .page-title-line-custom {
+  margin: 0 auto;
+  margin-bottom: 20px;
+  margin-top: 30px;
+}
+
+.page-201 #Mommy-Contact {
+  background-color: #faf9ec;
+}
+
 /* ------------------------
 	Aside
 ------------------------ */
@@ -6762,94 +6816,12 @@ aside li {
   margin-top: 0;
 }
 
-.contact form span {
-  color: #3b3f50;
-}
-
-.contact form label {
-  font-family: "Open Sans", sans-serif;
-}
-
 .contact form .type-singlelinetext input,
 .contact form .type-singlelinetext textarea,
 .contact form .type-textarea input,
 .contact form .type-textarea textarea {
-  background: #fff;
-  width: 100%;
-  border: 1px solid transparent;
-  background: #faf9ec;
-  font-size: 14px;
-  padding: 16px 20px;
-  border-radius: 4px;
-}
-
-.nav-form .contact form .type-singlelinetext input, .nav-form
-.contact form .type-singlelinetext textarea, .nav-form
-.contact form .type-textarea input, .nav-form
-.contact form .type-textarea textarea {
-  background: transparent;
-  border: 1px solid #ccc;
-}
-
-.contact form .type-singlelinetext ::-webkit-input-placeholder,
-.contact form .type-textarea ::-webkit-input-placeholder {
-  /* WebKit, Blink, Edge */
-  color: #3b3f50;
-  font-weight: normal;
-}
-
-.nav-form .contact form .type-singlelinetext ::-webkit-input-placeholder, .nav-form
-.contact form .type-textarea ::-webkit-input-placeholder {
-  color: #ccc;
-}
-
-.contact form .type-singlelinetext :-moz-placeholder,
-.contact form .type-textarea :-moz-placeholder {
-  /* Mozilla Firefox 4 to 18 */
-  color: #3b3f50;
-  font-weight: normal;
-  opacity: 1;
-}
-
-.nav-form .contact form .type-singlelinetext :-moz-placeholder, .nav-form
-.contact form .type-textarea :-moz-placeholder {
-  color: #ccc;
-}
-
-.contact form .type-singlelinetext ::-moz-placeholder,
-.contact form .type-textarea ::-moz-placeholder {
-  /* Mozilla Firefox 19+ */
-  color: #3b3f50;
-  font-weight: normal;
-  opacity: 1;
-}
-
-.nav-form .contact form .type-singlelinetext ::-moz-placeholder, .nav-form
-.contact form .type-textarea ::-moz-placeholder {
-  color: #ccc;
-}
-
-.contact form .type-singlelinetext :-ms-input-placeholder,
-.contact form .type-textarea :-ms-input-placeholder {
-  /* Internet Explorer 10-11 */
-  color: #3b3f50;
-  font-weight: normal;
-}
-
-.nav-form .contact form .type-singlelinetext :-ms-input-placeholder, .nav-form
-.contact form .type-textarea :-ms-input-placeholder {
-  color: #ccc;
-}
-
-@media only screen and (min-width: 768px) {
-  .contact fieldset {
-    float: left;
-    width: 50%;
-    height: 270px;
-  }
-  .contact fieldset div input {
-    font-size: 14px;
-  }
+  border: 2px solid #efecc4 !important;
+  background: transparent !important;
 }
 
 .contact .content {
@@ -6926,6 +6898,10 @@ aside li {
   }
 }
 
+.contact .addy-hours strong {
+  font-size: 16px;
+}
+
 .contact .address {
   width: 50%;
 }
@@ -6951,107 +6927,6 @@ aside li {
   display: block;
   width: 100%;
   height: 200px;
-}
-
-form .text-inputtype,
-form .email-inputtype {
-  width: 100%;
-  padding-left: 10px;
-  background: #ffffff;
-}
-
-form select {
-  width: 100%;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  border-radius: 0;
-  margin-bottom: 16px;
-  background: url("images/svg/select-arrow.svg");
-  background-position: right 18px center;
-  background-repeat: no-repeat;
-  background-size: 17px 11px;
-  background-color: #f9f9f9;
-  border: 1px solid #c9c9c9;
-  color: #3b3f50;
-  padding: 16px 16px;
-}
-
-form textarea {
-  width: 100%;
-  margin-bottom: 16px;
-  padding-left: 10px;
-  padding-top: 10px;
-  border: 1px solid #c9c9c9;
-  height: 145px;
-}
-
-form input[type="radio"] {
-  margin-right: 10px;
-}
-
-form .submit-btn:hover {
-  color: #3b3f50;
-  background: #f6e8b4 !important;
-}
-
-form .type-text {
-  font-size: 12px;
-  font-size: 0.75rem;
-}
-
-@keyframes shake {
-  10%,
-  90% {
-    -webkit-transform: translate3d(-3px, 0, 0);
-            transform: translate3d(-3px, 0, 0);
-  }
-  20%,
-  80% {
-    -webkit-transform: translate3d(4px, 0, 0);
-            transform: translate3d(4px, 0, 0);
-  }
-  30%,
-  50%,
-  70% {
-    -webkit-transform: translate3d(-8px, 0, 0);
-            transform: translate3d(-8px, 0, 0);
-  }
-  40%,
-  60% {
-    -webkit-transform: translate3d(8px, 0, 0);
-            transform: translate3d(8px, 0, 0);
-  }
-}
-
-.error {
-  border: 1px solid #e74c3c !important;
-  outline: none !important;
-  -webkit-box-shadow: 0 0 10px #e74c3c !important;
-          box-shadow: 0 0 10px #e74c3c !important;
-  -webkit-animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
-          animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
-  -webkit-transform: translate3d(0, 0, 0);
-          transform: translate3d(0, 0, 0);
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-  -webkit-perspective: 1000px;
-          perspective: 1000px;
-}
-
-span.error {
-  border: none !important;
-  -webkit-box-shadow: none !important;
-          box-shadow: none !important;
-  font-size: 0;
-  top: 28px;
-  right: 0;
-  position: absolute;
-  width: 30px;
-  height: 30px;
-  background-size: 7px 20px;
-  background-repeat: no-repeat;
-  background-position: center;
 }
 
 /* ***************************************** */
@@ -7171,8 +7046,12 @@ span.error {
   margin: 0 auto;
 }
 
+.welcome .welcome-cta .home-logo h1 span {
+  display: none;
+}
+
 .welcome .welcome-cta .home-logo img {
-  width: 80%;
+  width: 300px;
   max-width: 300px;
   min-height: 130px;
 }
@@ -7544,6 +7423,7 @@ span.error {
 =            home-reviews            =
 ====================================*/
 .home-reviews {
+  text-align: center;
   padding-top: 40px;
   padding-bottom: 60px;
 }
@@ -8196,6 +8076,8 @@ span.error {
   font-size: 30px;
   margin-bottom: 10px;
   font-weight: 100;
+  text-align: center;
+  margin-top: 0;
 }
 
 @media only screen and (min-width: 768px) {
@@ -8206,12 +8088,12 @@ span.error {
 }
 
 .tmpl_type_single .meta-data {
+  text-align: center;
+  margin: 0 auto;
   margin-top: 10px;
-  width: auto;
-  display: inline-block;
+  display: block;
+  max-width: 500px;
   padding-bottom: 5px;
-  border-bottom: 2px solid #3b3f50;
-  margin-bottom: 20px;
   color: #3b3f50;
   font-family: orpheuspro, serif !important;
   font-size: 15px;
@@ -8396,8 +8278,8 @@ span.error {
   position: relative;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
-  font-size: 12px;
-  line-height: 14px;
+  font-size: 14px;
+  line-height: 16px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -8721,9 +8603,9 @@ span.error {
   }
 }
 
-.flexible-contact .virtual-consulation {
-  margin-top: 40px;
-  max-width: 320px;
+.flexible-contact p {
+  max-width: 820px;
+  margin: 0 auto;
 }
 
 /* ------------------------

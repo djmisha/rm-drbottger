@@ -32,7 +32,7 @@
 		</div>
 		<div class="footer-social">
 			<a href="<?php the_field('facebook','options'); ?>" target="_blank" rel="noopener" title="facebook"><i class="fab fa-facebook"></i></a>
-			<a href="<?php the_field('instagram','options'); ?>" target="_blank" rel="noopener" title="instagram"><i class="fab fa-instagram"></i></a>
+			<a href="<?php the_field('youtube','options'); ?>" target="_blank" rel="noopener" title="youtube"><i class="fab fa-youtube"></i></a>
 			<a href="<?php the_field('twitter','options'); ?>" target="_blank" rel="noopener" title="twitter"><i class="fab fa-twitter"></i></a>
 			<a href="<?php the_field('pinterest','options'); ?>" target="_blank" rel="noopener" title="pinterest"><i class="fab fa-pinterest"></i></a>
 		</div>

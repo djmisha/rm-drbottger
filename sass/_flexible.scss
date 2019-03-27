@@ -40,8 +40,8 @@
 			font-family: $secondaryFont;
 			position: relative;
 			flex-wrap: nowrap;
-			font-size: 12px;
-			line-height: 14px;
+			font-size: 14px;
+			line-height: 16px;
 			@include media($tablet) {
 				font-size: 18px;
 				line-height: 27px;
@@ -300,11 +300,10 @@
 		padding-top: 90px;
 		padding-bottom: 90px;
 	}
-	h2 {
-
+	h2, p {
 	}
-	.virtual-consulation {
-		margin-top: 40px;
-		max-width: 320px;
+	p {
+		max-width: 820px;
+		margin: 0 auto;
 	}
 }

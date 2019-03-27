@@ -65,7 +65,7 @@
 		font-weight: 400;
 		color: $primaryColor;
 		display: block !important;
-		padding-bottom: 10px;
+		padding-bottom: 30px;
 		@include media($tablet) {
 			font-size: 44px;
 			line-height: 55px;
@@ -192,15 +192,19 @@
 			li {
 				margin-left: 20px;
 				margin-right: 20px;
+				font-size: 16px;
+				@include media($tablet) {
+					font-size: 18px;
+				}
 				&:before {
 					content: "\f0c1" !important;
 					top: 0px;
 					background: transparent;
 					font-family: "Font Awesome 5 Pro";
 					position: absolute;
-					left: 7px;
+					left: 5px;
 					transform: rotate(45deg);
-					color: $darkColor;
+					color: lighten($darkColor, 10%) ;
 				}
 				a {
 					text-decoration: none;
@@ -923,6 +927,39 @@
 		}
 	}
 	#Mommy-Makeover-Tips {
-		
+		background-color: #faf9ec;
+		.page-title-line-custom {
+			margin: 0 auto;
+			margin-bottom: 20px;
+			margin-top: 30px;
+		}
+	}
+	#Mommy-Makeover-Recovery-Tips-List {
+		background-color: #faf9ec;
+		padding-top: 0;
+		>div {
+			margin-bottom: 80px;
+			@include media($tablet) {
+				width: 45%;
+			}
+			@include media($desktop) {
+				width: 22%;
+			}
+		}
+	}
+	#Scars-Cost {
+		@include media($tablet) {
+			> div { 
+				width: 45%;
+			}
+		}
+		.page-title-line-custom {
+			margin: 0 auto;
+			margin-bottom: 20px;
+			margin-top: 30px;
+		}
+	}
+	#Mommy-Contact {
+		background-color: #faf9ec;
 	}
 }

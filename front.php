@@ -8,9 +8,11 @@
 <div class="welcome-parallax will-parallax parallax-welcome">
 	<div class="welcome" id="skiptomaincontent">
 		<div class="welcome-cta">
-			<div class="wow fadeInUp"  data-wow-delay=".15s">
+			<!-- <div class="wow fadeInUp"  data-wow-delay=".15s"> -->
 				<div class="home-logo">
-				<h1> <a href="<?php bloginfo('url'); ?>"> <img src="<?php bloginfo('template_directory'); ?>/images/logo.png" alt="David A. Bottger, MD"> </a> </h1> </div>
+				<a href="<?php bloginfo('url'); ?>"><img src="<?php bloginfo('template_directory'); ?>/images/logo.png" alt=""> </a><span></span> <h1> <span>David A. Bottger, MD</span></h1>
+			</div>
+				
 				<div class="home-addy">
 					<?php if(have_rows('locations', 'option')): ?>
 						<?php while(have_rows('locations', 'option')): the_row(); ?>
@@ -21,7 +23,7 @@
 					<?php endif; ?>
 				</div>
 				<a href="<?php the_field('schedule_a_consultation_link'); ?>" class="button" rel="nofollow">Schedule a Consultation</a>
-			</div>
+			<!-- </div> -->
 		</div>
 	</div>
 </div> 
@@ -80,22 +82,22 @@
 			<i class="fas fa-star"></i>
 		</div>
 		<?php the_field('home_reviews_content'); ?>
-		<span class="button">RevMary Jo Martin <i class="fas fa-facebook"></i></span>
+		<span class="button"><i class="fas fa-user-alt"></i> <?php the_field('home_reviews_name'); ?> </span>
 	</div>
 </section>
 
 
 <section class="home-breast-aug will-parallax parallax-home-breast">
-	<div class="home-breast-content">
-	<!-- <div class="home-breast-content wow fadeInUp"  data-wow-delay=".15s"> -->
+	<!-- <div class="home-breast-content"> -->
+	<div class="home-breast-content wow fadeInUp"  data-wow-delay=".15s">
 		<h2><?php the_field('breast_augmentation_headline'); ?></h2>
 		<?php the_field('breast_augmentation_content'); ?>
 	</div>
 </section>
 
 
-<section class="home-aug-buttons">
-<!-- <section class="home-aug-buttons wow fadeInUp"  data-wow-delay=".15s"> -->
+<!-- <section class="home-aug-buttons"> -->
+<section class="home-aug-buttons wow fadeInUp"  data-wow-delay=".15s">
 	<a href="<?php the_field('learn_more_about_breast_augmentation_button'); ?>" class="button" rel="nofollow">Learn More about Breast Augmentation</a>
 	<a href="<?php the_field('view_photo_gallery_button'); ?>" class="button" rel="nofollow">View Photo Gallery</a>
 </section> 

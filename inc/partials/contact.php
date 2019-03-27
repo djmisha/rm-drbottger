@@ -11,12 +11,5 @@ $text = get_sub_field('text');
    <h2><?php echo $heading; ?></h2>
    <?php echo $text; ?>
  </div>
- <a href="<?php bloginfo('template_directory'); ?>/patient-information-resources/internet-consultation-next-steps/">
-  <div class="virtual-consulation sidebar-button">
-    <i class="fas fa-user-tie"></i>
-    <i class="far fa-comment-alt"></i>
-    Virtual Consultation
-  </div>
-</a>
 </section>
 

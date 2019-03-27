@@ -106,8 +106,6 @@
 		height: 500px;
 	}
 	@include media($desktop) {
-		// background-position: center right no-repeat !important;
-		
 	}
 	@include media($full) {
 		height: 600px;
