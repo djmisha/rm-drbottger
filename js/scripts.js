@@ -88,10 +88,10 @@
 				
 				if ($(".parallax").hasClass("parallax")) {
 					$(".will-parallax").waypoint(function() {
-						$(".parallax-welcome").parallax("50%", -0.3, true); 
-						$(".parallax-footer").parallax("100%", -0.1, true);
-						$('.parallax-home-breast').parallax('100%', -0.3, true , 'is-parallaxing');
-						$(".parallax-internal-header").parallax("100%", -0.2, true);
+						$(".parallax-welcome").parallax("center", -0.3, true); 
+						$(".parallax-footer").parallax("center", -0.1, true);
+						$('.parallax-home-breast').parallax('center', -0.3, true , 'is-parallaxing');
+						$(".parallax-internal-header").parallax("center", -0.2, true);
 					});
 				}
 			}

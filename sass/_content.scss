@@ -775,4 +775,154 @@
 	#Tummy-Tuck-Recovery {
 		background-color: #faf9ec;
 	}
+	#Results-Pregnancy {
+		> div {
+			@include media($tablet) {
+				width: 45%;
+			}
+			h2 {text-align: left;}
+			img {margin-bottom: 40px;}
+		}
+	}
+	#Tummy-Tuck-and-Stretch-Marks {
+		color: $lightColor;
+		background-position: bottom right;
+		h2 {color: $lightColor;}
+		.page-title-line-custom {
+			margin: 0 auto;
+			margin-bottom: 20px;
+			margin-top: 30px;
+			background-color: $lightColor;
+		}
+		@include media($tablet) {
+			background-position: center center;
+			h2, p {
+				max-width: 820px;
+				margin: 0 auto;
+			}
+		}
+	}
+	#Scars-Non-Surgical {
+		> div {
+			@include media($tablet) {
+				width: 45%;
+			}
+			h2 {text-align: left;}
+			img {margin-bottom: 40px;}
+		}
+	}
+	#Tummy-Tuck-FAQ {
+		.page-title-line-custom {
+			margin: 0 auto;
+			margin-bottom: 20px;
+			margin-top: 30px;
+		}
+		h3 {text-align: left;}
+	}
+	#Tummy-Tuck-Cost {
+		@include media($tablet) {
+			background-color: #faf9ec;
+			flex-direction: row-reverse;
+		}
+	}
+	#Tummy-Schedule {
+		background-color: #faf9ec;
+		.page-title-line-custom {
+			margin: 0 auto;
+			margin-bottom: 20px;
+			margin-top: 30px;
+		}
+		@include media($tablet) {
+			background-position: center center;
+			h2, p {
+				max-width: 820px;
+				margin: 0 auto;
+			}
+		}
+	}
+}
+
+
+
+/*======================================
+=            Mommy Makeover            =
+======================================*/
+
+
+.page-201 {
+	#Mommy-Makeover-Candidates {
+		@include media($tablet) {
+			background-color: #faf9ec;
+			flex-direction: row-reverse;
+		}
+	}
+	#mommy-gallery-bna {
+		height: 350px;
+		text-align: center;
+		background-position: center center;
+		background-position-x: -600px; 
+		background-size: cover;
+		@include media($tablet) {
+			background-position: center center;
+			background-size: cover;
+		}
+		.page-title-line-custom {
+			display: none;
+		}
+		h2 {
+			color: $lightColor !important;
+		}
+		@include media($desktop) {
+			padding-right: 50%;
+		}
+		.button {
+			display: inline-block;
+			color: $darkColor !important;
+			background-color: $secondaryColor;
+		}
+	}
+	#Mommy-Makeover-Treatment-Options {
+		padding-bottom: 0;
+		text-align: center;
+		.page-title-line-custom {
+			margin: 0 auto;
+			margin-bottom: 20px;
+			margin-top: 30px;
+		}
+	}
+	#The-Treatment-Options {
+		padding-top: 40px;
+		> div {
+			h3 {
+				text-align: left;
+				font-size: 30px;
+			}
+			margin-bottom: 60px;
+			@include media($tablet) {
+				margin-bottom: 0px;
+				width: 48%;
+			}
+			@include media($desktop) {
+				width: 22%;
+			}
+		}
+	}
+	#Mommy-Makeover-Recovery {
+		color: $lightColor;
+		background-position: center left;
+		background-size: cover;
+		@include media($desktop) {
+			background-position: center center;
+		}
+		h2 {color: $lightColor;}
+		.page-title-line-custom {
+			margin: 0 auto;
+			margin-bottom: 20px;
+			margin-top: 30px;
+			background-color: $lightColor;
+		}
+	}
+	#Mommy-Makeover-Tips {
+		
+	}
 }

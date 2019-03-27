@@ -5910,6 +5910,208 @@ main,
   background-color: #faf9ec;
 }
 
+@media only screen and (min-width: 768px) {
+  .page-187 #Results-Pregnancy > div {
+    width: 45%;
+  }
+}
+
+.page-187 #Results-Pregnancy > div h2 {
+  text-align: left;
+}
+
+.page-187 #Results-Pregnancy > div img {
+  margin-bottom: 40px;
+}
+
+.page-187 #Tummy-Tuck-and-Stretch-Marks {
+  color: #ffffff;
+  background-position: bottom right;
+}
+
+.page-187 #Tummy-Tuck-and-Stretch-Marks h2 {
+  color: #ffffff;
+}
+
+.page-187 #Tummy-Tuck-and-Stretch-Marks .page-title-line-custom {
+  margin: 0 auto;
+  margin-bottom: 20px;
+  margin-top: 30px;
+  background-color: #ffffff;
+}
+
+@media only screen and (min-width: 768px) {
+  .page-187 #Tummy-Tuck-and-Stretch-Marks {
+    background-position: center center;
+  }
+  .page-187 #Tummy-Tuck-and-Stretch-Marks h2, .page-187 #Tummy-Tuck-and-Stretch-Marks p {
+    max-width: 820px;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .page-187 #Scars-Non-Surgical > div {
+    width: 45%;
+  }
+}
+
+.page-187 #Scars-Non-Surgical > div h2 {
+  text-align: left;
+}
+
+.page-187 #Scars-Non-Surgical > div img {
+  margin-bottom: 40px;
+}
+
+.page-187 #Tummy-Tuck-FAQ .page-title-line-custom {
+  margin: 0 auto;
+  margin-bottom: 20px;
+  margin-top: 30px;
+}
+
+.page-187 #Tummy-Tuck-FAQ h3 {
+  text-align: left;
+}
+
+@media only screen and (min-width: 768px) {
+  .page-187 #Tummy-Tuck-Cost {
+    background-color: #faf9ec;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+}
+
+.page-187 #Tummy-Schedule {
+  background-color: #faf9ec;
+}
+
+.page-187 #Tummy-Schedule .page-title-line-custom {
+  margin: 0 auto;
+  margin-bottom: 20px;
+  margin-top: 30px;
+}
+
+@media only screen and (min-width: 768px) {
+  .page-187 #Tummy-Schedule {
+    background-position: center center;
+  }
+  .page-187 #Tummy-Schedule h2, .page-187 #Tummy-Schedule p {
+    max-width: 820px;
+    margin: 0 auto;
+  }
+}
+
+/*======================================
+=            Mommy Makeover            =
+======================================*/
+@media only screen and (min-width: 768px) {
+  .page-201 #Mommy-Makeover-Candidates {
+    background-color: #faf9ec;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+}
+
+.page-201 #mommy-gallery-bna {
+  height: 350px;
+  text-align: center;
+  background-position: center center;
+  background-position-x: -600px;
+  background-size: cover;
+}
+
+@media only screen and (min-width: 768px) {
+  .page-201 #mommy-gallery-bna {
+    background-position: center center;
+    background-size: cover;
+  }
+}
+
+.page-201 #mommy-gallery-bna .page-title-line-custom {
+  display: none;
+}
+
+.page-201 #mommy-gallery-bna h2 {
+  color: #ffffff !important;
+}
+
+@media only screen and (min-width: 1080px) {
+  .page-201 #mommy-gallery-bna {
+    padding-right: 50%;
+  }
+}
+
+.page-201 #mommy-gallery-bna .button {
+  display: inline-block;
+  color: #3b3f50 !important;
+  background-color: #f6e8b4;
+}
+
+.page-201 #Mommy-Makeover-Treatment-Options {
+  padding-bottom: 0;
+  text-align: center;
+}
+
+.page-201 #Mommy-Makeover-Treatment-Options .page-title-line-custom {
+  margin: 0 auto;
+  margin-bottom: 20px;
+  margin-top: 30px;
+}
+
+.page-201 #The-Treatment-Options {
+  padding-top: 40px;
+}
+
+.page-201 #The-Treatment-Options > div {
+  margin-bottom: 60px;
+}
+
+.page-201 #The-Treatment-Options > div h3 {
+  text-align: left;
+  font-size: 30px;
+}
+
+@media only screen and (min-width: 768px) {
+  .page-201 #The-Treatment-Options > div {
+    margin-bottom: 0px;
+    width: 48%;
+  }
+}
+
+@media only screen and (min-width: 1080px) {
+  .page-201 #The-Treatment-Options > div {
+    width: 22%;
+  }
+}
+
+.page-201 #Mommy-Makeover-Recovery {
+  color: #ffffff;
+  background-position: center left;
+  background-size: cover;
+}
+
+@media only screen and (min-width: 1080px) {
+  .page-201 #Mommy-Makeover-Recovery {
+    background-position: center center;
+  }
+}
+
+.page-201 #Mommy-Makeover-Recovery h2 {
+  color: #ffffff;
+}
+
+.page-201 #Mommy-Makeover-Recovery .page-title-line-custom {
+  margin: 0 auto;
+  margin-bottom: 20px;
+  margin-top: 30px;
+  background-color: #ffffff;
+}
+
 /* ------------------------
 	Aside
 ------------------------ */
