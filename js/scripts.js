@@ -31,6 +31,9 @@
 		}).init();
 
 
+
+
+
 		/* Homepage Procedures Slideshow */
 
 		$('.the-slider').flickity({
@@ -69,7 +72,25 @@
 		// $(".owl-dots").appendTo(".reviews-box");
 
 
+		/*==================================
+		=            Testi Page            =
+		==================================*/
+		
+		var $grid = $(".testi-container").isotope({
+			itemSelector: ".the-testi",
+			percentPosition: true,
+			  masonry: {
+			    // use element for option
+			    columnWidth: '.the-testi'
+			    // columnWidth: 50,
+			  }
+		});
 
+		/* Adds Fancybox */
+			
+		$(".the-testi a").attr("data-fancybox", "gallery");
+
+		
 		/*================================
 		=            Parallax            =
 		================================*/

@@ -96,8 +96,7 @@
 </section>
 
 
-<!-- <section class="home-aug-buttons"> -->
-<section class="home-aug-buttons wow fadeInUp"  data-wow-delay=".15s">
+<section class="home-aug-buttons wow fadeIn"  data-wow-delay=".25s">
 	<a href="<?php the_field('learn_more_about_breast_augmentation_button'); ?>" class="button" rel="nofollow">Learn More about Breast Augmentation</a>
 	<a href="<?php the_field('view_photo_gallery_button'); ?>" class="button" rel="nofollow">View Photo Gallery</a>
 </section> 

@@ -3927,7 +3927,7 @@ img.alignleft {
 
 /* Hide Wow before JS Loads */
 @media only screen and (min-width: 1080px) {
-  .wow.fadeInDown, .wow.fadeInUp, .wow.fadeInRight, .wow.slideInDown {
+  .wow.fadeIn, .wow.fadeInDown, .wow.fadeInUp, .wow.fadeInRight, .wow.slideInDown {
     opacity: 0;
     visibility: hidden;
     -webkit-animation-fill-mode: both;
@@ -5334,18 +5334,6 @@ main,
 }
 
 @media only screen and (min-width: 768px) {
-  .page-feature .feature-content .feature-border {
-    padding-left: 40px;
-    padding-right: 40px;
-    max-width: 550px;
-    margin: 0 auto !important;
-    border: 1px solid rgba(59, 63, 80, 0.3);
-    padding-top: 60px;
-    padding-bottom: 60px;
-  }
-}
-
-@media only screen and (min-width: 768px) {
   .page-feature .feature-content {
     background: #d8e1bf;
     padding: 60px 40px;
@@ -5355,6 +5343,24 @@ main,
 @media only screen and (min-width: 1080px) {
   .page-feature .feature-content {
     padding: 100px 40px;
+  }
+}
+
+@media only screen and (min-width: 1480px) {
+  .page-feature .feature-content {
+    padding: 150px 40px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .page-feature .feature-content .feature-border {
+    padding-left: 40px;
+    padding-right: 40px;
+    max-width: 550px;
+    margin: 0 auto !important;
+    border: 1px solid rgba(59, 63, 80, 0.3);
+    padding-top: 60px;
+    padding-bottom: 60px;
   }
 }
 
@@ -5379,10 +5385,50 @@ main,
   margin-top: 20px !important;
 }
 
+.page-feature .feature-content ul li:before {
+  background-color: #3b3f50 !important;
+}
+
+.page-feature .feature-content .two-column {
+  -webkit-column-count: 1;
+     -moz-column-count: 1;
+          column-count: 1;
+}
+
 .page-feature .feature-image {
   background-position: center center !important;
   background-repeat: no-repeat !important;
   background-size: cover !important;
+}
+
+/*=========================================
+=            Testimonials Page            =
+=========================================*/
+.testi-container .the-testi {
+  border: 1px solid rgba(59, 63, 80, 0.3);
+  padding: 20px 20px 10px 20px;
+  margin-bottom: 40px;
+  position: relative;
+  width: 100%;
+}
+
+.testi-container .the-testi:nth-of-type(odd) {
+  margin-right: 40px;
+}
+
+@media only screen and (min-width: 768px) {
+  .testi-container .the-testi {
+    width: 45%;
+  }
+}
+
+.testi-container .the-testi video, .testi-container .the-testi iframe {
+  width: 100%;
+  max-height: 280px;
+}
+
+.testi-container .the-testi img {
+  max-width: 100%;
 }
 
 /*=========================================================================
