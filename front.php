@@ -88,7 +88,6 @@
 
 
 <section class="home-breast-aug will-parallax parallax-home-breast">
-	<!-- <div class="home-breast-content"> -->
 	<div class="home-breast-content wow fadeInUp"  data-wow-delay=".15s">
 		<h2><?php the_field('breast_augmentation_headline'); ?></h2>
 		<?php the_field('breast_augmentation_content'); ?>
