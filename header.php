@@ -54,7 +54,7 @@
 		</div> 
 		<div class="menu-trigger">
 			<i class="fal fa-bars"></i>
-			<i class="fal fa-window-close"></i>
+			<!-- <i class="fal fa-window-close"></i> -->
 		</div>
 	</div>
 

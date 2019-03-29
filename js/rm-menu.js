@@ -19,7 +19,7 @@ var slideRightRemoveClass = true;
 		$("body").toggleClass('menu-is-open');
 		var el = $(this);
 		slideRightRemoveClass = false;
-		$('.menu-trigger').toggleClass('menu-clicked');
+		// $('.menu-trigger').toggleClass('menu-clicked');
 		//console.log(el.parent().next());
 
 	});

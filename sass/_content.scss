@@ -379,14 +379,10 @@
 =========================================*/
 
 .testi-container {
-	// display: flex;
-	// flex-wrap: wrap;
-	// justify-content: space-around;
 	.the-testi {
 		border: 1px solid rgba($primaryColor, .3) ;
 		padding: 20px 20px 10px 20px;
 		margin-bottom: 40px;
-		// margin-top: ;
 		position: relative;
 		width: 100%;
 		&:nth-of-type(odd){
@@ -394,9 +390,6 @@
 		}
 		@include media($tablet) {
 			width: 45%;
-		}
-		@include media($desktop) {
-			// width: 30%;
 		}
 		video, iframe {
 			width: 100%;
@@ -471,14 +464,16 @@
 	position: relative;
 	margin-bottom: 0px;
 	height: auto;
-	background-size: 125vw auto;
+	// background-size: 125vw auto;
 	background-position: top right;
-	height: 55vw;
+	height: 400px;
+	// min-height: 400px;
 
 	@include media($tablet) {
 		background-position: center center;
 		background-size: cover;
 		height: 80vh;
+		min-height: 600px
 	}
 	@include media($desktop) {
 		min-height: 600px
@@ -505,7 +500,10 @@
 	}
 	.inside-header-logo {
 		@include media($tablet) {
-			margin-top: 400px;
+			margin-top: 200px;
+			margin-top: 25vh;
+		}
+		@include media($desktop) {
 		}
 	}
 }
@@ -809,11 +807,33 @@
 	#Tummy-Tuck-Candidates {
 		background-color: #faf9ec;
 		@include media($tablet) {
+			flex-direction: column;
+			> div {
+				width: 100%;
+			}
+		}
+		@include media($desktop) {
 			flex-direction: row-reverse;
+			> div {
+				width: 50%;
+			}
 		}
 	}
 	#Tummy-Tuck-Procedure {
 		background-color: #faf9e3;
+		@include media($tablet) {
+					flex-direction: column;
+					> div {
+						width: 100%;
+						min-height: 600px;
+					}
+				}
+				@include media($desktop) {
+					flex-direction: row;
+					> div {
+						width: 50%;
+					}
+				}
 	}
 	#TummyBNA {
 		background: url('images/bg-tummy-bna.jpg');
@@ -823,18 +843,47 @@
 		h2 {
 			text-align: left;
 		}
+		>div {
+			margin-bottom: 40px;
+		}
 		@include media($tablet) {
 			> div {
+				margin-bottom: 0px;
 				width: 45%;
 			}
 		}
 	}
 	#Abdominoplasty-Risks {
 		background-color: #faf9ec;
-		flex-direction: row-reverse;
+		@include media($tablet) {
+			flex-direction: column;
+			> div {
+				width: 100%;
+				min-height: 800px;
+			}
+		}
+		@include media($desktop) {
+			flex-direction: row-reverse;
+			> div {
+				width: 50%;
+			}
+		}
 	}
 	#Tummy-Tuck-Recovery {
 		background-color: #faf9ec;
+		@include media($tablet) {
+			flex-direction: column;
+			> div {
+				width: 100%;
+				min-height: 800px;
+			}
+		}
+		@include media($desktop) {
+			flex-direction: row;
+			> div {
+				width: 50%;
+			}
+		}
 	}
 	#Results-Pregnancy {
 		> div {
@@ -861,6 +910,10 @@
 				max-width: 820px;
 				margin: 0 auto;
 			}
+			p {
+				margin-bottom: 20px;
+			}
+
 		}
 	}
 	#Scars-Non-Surgical {
@@ -912,9 +965,19 @@
 
 .page-201 {
 	#Mommy-Makeover-Candidates {
+		background-color: #faf9ec;
 		@include media($tablet) {
-			background-color: #faf9ec;
+			flex-direction: column;
+			> div {
+				width: 100%;
+			}
+		}
+		@include media($desktop) {
 			flex-direction: row-reverse;
+			> div {
+				width: 50%;
+			}
+
 		}
 	}
 	#mommy-gallery-bna {
@@ -971,8 +1034,10 @@
 	#Mommy-Makeover-Recovery {
 		color: $lightColor;
 		background-position: center left;
+		background-position-x: -200px;
 		background-size: cover;
 		@include media($desktop) {
+		background-size: cover;
 			background-position: center center;
 		}
 		h2 {color: $lightColor;}

@@ -66,9 +66,11 @@ footer,
 }
 
 .welcome .welcome-cta {
+	margin-top: 50px;
 	text-align: left;
 	@include media($tablet) {
-		max-width: 450px;
+		margin-top: 0;
+		max-width: 490px;
 		background: none;
 		padding-top: 170px;
 		padding-left: 50px;
@@ -86,7 +88,7 @@ footer,
 		padding-left: 20px;
 		padding-top: 20px;
 		padding-bottom: 20px;
-		margin-bottom: 310px;
+		margin-bottom: 320px;
 		background: $lightColor;
 		@include media($tablet) {
 			padding: 0;
@@ -101,7 +103,7 @@ footer,
 		}
 
 		img {
-			width: 300px;
+			width: 280px;
 			// margin: 0 auto;
 			max-width: 300px;
 			min-height: 130px;
