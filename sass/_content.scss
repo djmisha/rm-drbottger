@@ -309,13 +309,22 @@
 .page-feature {
 	display: flex;
 	flex-direction: column-reverse;
-	@include media($tablet) {
+	@include media($desktop) {
 		flex-direction: row-reverse;
 	}
-	> div {
+	.feature-image {
 		min-height: 350px;
 		@include media($tablet) {
+			min-height: 600px;
+		}
+	}
+	> div {
+		@include media($tablet) {
+			width: 100%;
+		}
+		@include media($desktop) {
 			width: 50%;
+			
 		}
 	}
 	.feature-content {
@@ -379,16 +388,17 @@
 =========================================*/
 
 .testi-container {
+	display: flex;
+	flex-wrap: wrap;
 	.the-testi {
 		border: 1px solid rgba($primaryColor, .3) ;
 		padding: 20px 20px 10px 20px;
-		margin-bottom: 40px;
 		position: relative;
 		width: 100%;
-		&:nth-of-type(odd){
-			margin-right: 40px;
-		}
+		height: auto;
 		@include media($tablet) {
+			margin-bottom: 40px;
+			margin-right: 20px;
 			width: 45%;
 		}
 		video, iframe {
@@ -397,6 +407,11 @@
 		}
 		img {
 			max-width: 100%;
+			height: auto;
+		}
+		p {
+			margin-bottom: 10px;
+			display: block;
 		}
 		// &:before {
 		// 	position: absolute;
@@ -530,7 +545,27 @@
 	}
 	#WhatisBreastAugmentation {
 		background-color: #faf9ec;
-		flex-direction: row-reverse;
+		@include media($tablet) {
+			.with-bg {
+				min-height: 600px;
+			}
+			flex-direction: column;
+			> div {
+				width: 100%;
+			}
+		}
+		@include media($desktop) {
+			flex-direction: row-reverse;
+			> div {
+				width: 50%;
+			}
+		}
+	}
+	#BreastAugmentationBenefits {
+		.page-title-line-custom {
+			margin: 0 auto;
+			margin-bottom: 20px;
+		}
 	}
 	#BreastAugmentationCandidates {
 		.two-column {
@@ -547,11 +582,12 @@
 		}
 	}
 	.view-gallery-callout {
-		height: 350px;
 		text-align: center;
 		background-position: center right;
 		background-size: cover;
+		height: 200px;
 		@include media($tablet) {
+			height: 350px;
 			background-size: cover;
 		}
 		.page-title-line-custom {
@@ -704,11 +740,23 @@
 	}
 	#BreastAugmentationProcedure {
 		color: $lightColor;
+		background-position-x: -900px; 
+		background-size: cover;
+		@include media(550px) {
+			background-size: cover;
+			background-position: center center;
+		}
+		.featured-content {
+			height: auto;
+		}
 		h2 {color: $lightColor;}
 		.page-title-line-custom {
 			margin: 0 auto;
 			margin-bottom: 20px;
 			background-color: $lightColor;
+		}
+		p a {
+			color: $lightColor;
 		}
 	}
 	#FourBlock {
@@ -732,8 +780,12 @@
 	#ReflectionofYourFuture {
 		text-align: left;
 		color: $lightColor;
-		background-size: 1000px auto;
+		background-size: 700px auto;
 		padding-right: 45%;
+		// background-position-x: -800px; 
+		@include media(450px) {
+			background-size: 1000px auto;
+		}
 		@include media($tablet) {
 			background-size: cover;
 		}

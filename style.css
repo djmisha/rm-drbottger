@@ -4523,6 +4523,7 @@ main,
   background-repeat: no-repeat;
   background-size: cover;
   height: 250px;
+  background-position-y: 50px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -5298,7 +5299,7 @@ main,
           flex-direction: column-reverse;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1080px) {
   .page-feature {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: reverse;
@@ -5307,11 +5308,23 @@ main,
   }
 }
 
-.page-feature > div {
+.page-feature .feature-image {
   min-height: 350px;
 }
 
 @media only screen and (min-width: 768px) {
+  .page-feature .feature-image {
+    min-height: 600px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .page-feature > div {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 1080px) {
   .page-feature > div {
     width: 50%;
   }
@@ -5392,20 +5405,26 @@ main,
 /*=========================================
 =            Testimonials Page            =
 =========================================*/
+.testi-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
 .testi-container .the-testi {
   border: 1px solid rgba(59, 63, 80, 0.3);
   padding: 20px 20px 10px 20px;
-  margin-bottom: 40px;
   position: relative;
   width: 100%;
-}
-
-.testi-container .the-testi:nth-of-type(odd) {
-  margin-right: 40px;
+  height: auto;
 }
 
 @media only screen and (min-width: 768px) {
   .testi-container .the-testi {
+    margin-bottom: 40px;
+    margin-right: 20px;
     width: 45%;
   }
 }
@@ -5417,6 +5436,12 @@ main,
 
 .testi-container .the-testi img {
   max-width: 100%;
+  height: auto;
+}
+
+.testi-container .the-testi p {
+  margin-bottom: 10px;
+  display: block;
 }
 
 /*=========================================================================
@@ -5543,10 +5568,38 @@ main,
 
 .page-170 #WhatisBreastAugmentation {
   background-color: #faf9ec;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
+}
+
+@media only screen and (min-width: 768px) {
+  .page-170 #WhatisBreastAugmentation {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .page-170 #WhatisBreastAugmentation .with-bg {
+    min-height: 600px;
+  }
+  .page-170 #WhatisBreastAugmentation > div {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 1080px) {
+  .page-170 #WhatisBreastAugmentation {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+  .page-170 #WhatisBreastAugmentation > div {
+    width: 50%;
+  }
+}
+
+.page-170 #BreastAugmentationBenefits .page-title-line-custom {
+  margin: 0 auto;
+  margin-bottom: 20px;
 }
 
 @media only screen and (min-width: 1080px) {
@@ -5567,14 +5620,15 @@ main,
 }
 
 .page-170 .view-gallery-callout {
-  height: 350px;
   text-align: center;
   background-position: center right;
   background-size: cover;
+  height: 200px;
 }
 
 @media only screen and (min-width: 768px) {
   .page-170 .view-gallery-callout {
+    height: 350px;
     background-size: cover;
   }
 }
@@ -5785,6 +5839,19 @@ main,
 
 .page-170 #BreastAugmentationProcedure {
   color: #ffffff;
+  background-position-x: -900px;
+  background-size: cover;
+}
+
+@media only screen and (min-width: 550px) {
+  .page-170 #BreastAugmentationProcedure {
+    background-size: cover;
+    background-position: center center;
+  }
+}
+
+.page-170 #BreastAugmentationProcedure .featured-content {
+  height: auto;
 }
 
 .page-170 #BreastAugmentationProcedure h2 {
@@ -5795,6 +5862,10 @@ main,
   margin: 0 auto;
   margin-bottom: 20px;
   background-color: #ffffff;
+}
+
+.page-170 #BreastAugmentationProcedure p a {
+  color: #ffffff;
 }
 
 .page-170 #FourBlock > div {
@@ -5821,8 +5892,14 @@ main,
 .page-170 #ReflectionofYourFuture {
   text-align: left;
   color: #ffffff;
-  background-size: 1000px auto;
+  background-size: 700px auto;
   padding-right: 45%;
+}
+
+@media only screen and (min-width: 450px) {
+  .page-170 #ReflectionofYourFuture {
+    background-size: 1000px auto;
+  }
 }
 
 @media only screen and (min-width: 768px) {
@@ -6609,6 +6686,14 @@ aside li {
 
 .upper-footer form .type-submitbutton .submit-btn:hover {
   background: transparent !important;
+}
+
+.upper-footer #sf-message-295 {
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  margin: 0 auto;
+  padding: 40px;
+  margin-top: 45px;
 }
 
 .upper-footer .footer-address {

@@ -76,14 +76,24 @@
 		=            Testi Page            =
 		==================================*/
 		
+
+		  // init Isotope after all images have loaded
+		  // $grid.isotope({
+		  //   itemSelector: '.element-item',
+			 //  layoutMode: 'masonry'
+		  // });
+
+			
+		var $grid = $('.testi-container').imagesLoaded( function() {
 		var $grid = $(".testi-container").isotope({
 			itemSelector: ".the-testi",
 			percentPosition: true,
 			  masonry: {
 			    // use element for option
-			    columnWidth: '.the-testi'
-			    // columnWidth: 50,
+			    columnWidth: '.the-testi',
+			    columnWidth: 45,
 			  }
+		});
 		});
 
 		/* Adds Fancybox */

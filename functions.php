@@ -7,9 +7,11 @@
 if( !defined('TMPL_DIR')):
 	define('TMPL_DIR' , get_template_directory() );
 endif;
+
 if( !defined('TMPL_DIR_URI')):
 	define('TMPL_DIR_URI' , get_template_directory_uri() );
 endif;
+
 
 /*===================================
 =            THEME SETUP            =
@@ -71,6 +73,9 @@ function __themejs(){
 	
 	// wp_register_script('rm-match', TMPL_DIR_URI . '/js/libs/match-height/jquery.matchHeight-min.js', array('jquery','modernizr'), '1.0', true );
 	wp_register_script('rm-isotope', TMPL_DIR_URI . '/js/libs/isotope.pkgd.js', array('jquery','modernizr'), '1.0', true );
+	wp_register_script( 'rm_loaded', TMPL_DIR_URI . '/js/libs/imagesLoaded.min.js', array('jquery'), '1', true );
+		
+
 	wp_register_script('rm-owl', TMPL_DIR_URI . '/js/libs/owl-carousel/owl.carousel.min.js', array('jquery','modernizr'), '1.0', true );
 	wp_register_script('rm-parallax', TMPL_DIR_URI . '/js/libs/parallax/jquery.parallax.js', array('jquery','modernizr'), '1.0', true );
 	wp_register_script('rm-waypoints', TMPL_DIR_URI . '/js/libs/parallax/jquery.waypoints.min.js', array('jquery','modernizr'), '1.0', true );

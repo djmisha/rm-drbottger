@@ -35,6 +35,7 @@
 			<a href="<?php the_field('youtube','options'); ?>" target="_blank" rel="noopener" title="youtube"><i class="fab fa-youtube"></i></a>
 			<a href="<?php the_field('twitter','options'); ?>" target="_blank" rel="noopener" title="twitter"><i class="fab fa-twitter"></i></a>
 			<a href="<?php the_field('pinterest','options'); ?>" target="_blank" rel="noopener" title="pinterest"><i class="fab fa-pinterest"></i></a>
+			<a href="<?php the_field('google','options'); ?>" target="_blank" rel="noopener" title="google"><i class="fab fa-google"></i></a>
 		</div>
 	</section>
 	
