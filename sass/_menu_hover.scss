@@ -91,7 +91,8 @@ $menuHeight : 60px;
 			// transition: .25s ease-in-out top, .25s ease-in-out opacity;
 			> li {
 
-				border-bottom: 1px solid rgba($secondaryColor, .1); //for visual purposes.  can remove.
+				border-bottom: 1px solid rgba($secondaryColor, .1);
+				 //for visual purposes.  can remove.
 				&:last-of-type {
 					border-bottom:none;
 				}

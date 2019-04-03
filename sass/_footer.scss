@@ -39,13 +39,20 @@
 		height: 250px;
 	}
 	span {
+		padding-left: 20px;
+		padding-right: 20px;
 		font-size: 34px;
 		line-height: 36px;
 		font-family: $secondaryFont;
 		color: $lightColor;
 		@include media($tablet) {
+			font-size: 40px;
+			line-height: 44px;
+		}
+		@include media($desktop) {
 			font-size: 45px;
 			line-height: 48px;
+			
 		}
 	}
 }
@@ -110,7 +117,7 @@
 		textarea {
 			border-radius: 4px;
 			color: $darkColor !important;
-			background: rgba(#f0f0f0, 0.8) !important;
+			background: rgba(#f0f0f0, 0.95) !important;
 			border: rgba(#fff, 0.3) !important;
 		}
 		.disclaimer {

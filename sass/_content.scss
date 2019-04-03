@@ -196,16 +196,16 @@
 				@include media($tablet) {
 					font-size: 18px;
 				}
-				&:before {
-					content: "\f0c1" !important;
-					top: 0px;
-					background: transparent;
-					font-family: "Font Awesome 5 Pro";
-					position: absolute;
-					left: 5px;
-					transform: rotate(45deg);
-					color: lighten($darkColor, 10%) ;
-				}
+				// &:before {
+				// 	content: "\f0c1" !important;
+				// 	top: 0px;
+				// 	background: transparent;
+				// 	font-family: "Font Awesome 5 Pro";
+				// 	position: absolute;
+				// 	left: 5px;
+				// 	transform: rotate(45deg);
+				// 	color: lighten($darkColor, 10%) ;
+				// }
 				a {
 					text-decoration: none;
 					color: $darkColor;
@@ -341,13 +341,13 @@
 		}
 		.feature-border {
 			@include media($tablet) {
-				padding-left: 40px;
-				padding-right: 40px;
+				padding-left: 80px;
+				padding-right: 80px;
 				max-width: 550px;
 				margin: 0 auto !important;
 				border: 1px solid rgba($primaryColor, .3);
-				padding-top: 60px;
-				padding-bottom: 60px;
+				padding-top: 80px;
+				padding-bottom: 80px;
 			}
 		}
 		p,
@@ -699,7 +699,7 @@
 			padding-top: 100px;
 			background-position: center center;
 			background-size: auto auto;
-			padding-right: 45%;
+			padding-right: 55%;
 		}
 		h2 {
 			text-align: left;

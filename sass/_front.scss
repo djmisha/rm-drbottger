@@ -11,6 +11,12 @@ footer,
  	// display: none !important;
  }
 
+
+.home p a{
+	// a {
+		color: $primaryColor;
+	// }
+}
  .home h2 {
  	margin: 0;
  	font-family: $secondaryFont;
@@ -70,12 +76,13 @@ footer,
 	text-align: left;
 	@include media($tablet) {
 		margin-top: 0;
-		max-width: 490px;
+		max-width: 340px;
 		background: none;
 		padding-top: 170px;
 		padding-left: 50px;
 	}
 	@include media($desktop) {
+		max-width: 490px;
 		max-width: none;
 		padding-top: 35vh;
 		padding-left: 15vw;
@@ -101,13 +108,17 @@ footer,
 				display: none;
 			}
 		}
-
+		a {
+			margin: 0 auto;
+			text-align: center;
+		}
 		img {
 			width: 280px;
-			// margin: 0 auto;
+			margin: 0 auto;
 			max-width: 300px;
 			min-height: 130px;
 			@include media($desktop) {
+				margin: 0;
 				min-height: none;
 				max-width: none;
 				width: auto;
@@ -142,8 +153,10 @@ footer,
 			height: 29px;
 			z-index: 1;
 			@include media($tablet) {
+				left: 240px;
+			}
+			@include media($desktop) {
 				left: 310px;
-				
 			}
 		}
 		&:hover {
@@ -194,6 +207,7 @@ footer,
 			line-height: 47px;
 		}
 	}
+
 	.doc-content {
 		@include media($desktop) {
 			max-width: 600px;
@@ -205,7 +219,7 @@ footer,
 			display: block;
 			float: left; 
 			margin-right: 20px;
-			margin-bottom: 40px;
+			// margin-bottom: 40px;
 			width: 90px;
 			// width: 100%;
 			// max-width: 350px;
@@ -314,13 +328,17 @@ footer,
 		padding-bottom: 40px;
 		transition: all .35s ease-in-out;
 		position: relative;
+		overflow: hidden;
+
 		@include media($tablet) {
 			padding-left: 40px;
 			padding-right: 40px;
 			padding-top: 300px;
 			padding-bottom: 80px;
+			transition: all .35s ease-in-out;
 		}
 		@include media($desktop) {
+			transition: all .35s ease-in-out;
 			padding-bottom: 80px;
 			padding-top: 370px;
 		}
@@ -367,7 +385,24 @@ footer,
 			transition: all .35s ease-in-out;
 			background: rgba( $primaryColor, .6);
 		}
+		img {
+			transition: all .35s ease-in-out;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left:0;
+			right: 0;
+			z-index: -1;
+			width: 120%;
+		}
 		&:hover {
+			transition: background .35s ease-in-out;
+			@include media(1150px) {
+				background-size: 140% auto;
+			}
+			@include media(1350px) {
+				background-size: 115% auto;
+			}
 			.the-seth-button {
 				background: $primaryColor;
 			}

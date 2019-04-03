@@ -53,8 +53,10 @@
 		<?php $count = 3; ?>
 		<ul>
 			<?php while(have_rows('featured_procedures_1')): the_row(); ?>
+				<!-- <li class="wow fadeIn" data-wow-offset="0" data-wow-delay=".<?echo $count; ?>0s" data-wow-duration="1.5s" > -->
 				<li style="background-image: url('<?php the_sub_field('image'); ?>');" class="wow fadeIn" data-wow-offset="0" data-wow-delay=".<?echo $count; ?>0s" data-wow-duration="1.5s" >
 					<a href="<?php the_sub_field('link'); ?>" rel="nofollow">
+						<!-- <img src="<?php the_sub_field('image'); ?>" alt="logo"> -->
 						<div class="feat-overlay"></div>
 						<div class="the-seth">
 							<div class="the-seth-button">

@@ -4523,7 +4523,7 @@ main,
   background-repeat: no-repeat;
   background-size: cover;
   height: 250px;
-  background-position-y: 50px;
+  background-position-y: 90px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -4539,21 +4539,35 @@ main,
 }
 
 .inside-header-logo {
-  float: left;
-  margin-top: 100px;
+  width: calc( 100% + 40px);
+  position: relative;
+  left: -20px;
+  background-color: #faf9ec;
+  margin-top: 60px;
+  min-height: 90px;
 }
 
 @media only screen and (min-width: 768px) {
   .inside-header-logo {
+    float: left;
+    background: transparent;
+    width: auto;
     margin-top: 200px;
   }
 }
 
 .inside-header-logo img {
   width: 180px;
+  margin-bottom: 15px;
 }
 
 @media only screen and (min-width: 768px) {
+  .inside-header-logo img {
+    width: 300px;
+  }
+}
+
+@media only screen and (min-width: 1080px) {
   .inside-header-logo img {
     width: auto;
   }
@@ -4672,7 +4686,6 @@ main,
   right: 0;
   top: 0px;
   cursor: pointer;
-  border-left: 1px solid rgba(246, 232, 180, 0.1);
 }
 
 .touch-menu .nav-dropdown-button:after {
@@ -5170,19 +5183,6 @@ main,
   }
 }
 
-.interior .content ul.styled-links li:before {
-  content: "\f0c1" !important;
-  top: 0px;
-  background: transparent;
-  font-family: "Font Awesome 5 Pro";
-  position: absolute;
-  left: 5px;
-  -webkit-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-          transform: rotate(45deg);
-  color: #51566d;
-}
-
 .interior .content ul.styled-links li a {
   text-decoration: none;
   color: #3b3f50;
@@ -5355,13 +5355,13 @@ main,
 
 @media only screen and (min-width: 768px) {
   .page-feature .feature-content .feature-border {
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: 80px;
+    padding-right: 80px;
     max-width: 550px;
     margin: 0 auto !important;
     border: 1px solid rgba(59, 63, 80, 0.3);
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding-top: 80px;
+    padding-bottom: 80px;
   }
 }
 
@@ -5779,7 +5779,7 @@ main,
     padding-top: 100px;
     background-position: center center;
     background-size: auto auto;
-    padding-right: 45%;
+    padding-right: 55%;
   }
 }
 
@@ -6550,6 +6550,8 @@ aside li {
 }
 
 .footer-cta span {
+  padding-left: 20px;
+  padding-right: 20px;
   font-size: 34px;
   line-height: 36px;
   font-family: orpheuspro, serif;
@@ -6557,6 +6559,13 @@ aside li {
 }
 
 @media only screen and (min-width: 768px) {
+  .footer-cta span {
+    font-size: 40px;
+    line-height: 44px;
+  }
+}
+
+@media only screen and (min-width: 1080px) {
   .footer-cta span {
     font-size: 45px;
     line-height: 48px;
@@ -6639,7 +6648,7 @@ aside li {
 .upper-footer form textarea {
   border-radius: 4px;
   color: #3b3f50 !important;
-  background: rgba(240, 240, 240, 0.8) !important;
+  background: rgba(240, 240, 240, 0.95) !important;
   border: rgba(255, 255, 255, 0.3) !important;
 }
 
@@ -7169,6 +7178,10 @@ aside li {
 /* ------------------------
 	Home Page
 ------------------------ */
+.home p a {
+  color: #3b3f50;
+}
+
 .home h2 {
   margin: 0;
   font-family: orpheuspro, serif;
@@ -7242,7 +7255,7 @@ aside li {
 @media only screen and (min-width: 768px) {
   .welcome .welcome-cta {
     margin-top: 0;
-    max-width: 490px;
+    max-width: 340px;
     background: none;
     padding-top: 170px;
     padding-left: 50px;
@@ -7251,6 +7264,7 @@ aside li {
 
 @media only screen and (min-width: 1080px) {
   .welcome .welcome-cta {
+    max-width: 490px;
     max-width: none;
     padding-top: 35vh;
     padding-left: 15vw;
@@ -7286,14 +7300,21 @@ aside li {
   display: none;
 }
 
+.welcome .welcome-cta .home-logo a {
+  margin: 0 auto;
+  text-align: center;
+}
+
 .welcome .welcome-cta .home-logo img {
   width: 280px;
+  margin: 0 auto;
   max-width: 300px;
   min-height: 130px;
 }
 
 @media only screen and (min-width: 1080px) {
   .welcome .welcome-cta .home-logo img {
+    margin: 0;
     min-height: none;
     max-width: none;
     width: auto;
@@ -7339,6 +7360,12 @@ aside li {
 }
 
 @media only screen and (min-width: 768px) {
+  .welcome .welcome-cta .button:after {
+    left: 240px;
+  }
+}
+
+@media only screen and (min-width: 1080px) {
   .welcome .welcome-cta .button:after {
     left: 310px;
   }
@@ -7414,7 +7441,6 @@ aside li {
   display: block;
   float: left;
   margin-right: 20px;
-  margin-bottom: 40px;
   width: 90px;
 }
 
@@ -7566,6 +7592,7 @@ aside li {
   -webkit-transition: all .35s ease-in-out;
   transition: all .35s ease-in-out;
   position: relative;
+  overflow: hidden;
 }
 
 @media only screen and (min-width: 768px) {
@@ -7574,11 +7601,15 @@ aside li {
     padding-right: 40px;
     padding-top: 300px;
     padding-bottom: 80px;
+    -webkit-transition: all .35s ease-in-out;
+    transition: all .35s ease-in-out;
   }
 }
 
 @media only screen and (min-width: 1080px) {
   .home-featured-procedures li {
+    -webkit-transition: all .35s ease-in-out;
+    transition: all .35s ease-in-out;
     padding-bottom: 80px;
     padding-top: 370px;
   }
@@ -7645,6 +7676,35 @@ aside li {
   -webkit-transition: all .35s ease-in-out;
   transition: all .35s ease-in-out;
   background: rgba(59, 63, 80, 0.6);
+}
+
+.home-featured-procedures li img {
+  -webkit-transition: all .35s ease-in-out;
+  transition: all .35s ease-in-out;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  width: 120%;
+}
+
+.home-featured-procedures li:hover {
+  -webkit-transition: background .35s ease-in-out;
+  transition: background .35s ease-in-out;
+}
+
+@media only screen and (min-width: 1150px) {
+  .home-featured-procedures li:hover {
+    background-size: 140% auto;
+  }
+}
+
+@media only screen and (min-width: 1350px) {
+  .home-featured-procedures li:hover {
+    background-size: 115% auto;
+  }
 }
 
 .home-featured-procedures li:hover .the-seth-button {
