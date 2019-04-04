@@ -53,8 +53,8 @@
 			<?php endif; ?>
 		</div> 
 		<div class="menu-trigger">
-			<i class="fal fa-bars"></i>
-			<!-- <i class="fal fa-window-close"></i> -->
+			<div class="hamburger"></div>
+			<div class="hamburger"></div>
 		</div>
 	</div>
 
@@ -104,7 +104,6 @@
 		<?php elseif (is_single()): ?>
 			<h1><?php the_title(); ?></h1>
 			<div class="meta-data">Posted on <?the_time('M');?> <?the_time('j');?>, <? the_time('Y'); ?> <?php the_category(', '); ?></div>
-			
 		<?php else: ?> 
 			<h1><?the_title();?></h1>
 		<?php endif; ?>

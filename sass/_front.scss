@@ -321,29 +321,45 @@ footer,
 		width: 50%;
 		background-position: center center;
 		background-repeat: no-repeat;
-		background-size: cover;
+		background-size: auto auto;
 		padding-left: 20px;
 		padding-right: 20px;
 		padding-top: 100px;
 		padding-bottom: 40px;
-		transition: all .35s ease-in-out;
+		transition: all .35s ease-in-out !important;
 		position: relative;
 		overflow: hidden;
 
 		@include media($tablet) {
+			background-position: center center;
 			padding-left: 40px;
 			padding-right: 40px;
 			padding-top: 300px;
 			padding-bottom: 80px;
-			transition: all .35s ease-in-out;
 		}
 		@include media($desktop) {
-			transition: all .35s ease-in-out;
 			padding-bottom: 80px;
 			padding-top: 370px;
 		}
 		@include media($full) {
 			background-size: 110% auto;
+		}
+		&:hover {
+			@include media($desktop) {
+				background-size: 170% auto;
+			}
+			@include media(1150px) {
+				background-size: 140% auto;
+			}
+			@include media(1350px) {
+				background-size: 115% auto;
+			}
+			.the-seth-button {
+				background: $primaryColor;
+			}
+			.feat-overlay {
+				background: transparent;
+			}
 		}
 		a {text-decoration: none;}
 		.the-seth {
@@ -395,21 +411,7 @@ footer,
 			z-index: -1;
 			width: 120%;
 		}
-		&:hover {
-			transition: background .35s ease-in-out;
-			@include media(1150px) {
-				background-size: 140% auto;
-			}
-			@include media(1350px) {
-				background-size: 115% auto;
-			}
-			.the-seth-button {
-				background: $primaryColor;
-			}
-			.feat-overlay {
-				background: transparent;
-			}
-		}
+		
 	}
 }
 
@@ -611,14 +613,16 @@ footer,
 	.the-holder {
 		border: 1px solid $primaryColor;
 		position: relative;
+		// max-height: 800px;
 	}
 	.the-slider {
 		position: relative;
-		max-width: 550px;
-		height: 100%;
+		max-width: 600px;
+		height: auto;
+		// height: 100%;
 		padding: 20px 20px;
 		@include media($tablet) {
-			padding: 60px 50px 60px 80px;
+			padding: 60px 50px 0px 80px;
 			background: transparent;
 		}
 		@include media($desktop) {
@@ -638,7 +642,7 @@ footer,
 				margin-right: 40px;
 			}
 			@include media($desktop) {
-				margin-bottom: 200px;
+				margin-bottom: 220px;
 			}
 		}
 		&:nth-of-type(even) {
@@ -649,17 +653,21 @@ footer,
 
 	.carousel-cell {
 	  width: 100%; /* full width */
-	  height: 900px; /* height of carousel */
+	  // height: 700px; 
+	  /* height of carousel */
 	  @include media($desktop) {
-		  height: 860px; /* height of carousel */
+		  // height: 860px; /* height of carousel */
 		  // border: 1px solid red;
 		}
 	}
-
+	
+	.flickity-viewport {
+		// height: 700px
+	}
 
 	.flickity-button {
 		background: $primaryColor;
-		margin-top: 40px;
+		// margin-top: 40px;
 	}
 	.flickity-button:hover {
 	}
@@ -685,7 +693,8 @@ footer,
 	}
 	.flickity-page-dots {
 		position: relative;
-		bottom: -10px
+		bottom: 0px;
+		margin-bottom:10px
 	}
 
 	.button {

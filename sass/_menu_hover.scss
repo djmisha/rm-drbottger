@@ -85,7 +85,7 @@ $menuHeight : 60px;
 			transform: translate(-50%, 0);
 			opacity: 0;
 			visibility: hidden;
-			width: 300px;
+			width: 250px;
 			z-index: -5;
 			transition: .25s ease-in-out all;
 			// transition: .25s ease-in-out top, .25s ease-in-out opacity;
@@ -118,11 +118,11 @@ $menuHeight : 60px;
 						background-repeat: no-repeat;
 					}
 					.sub-menu{
-						// left: 300px;
+						// left: 250px;
 						right: inherit;
 						left: inherit;
 						transform: none;
-						left: 300px;
+						left: 250px;
 						top: 0;
 
 					}
@@ -136,7 +136,7 @@ $menuHeight : 60px;
 							right: inherit;
 							left: inherit;
 							transform: none;
-							left: 300px;
+							left: 250px;
 							top: 0;
 						}
 					}

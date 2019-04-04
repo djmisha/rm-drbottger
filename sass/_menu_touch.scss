@@ -1,91 +1,88 @@
-//Touch Menu
+// Touch Menu
 
-.menu-wrap{
+.menu-wrap {
 	display: none;
 }
 
 .touch-menu{
 	display: block;
+
 	&.menu-wrap{
-		width: 320px;
+		width: 100%;
 		position: fixed;
-		bottom: 0;
-		top: 50px;
-		left: -320px;
-		height: calc(100% - 50px) ;
+		top: 0px;
+		left: -100%;
+		height: 100%;
 		z-index: 500;
 		padding: 0;
 	}
 
 	.main-menu{
-		border-right: 1px solid rgba($secondaryColor, .1);
-		border-bottom: 1px solid rgba($secondaryColor, .1);
-		background: rgba($primaryColor, .98);
+		// background: rgba(#000, .95);
+		background: $darkColor;
 		height: 100%;
-		width: 320px;
+		width: 100%;
 		overflow-y: scroll;
-		transform: translate3d(-320px, 0, 0);
-		transition: all 600ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+		transform: translate3d(-100%, 0, 0);
+		// visibility: hidden;
+		// opacity: 0;
+		// transition: visibility 0s linear 300ms, opacity 300ms;
 
-		li.menu-item-316 a  {
-			font-size: 33px;
-			padding-top: 6px;
-			padding-bottom: 6px;
-		}
-
-
-		li.menu-item-316 a i {
-			font-size: 30px;
-		}
-		//Set baseline "li" styling
+		// Set baseline "li" styling
+		
 		li{
 			margin: 0;
 			padding: 0;
 			position: relative;
 			list-style-type: none;
-				&:before{
-					display: none;
-				}
+			text-align: center;
+			&:before{
+				display: none;
+			}
 		}
-		//End "li" reset
-		//Set baseline "a" styling
-		a, span{
-			text-align: left;
-			font-family: $primaryFont;
-			text-transform: none;
-			// letter-spacing: 1px;
-			// font-weight: bold;
+		
+		// Set baseline "a" styling
+
+		a{
+			//  text-transform: uppercase;
+			//  letter-spacing: 1px;
+			font-family: $secondaryFont;
+
 			text-decoration: none;
 			display: block;
-			
-			color: $lightColor; //Set color for menu items
+			color: rgba($lightColor, .9);  // Set color for menu items
+			font-size: 20px; // Set font size for menu items
 			line-height: 1em;
-			font-size: 15px; //Set font size for menu items
+			// font-weight: 100;
 		}
-		//End "a" reset
+		// End "a" reset
 
-		//Touch Menu Items
+		// Touch Menu Items
+
 		.menu-item{
 			> a{
 				padding: 16px 20px;
-				border-bottom: 1px solid rgba($secondaryColor, .1);
+				border-bottom: 1px solid rgba($lightColor, .05);
 			}
 		}
 
 		.first.menu-item{
-			border-top: 1px solid rgba($secondaryColor, .1);
+			border-top: 1px solid rgba($lightColor, .15);
 		}
 
-		//General Sub-Menu Styling
+		// General Sub-Menu Styling
+
 		.sub-menu{
 			display: none;
-			a{
-				font-size: .85em;
-				padding-left: 40px;
+			a {
+				font-size: 17px;
+				line-height: 1em;
+				letter-spacing: .5px;
 			}
 		}
 
-		//Specific Sub-Menu Level Styling
+		// Specific Sub-Menu Level Styling
+
 		ul[data-ul-depth="0"]{
 			> li > a{
 				padding-left: 30px;
@@ -114,77 +111,74 @@
 	}
 
 	.nav-dropdown-button {
-    position: absolute;
-    z-index: 25;
-    width: 50px;
-    height: 46px;
-    // background: rgba($lightColor, 0.1);
-    right: 0;
-    top: 0px;
-    cursor: pointer;
-    // border-left:  1px solid rgba($secondaryColor, .1);
+		position: absolute;
+		z-index: 25;
+		width: 50px;
+		height: 50px;
+		// background: rgba($lightColor, 0.05);
+		right: 0;
+		top: 0px;
+		cursor: pointer;
+		// border-left: 1px solid rgba($lightColor, .15);
+
 		&:after{
-			content: '';
-			width: 8px;
-			height: 14px;
-			background-size: 8px 14px;
+			content: '\f067';
+			font-family: 'Font Awesome 5 Pro';
+			color: rgba($lightColor, .4); 
+			font-weight: 100;
 			transition: .2s linear transform;
 			position: absolute;
-			top: 50%;
+			top: 25px;
 			transform: translateY(-50%);
 			left: 0;
 			right: 0;
 			margin: 0 auto;
-			background-image: url(images/svg/arrow.svg);
 			background-position: center;
 			background-repeat: no-repeat;
 		}
 	}
 
-	.close-menu{
-		i {
-			font-size: 28px;
-		}
+	.close-menu {
 		display: block;
-		width: 100%;
-		padding: 12px 20px;
-		 //match to "a" padding
-		color: $lightColor;
+		position: absolute;
+		top: 0px;
+		left: 10px;
+		padding: 8px 19px 7px 15px;
+		color: rgba($lightColor,.4); 
 		text-align: center;
-		font-size: 15px; //match to other font-size
+		font-size: 34px; // match to other font-size
 		cursor: pointer;
-		// border-bottom: 1px solid rgba($secondaryColor, .1);
-
-		// &:before{
-		// 	content: '';
-		// 	width: 12px;
-		// 	height: 20px;
-		// 	background-size: 12px 20px;
-		// 	transition: .2s linear transform;
-		// 	position: absolute;
-		// 	top: 351px;
-		// 	transform:  rotate(180deg) ;
-		// 	left: 100px;
-		// 	// right: 0;
-		// 	margin: 0 auto;
-		// 	background-image: url(images/svg/arrow.svg);
-		// 	background-position: center;
-		// 	background-repeat: no-repeat;
-		// }
+		// border: 1px solid white;
+		i {
+			font-weight: 100;
+		}
 	}
 
 	.sub-menu-open{
 		> .nav-dropdown-button{
 			&:after{
-				content: '';
-				transform: translateY(-50%) rotate(90deg) !important;
+				content: '\f068';
+				font-weight: 100;
 			}
 		}
 	}
-} //Closing .touch-menu
+} 
 
-.menu-is-open{
-	.touch-menu .main-menu{
-		transform: translate3d(320px, 0, 0);
-	}
+// Closing Opening Menu with Fade
+
+
+.touch-menu.menu-is-closed .main-menu{
+	visibility: hidden;
+	opacity: 0;
+	transition: visibility 0s linear 300ms, opacity 300ms, transform 5s;
+	transform: translate3d(100%, 0, 0);
 }
+
+.touch-menu.menu-is-open .main-menu{
+	visibility: visible;
+	opacity: 1;
+	transition: visibility 0s linear 0s, opacity 300ms;
+	transform: translate3d(100%, 0, 0);
+}
+
+
