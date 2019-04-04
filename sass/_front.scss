@@ -1,8 +1,8 @@
-header,
+// header,
 .welcome,
-footer,
+// footer,
 .home-doctor,
-.home-featured-procedures,
+// .home-featured-procedures,
 .home-reviews,
 .home-breast-aug,
 .home-aug-buttons,
@@ -12,10 +12,8 @@ footer,
  }
 
 
-.home p a{
-	// a {
-		color: $primaryColor;
-	// }
+.home p a {
+	color: $primaryColor;
 }
  .home h2 {
  	margin: 0;
@@ -336,23 +334,24 @@ footer,
 			padding-right: 40px;
 			padding-top: 300px;
 			padding-bottom: 80px;
+			background-size: auto auto;
+
 		}
 		@include media($desktop) {
 			padding-bottom: 80px;
 			padding-top: 370px;
+			background-size: auto 100%;
+
 		}
 		@include media($full) {
 			background-size: 110% auto;
 		}
 		&:hover {
 			@include media($desktop) {
-				background-size: 170% auto;
-			}
-			@include media(1150px) {
-				background-size: 140% auto;
+				background-size: auto 120% ;
 			}
 			@include media(1350px) {
-				background-size: 115% auto;
+				background-size: auto 115% ;
 			}
 			.the-seth-button {
 				background: $primaryColor;

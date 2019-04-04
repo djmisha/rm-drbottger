@@ -7603,6 +7603,7 @@ aside li {
     padding-right: 40px;
     padding-top: 300px;
     padding-bottom: 80px;
+    background-size: auto auto;
   }
 }
 
@@ -7610,6 +7611,7 @@ aside li {
   .home-featured-procedures li {
     padding-bottom: 80px;
     padding-top: 370px;
+    background-size: auto 100%;
   }
 }
 
@@ -7621,19 +7623,13 @@ aside li {
 
 @media only screen and (min-width: 1080px) {
   .home-featured-procedures li:hover {
-    background-size: 170% auto;
-  }
-}
-
-@media only screen and (min-width: 1150px) {
-  .home-featured-procedures li:hover {
-    background-size: 140% auto;
+    background-size: auto 120%;
   }
 }
 
 @media only screen and (min-width: 1350px) {
   .home-featured-procedures li:hover {
-    background-size: 115% auto;
+    background-size: auto 115%;
   }
 }
 
