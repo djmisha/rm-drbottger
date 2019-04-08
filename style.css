@@ -4523,7 +4523,7 @@ main,
   background-repeat: no-repeat;
   background-size: cover;
   height: 200px;
-  margin-top: 140px;
+  margin-top: 160px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -4543,7 +4543,7 @@ main,
   width: calc( 100% + 40px);
   position: relative;
   left: -20px;
-  top: -90px;
+  top: -110px;
   background-color: #faf9ec;
 }
 
@@ -4558,7 +4558,7 @@ main,
 }
 
 .inside-header-logo img {
-  width: 140px;
+  width: 200px;
   margin-top: 10px;
   margin-bottom: 15px;
 }
@@ -5173,15 +5173,26 @@ main,
 }
 
 .interior .content ul.styled-links li {
-  margin-left: 20px;
-  margin-right: 20px;
+  width: 100%;
+  text-align: center;
+  margin-left: 0px;
+  margin-right: 0px;
   font-size: 16px;
+  padding-left: 0;
 }
 
 @media only screen and (min-width: 768px) {
   .interior .content ul.styled-links li {
+    width: auto;
+    margin-left: 20px;
+    margin-right: 20px;
     font-size: 18px;
   }
+}
+
+.interior .content ul.styled-links li:before {
+  display: none;
+  content: "\f0c1" !important;
 }
 
 .interior .content ul.styled-links li a {

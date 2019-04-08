@@ -190,22 +190,22 @@
 				margin: 0;
 			}
 			li {
-				margin-left: 20px;
-				margin-right: 20px;
+				width: 100%;
+				text-align: center;
+				margin-left: 0px;
+				margin-right: 0px;
 				font-size: 16px;
+				padding-left: 0;
 				@include media($tablet) {
+					width: auto;
+					margin-left: 20px;
+					margin-right: 20px;
 					font-size: 18px;
 				}
-				// &:before {
-				// 	content: "\f0c1" !important;
-				// 	top: 0px;
-				// 	background: transparent;
-				// 	font-family: "Font Awesome 5 Pro";
-				// 	position: absolute;
-				// 	left: 5px;
-				// 	transform: rotate(45deg);
-				// 	color: lighten($darkColor, 10%) ;
-				// }
+				&:before {
+					display: none;
+					content: "\f0c1" !important;
+				}
 				a {
 					text-decoration: none;
 					color: $darkColor;
