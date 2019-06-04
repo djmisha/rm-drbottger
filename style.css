@@ -4377,6 +4377,26 @@ main,
   }
 }
 
+/*================================
+=            IPAD PRO            =
+================================*/
+@media only screen and (min-width: 1080px) {
+  .is--device.is--ipad .home section,
+  .is--device.is--ipad .inside header,
+  .is--device.is--ipad footer section {
+    padding: 100px calc(40px + (50% - (1080px / 2))) !important;
+  }
+}
+
+.is--device.is--ipad .inside header {
+  padding-top: 0 !important;
+}
+
+.is--device.is--ipad .site-crumbs {
+  padding-top: 20px !important;
+  padding-bottom: 5px !important;
+}
+
 /* ***************************************** */
 /* --------------- Layouts ----------------- */
 /* ***************************************** */
@@ -4429,6 +4449,9 @@ main,
   left: 20px;
   padding-top: 12px;
   height: 100%;
+  /*================================
+	=            IPAD PRO            =
+	================================*/
 }
 
 @media only screen and (min-width: 1080px) {
@@ -4437,10 +4460,8 @@ main,
   }
 }
 
-@media only screen and (min-width: 1080px) {
-  .menu-trigger {
-    display: none;
-  }
+.is--ipad .menu-trigger {
+  display: block;
 }
 
 .menu-trigger .hamburger {
@@ -7400,6 +7421,9 @@ aside li {
   padding-top: 40px;
   padding-bottom: 40px;
   position: relative;
+  /*================================
+	=            IPAD PRO            =
+	================================*/
 }
 
 @media only screen and (min-width: 768px) {
@@ -7427,6 +7451,12 @@ aside li {
   }
 }
 
+@media only screen and (min-width: 1336px) {
+  .is--device.is--ipad .home-doctor {
+    padding-left: 40%;
+  }
+}
+
 .home-doctor h2 {
   margin-bottom: 20px;
 }
@@ -7445,9 +7475,22 @@ aside li {
   }
 }
 
+.home-doctor .doc-content {
+  /*================================
+		=            IPAD PRO            =
+		================================*/
+}
+
 @media only screen and (min-width: 1080px) {
   .home-doctor .doc-content {
     max-width: 600px;
+  }
+}
+
+@media only screen and (min-width: 1336px) {
+  .is--device.is--ipad .home-doctor .doc-content {
+    padding-left: 40%;
+    max-width: none;
   }
 }
 

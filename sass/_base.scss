@@ -144,6 +144,30 @@ main,
 	}
 }
 
+/*================================
+=            IPAD PRO            =
+================================*/
+
+.is--device.is--ipad {
+	.home section,
+	.inside header,
+	footer section
+	 {
+		@include media($desktop) {
+			padding: 100px  calc(40px + (50% - (#{$desktop} / 2))) !important;
+		}
+	}
+	.inside header {
+		padding-top: 0 !important;
+	}
+	.site-crumbs {
+		padding-top: 20px !important;
+		padding-bottom: 5px !important;
+	}
+}
+
+
+
 /* ***************************************** */
 /* --------------- Layouts ----------------- */
 /* ***************************************** */

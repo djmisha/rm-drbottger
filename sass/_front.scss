@@ -194,6 +194,14 @@
 		background-size: cover;
 		padding-bottom: 150px;
 	}
+	/*================================
+	=            IPAD PRO            =
+	================================*/
+	.is--device.is--ipad & {
+		@include media(1336px) {
+			padding-left: 40% ;
+		}
+	}
 	h2 {
 		margin-bottom: 20px;
 		@include media($tablet) {
@@ -212,6 +220,15 @@
 		}
 		@include media($full) {
 			
+		}
+		/*================================
+		=            IPAD PRO            =
+		================================*/
+		.is--device.is--ipad & {
+			@include media(1336px) {
+				padding-left: 40% ;
+				max-width: none;
+			}
 		}
 		img.doc-image {
 			display: block;

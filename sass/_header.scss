@@ -22,24 +22,24 @@
 }
 
 .menu-trigger {
-	@include media($desktop) {
-		display: none;
-	}
+	
 	width: 32px;
 	height: 100%;
 	position: relative;
 	left: 20px;
 	padding-top: 12px;
-	// border: 1px solid white;
-	// display: flex;
-	// align-items: center;
-	// justify-content: center;
-	// flex-direction: row;
-	// flex-wrap: wrap;
-	// padding-right: 20px;
+	
 	height: 100%;
 	@include media($desktop) {
 		display: none;
+	}
+
+	/*================================
+	=            IPAD PRO            =
+	================================*/
+
+	.is--ipad & {
+		display: block;
 	}
 	.hamburger {
 		margin-top: 8px;
