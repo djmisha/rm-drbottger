@@ -37,8 +37,8 @@ function get__header__image() {
 
             }
             echo 'style="background-image:url(' . $defaultRandImage . ')" ';
-            $directParent = $post->post_parent;
-            echo 'data-ID="' . $directParent . '"';
+            // $directParent = $post->post_parent;
+            // echo 'data-ID="' . $directParent . '"';
 
             // echo 'data-name="' . $defaultRandName . '" ';
             // echo 'data-tag="' . $defaultRandTag . '" ';

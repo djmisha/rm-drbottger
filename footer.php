@@ -8,7 +8,7 @@
 			<img src="<?php bloginfo('template_directory'); ?>/images/bg-footer.jpg" alt="logo">
 		</div>
 		<div class="footer-contact-form">
-			<?php echo do_shortcode('[seaforms name="contact-us"]'); ?>
+			<?php echo do_shortcode('[seaforms name="footer-form"]'); ?>
 		</div>
 		<div class="footer-address" style="background-image: url('<?php bloginfo('template_directory'); ?>/images/icon-map.png');">
 			<img src="<?php bloginfo('template_directory'); ?>/images/logo-footer.png" alt="logo">
@@ -18,6 +18,7 @@
 						<div class="loc-addy">
 							<a href="<?php the_sub_field('map_link', 'option'); ?>" class="track-outbound" data-label="Address - Footer" target="_blank"  rel="noopener">
 								<i class="fas fa-map-marker-alt"></i>
+								Philadelphia Main Line<br>
 								<?php the_sub_field('address', 'option'); ?><br> <?php the_sub_field('city', 'option'); ?>
 							</a>
 						</div>
@@ -38,12 +39,12 @@
 			<a href="<?php the_field('google','options'); ?>" target="_blank" rel="noopener" title="google"><i class="fab fa-google"></i></a>
 		</div>
 	</section>
-	
+
 	<section class="lower-footer">
 		<div class="footer-buttons">
 			<a href="<?php the_field('gallery_footer_link', 'option'); ?>">Results Gallery</a>
 			<a href="<?php the_field('reviews_footer_link', 'option'); ?>">Patient Reviews</a>
-		</div>		
+		</div>
 		<div class="model-disc">
 			<p>Stock model images are used throughout this website and are for illustrative purposes only. All before-and-after photos and patient testimonials on our site are from actual patients, and have been published with permission. Individual results may vary.</p>
 		</div>
@@ -60,7 +61,7 @@
 				</ul>
 			<?php endif; ?>
 		</div>
-	</section>  
+	</section>
 
 
 </footer>

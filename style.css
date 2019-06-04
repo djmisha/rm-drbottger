@@ -5177,16 +5177,18 @@ main,
   text-align: center;
   margin-left: 0px;
   margin-right: 0px;
-  font-size: 16px;
   padding-left: 0;
+  font-size: 14px;
+  line-height: 16px;
 }
 
 @media only screen and (min-width: 768px) {
   .interior .content ul.styled-links li {
+    font-size: 18px;
+    line-height: 27px;
     width: auto;
     margin-left: 20px;
     margin-right: 20px;
-    font-size: 18px;
   }
 }
 
